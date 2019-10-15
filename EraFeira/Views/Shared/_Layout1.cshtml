@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap" rel="stylesheet">
+    <title>@ViewBag.Title - EraFeira</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="background-image: url('../Imagens/Imagemdesfocada.png'); background-size: cover;">
+    <div class="cabecalho1">
+        @Html.ActionLink("EraFeira", "Index", "Home", new { area = "" }, new { @class = "navbar-brand logo" })
+        <div class="group-btns">
+            @Html.ActionLink("Entrar", "Login", "Home", new { area = "" }, new { @class = "btn-login" })
+            @Html.ActionLink("Cadastrar", "Create", "Usu_usuarios", new { area = "" }, new { @class = "btn-cadastrar" })
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <footer class="rodape1">
+        <nav>
+            <a class="sure" href="">Sobre nós</a>
+            <a class="sure" href="">Ideia</a>
+            <a class="not" href="">Contato</a>
+        </nav>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    @if (TempData["MSG"] != null)
+    {
+        <script>
+        $(document).ready(function () {
+            var titulo = "";
+            switch ("@TempData["MSG"].ToString().Split('|')[0]") {
+                case "success": titulo = "SUCESSO";
+                    break;
+                case "warning": titulo = "ATENÇÃO";
+                    break;
+                case "error": titulo = "ERRO";
+                    break;
+                case "info": titulo = "INFORMAÇÃO";
+                    break;
+            }
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-bottom-right",
+                "preventDuplicates": true,
+                "onclick": null,
+                "showDuration": "6000",
+                "hideDuration": "6000",
+                "timeOut": "6000",
+                "extendedTimeOut": "6000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr["@TempData["MSG"].ToString().Split('|')[0]"]("@Html.Raw(TempData["MSG"].ToString().Split('|')[1])", titulo)
+        });
+        </script>
+    }
+
+
+</body>
+</html>
+
+
+

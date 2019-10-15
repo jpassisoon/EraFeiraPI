@@ -1,0 +1,106 @@
+﻿* {
+    text-decoration: none;
+}
+
+/* layout1 */
+
+.cabecalho1 {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(255,255,255,0.0);
+}
+
+.rodape1 {
+    width: 100%;
+    height: 70px;
+    background-color: #212121;
+    bottom: 0px;
+    position: absolute;
+}
+
+/* Corpo do Login */
+
+.form-login{
+    width: 470px;
+    height: 385px;
+    background-color: rgb(253, 253, 253);
+    margin: 0 auto;
+    box-shadow: 1px 1px 10px 1px #EAEAEA;
+    border-radius: 3px;
+    margin-top: 30px;
+}
+
+.form-block {
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 40px;
+    height: 300px;
+}
+
+.test {
+    margin-bottom: 16px;
+}
+
+.inpu {
+    width: 250px;
+    height: 30px;
+    border: #EAEAEA;
+    background-color: #ffffff;
+    border: 1px solid #d6d6d6;
+    border-radius: 1px;
+}
+
+.h1-login {
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    padding-top: 40px;
+    font-size: 25px;
+}
+
+span {
+    color: #F96714;
+}
+
+.label1 {
+    font-weight: 500;
+    margin: 0px;
+    margin-bottom: 3px;
+}
+
+.esqueceu-senha {
+    display: block;
+    margin-top: -5px;
+    margin-bottom: 25px;
+    margin-left: 113px;
+    color: #505050;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.esqueceu-senha:hover{
+    color: #F96714;
+    text-decoration: none;
+}
+
+.Entrar {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 7px;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    width: 250px;
+    height: 33px;
+    transition: all .30s ease-in-out
+}
+
+    .Entrar:hover {
+        border-bottom: 2px solid rgb(248, 119, 44);
+        color: #ffffff;
+    }

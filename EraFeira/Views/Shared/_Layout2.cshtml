@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    @*<meta name="viewport" content="width=device-width, initial-scale=1.0">*@
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap" rel="stylesheet">
+    <title>@ViewBag.Title - EraFeira</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+    <div class="menu-lateral">
+        @Html.ActionLink("EraFeira", "Index", "Home", new { area = "" }, new { @class = "navbar-brand titulo-menu" })
+        <div class="dropright">
+            <button type="button" class="btn dropdown-toggle adm-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Cadastros
+            </button>
+            <div class="dropdown-menu adm-submenu">
+                <a class="dropdown-item adm-link" href="#">Fornecedor</a>
+                <a class="dropdown-item adm-link" href="#">Produto</a>
+            </div>
+        </div>
+
+        <div class="dropright">
+            <button type="button" class="btn dropdown-toggle adm-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Produtos
+            </button>
+            <div class="dropdown-menu adm-submenu">
+                <a class="dropdown-item adm-link" href="#">Visualização de produtos</a>
+                <a class="dropdown-item adm-link" href="#">Nível de Estoque</a>
+            </div>
+        </div>
+
+        <div class="dropright">
+            <button type="button" class="btn dropdown-toggle adm-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Movimentações
+            </button>
+            <div class="dropdown-menu adm-submenu">
+                <a class="dropdown-item adm-link" href="#">Entradas/Saídas</a>
+                <a class="dropdown-item adm-link" href="#">Gastos</a>
+            </div>
+        </div>
+
+        <a class="btn adm-menu" href="#">Pedidos</a>
+
+        <div class="dropright">
+            <button type="button" class="btn dropdown-toggle adm-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Relatórios
+            </button>
+            <div class="dropdown-menu adm-submenu">
+                <a class="dropdown-item adm-link" href="#">Relatório de produtos</a>
+                <a class="dropdown-item adm-link" href="#">Relatório de movimentações</a>
+                <a class="dropdown-item adm-link" href="#">Relatório de vendas</a>
+            </div>
+        </div>
+
+        <a class="btn adm-menu" href="#">Sair</a>
+
+    </div>
+
+    <div class="corpo">
+        @RenderBody()
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/popper")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    @if (TempData["MSG"] != null)
+    {
+        <script>
+        $(document).ready(function () {
+            var titulo = "";
+            switch ("@TempData["MSG"].ToString().Split('|')[0]") {
+                case "success": titulo = "SUCESSO";
+                    break;
+                case "warning": titulo = "ATENÇÃO";
+                    break;
+                case "error": titulo = "ERRO";
+                    break;
+                case "info": titulo = "INFORMAÇÃO";
+                    break;
+            }
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-bottom-right",
+                "preventDuplicates": true,
+                "onclick": null,
+                "showDuration": "6000",
+                "hideDuration": "6000",
+                "timeOut": "6000",
+                "extendedTimeOut": "6000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr["@TempData["MSG"].ToString().Split('|')[0]"]("@Html.Raw(TempData["MSG"].ToString().Split('|')[1])", titulo)
+        });
+        </script>
+    }
+
+
+</body>
+</html>

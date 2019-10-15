@@ -1,0 +1,70 @@
+﻿@model IEnumerable<EraFeira.Models.End_endereco>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.End_cep)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.End_logradouro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.End_numero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.End_bairro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.End_complemento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.End_cidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.End_estado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.End_cep)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.End_logradouro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.End_numero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.End_bairro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.End_complemento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.End_cidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.End_estado)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.End_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.End_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.End_id })
+        </td>
+    </tr>
+}
+
+</table>

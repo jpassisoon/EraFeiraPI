@@ -1,0 +1,189 @@
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\EraFeira.dll.config
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\EraFeira.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\EraFeira.pdb
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\csc.exe
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\csc.exe.config
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\csc.rsp
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\csi.exe
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\csi.exe.config
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\csi.rsp
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.AppContext.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Console.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.IO.Compression.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Security.Claims.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.ValueTuple.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\vbc.exe
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\vbc.exe.config
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\vbc.rsp
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\VBCSCompiler.exe
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\Antlr3.Runtime.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\Newtonsoft.Json.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\System.Web.Helpers.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\System.Web.Mvc.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\System.Web.Optimization.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\System.Web.Razor.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\System.Web.WebPages.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\System.Web.WebPages.Razor.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\WebGrease.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\System.Web.Helpers.xml
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\System.Web.Mvc.xml
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\System.Web.Optimization.xml
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\System.Web.Razor.xml
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\System.Web.WebPages.xml
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\System.Web.WebPages.Razor.xml
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\Newtonsoft.Json.xml
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\Antlr3.Runtime.pdb
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\pt-br\System.Web.Helpers.resources.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\pt-br\System.Web.Optimization.resources.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\pt-br\System.Web.Razor.resources.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\pt-br\System.Web.WebPages.resources.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\obj\Debug\EraFeira.csprojAssemblyReference.cache
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\obj\Debug\EraFeira.csproj.CoreCompileInputs.cache
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\obj\Debug\EraFeira.csproj.CopyComplete
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\obj\Debug\EraFeira.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\obj\Debug\EraFeira.pdb
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\EntityFramework.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\EntityFramework.SqlServer.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\MySql.Data.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\MySql.Data.Entity.EF6.dll
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\EntityFramework.xml
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\bin\EntityFramework.SqlServer.xml
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\obj\Debug\EraFeira.Migrations.Versao2.resources
+C:\Users\Tainá\Documents\Fatec\2019\2º semestre\pi\projeto\EraFeira\EraFeira\obj\Debug\EraFeira.csproj.GenerateResource.cache
+D:\1\EraFeira\EraFeira\bin\EraFeira.dll.config
+D:\1\EraFeira\EraFeira\bin\EraFeira.dll
+D:\1\EraFeira\EraFeira\bin\EraFeira.pdb
+D:\1\EraFeira\EraFeira\bin\roslyn\csc.exe
+D:\1\EraFeira\EraFeira\bin\roslyn\csc.exe.config
+D:\1\EraFeira\EraFeira\bin\roslyn\csc.rsp
+D:\1\EraFeira\EraFeira\bin\roslyn\csi.exe
+D:\1\EraFeira\EraFeira\bin\roslyn\csi.exe.config
+D:\1\EraFeira\EraFeira\bin\roslyn\csi.rsp
+D:\1\EraFeira\EraFeira\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\1\EraFeira\EraFeira\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\Microsoft.Managed.Core.targets
+D:\1\EraFeira\EraFeira\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\1\EraFeira\EraFeira\bin\roslyn\System.AppContext.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Collections.Immutable.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Console.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.IO.Compression.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.IO.FileSystem.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.IO.Pipes.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Reflection.Metadata.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Security.AccessControl.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Security.Claims.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Security.Principal.Windows.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.ValueTuple.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Xml.XmlDocument.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Xml.XPath.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\1\EraFeira\EraFeira\bin\roslyn\vbc.exe
+D:\1\EraFeira\EraFeira\bin\roslyn\vbc.exe.config
+D:\1\EraFeira\EraFeira\bin\roslyn\vbc.rsp
+D:\1\EraFeira\EraFeira\bin\roslyn\VBCSCompiler.exe
+D:\1\EraFeira\EraFeira\bin\roslyn\VBCSCompiler.exe.config
+D:\1\EraFeira\EraFeira\bin\Antlr3.Runtime.dll
+D:\1\EraFeira\EraFeira\bin\EntityFramework.dll
+D:\1\EraFeira\EraFeira\bin\EntityFramework.SqlServer.dll
+D:\1\EraFeira\EraFeira\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\1\EraFeira\EraFeira\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\1\EraFeira\EraFeira\bin\Microsoft.Web.Infrastructure.dll
+D:\1\EraFeira\EraFeira\bin\MySql.Data.dll
+D:\1\EraFeira\EraFeira\bin\MySql.Data.Entity.EF6.dll
+D:\1\EraFeira\EraFeira\bin\Newtonsoft.Json.dll
+D:\1\EraFeira\EraFeira\bin\System.Diagnostics.DiagnosticSource.dll
+D:\1\EraFeira\EraFeira\bin\System.Web.Helpers.dll
+D:\1\EraFeira\EraFeira\bin\System.Web.Mvc.dll
+D:\1\EraFeira\EraFeira\bin\System.Web.Optimization.dll
+D:\1\EraFeira\EraFeira\bin\System.Web.Razor.dll
+D:\1\EraFeira\EraFeira\bin\System.Web.WebPages.Deployment.dll
+D:\1\EraFeira\EraFeira\bin\System.Web.WebPages.dll
+D:\1\EraFeira\EraFeira\bin\System.Web.WebPages.Razor.dll
+D:\1\EraFeira\EraFeira\bin\WebGrease.dll
+D:\1\EraFeira\EraFeira\bin\EntityFramework.xml
+D:\1\EraFeira\EraFeira\bin\EntityFramework.SqlServer.xml
+D:\1\EraFeira\EraFeira\bin\System.Web.Helpers.xml
+D:\1\EraFeira\EraFeira\bin\System.Web.Mvc.xml
+D:\1\EraFeira\EraFeira\bin\System.Web.Optimization.xml
+D:\1\EraFeira\EraFeira\bin\System.Web.Razor.xml
+D:\1\EraFeira\EraFeira\bin\System.Web.WebPages.xml
+D:\1\EraFeira\EraFeira\bin\System.Web.WebPages.Deployment.xml
+D:\1\EraFeira\EraFeira\bin\System.Web.WebPages.Razor.xml
+D:\1\EraFeira\EraFeira\bin\Newtonsoft.Json.xml
+D:\1\EraFeira\EraFeira\bin\Antlr3.Runtime.pdb
+D:\1\EraFeira\EraFeira\bin\System.Diagnostics.DiagnosticSource.xml
+D:\1\EraFeira\EraFeira\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\1\EraFeira\EraFeira\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\1\EraFeira\EraFeira\bin\pt-br\System.Web.Helpers.resources.dll
+D:\1\EraFeira\EraFeira\bin\pt-br\System.Web.Mvc.resources.dll
+D:\1\EraFeira\EraFeira\bin\pt-br\System.Web.Optimization.resources.dll
+D:\1\EraFeira\EraFeira\bin\pt-br\System.Web.Razor.resources.dll
+D:\1\EraFeira\EraFeira\bin\pt-br\System.Web.WebPages.resources.dll
+D:\1\EraFeira\EraFeira\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+D:\1\EraFeira\EraFeira\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+D:\1\EraFeira\EraFeira\obj\Debug\EraFeira.csprojAssemblyReference.cache
+D:\1\EraFeira\EraFeira\obj\Debug\EraFeira.Migrations.Versao2.resources
+D:\1\EraFeira\EraFeira\obj\Debug\EraFeira.csproj.GenerateResource.cache
+D:\1\EraFeira\EraFeira\obj\Debug\EraFeira.csproj.CopyComplete
+D:\1\EraFeira\EraFeira\obj\Debug\EraFeira.dll
+D:\1\EraFeira\EraFeira\obj\Debug\EraFeira.pdb

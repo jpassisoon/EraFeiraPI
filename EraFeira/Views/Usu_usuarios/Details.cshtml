@@ -1,0 +1,90 @@
+﻿@model EraFeira.Models.Usu_usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Usu_usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_sobrenome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_sobrenome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_senha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_senha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_data_nascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_data_nascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_Cpf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_Cpf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_sexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_sexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_telefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_telefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_celular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_celular)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Usu_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
