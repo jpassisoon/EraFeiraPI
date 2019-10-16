@@ -105,6 +105,21 @@ namespace EraFeira.Controllers
             return View();
         }
 
+        public ActionResult Cidade()
+        {
+            return View();
+        }
+
+        public ActionResult Entregas()
+        {
+            return View();
+        }
+        
+        public ActionResult AreaUsuario()
+        {
+            return View();
+        }
+
         // GET: Usu_usuarios/Edit/5
         public ActionResult Edit(int? id)
         {

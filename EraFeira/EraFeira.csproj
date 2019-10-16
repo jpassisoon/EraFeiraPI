@@ -174,6 +174,7 @@
     <Compile Include="ViewModels\EsqueceuSenhaViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\AreaUsuario.css" />
     <Content Include="Content\AutenticacaoAdministrador.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -182,8 +183,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Cadastro.css" />
+    <Content Include="Content\Cidade.css" />
     <Content Include="Content\DashboardAdministrador.css" />
     <Content Include="Content\Endereco.css" />
+    <Content Include="Content\Entregas.css" />
     <Content Include="Content\EsqueceuSenha.css" />
     <Content Include="Content\Home.css" />
     <Content Include="Content\Login.css" />
@@ -197,6 +200,7 @@
     <Content Include="Imagens\alho.png" />
     <Content Include="Imagens\banana.png" />
     <Content Include="Imagens\cecilia-rodriguez-suarez-ZWL0e5X7SB0-unsplash.jpg" />
+    <Content Include="Imagens\CenouraOutlined.png" />
     <Content Include="Imagens\cesta.png" />
     <Content Include="Imagens\circulo-laranja.png" />
     <Content Include="Imagens\cozinhando3.jpg" />
@@ -204,8 +208,12 @@
     <Content Include="Imagens\Erafeira-cesta.png" />
     <Content Include="Imagens\Erafeira-Numero-entregas.png" />
     <Content Include="Imagens\Imagemdesfocada.png" />
+    <Content Include="Imagens\LimaoOutlined.png" />
     <Content Include="Imagens\maca.png" />
+    <Content Include="Imagens\MacaOutlined.png" />
     <Content Include="Imagens\morango.png" />
+    <Content Include="Imagens\PimentaoOutlined.png" />
+    <Content Include="Imagens\SalsinhaOutlined.png" />
     <Content Include="Imagens\tomate.png" />
     <Content Include="Imagens\user.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -445,6 +453,9 @@
     <Content Include="Views\Img_imagems\Details.cshtml" />
     <Content Include="Views\Img_imagems\Edit.cshtml" />
     <Content Include="Views\Img_imagems\Index.cshtml" />
+    <Content Include="Views\Usu_usuarios\Cidade.cshtml" />
+    <Content Include="Views\Usu_usuarios\Entregas.cshtml" />
+    <Content Include="Views\Usu_usuarios\AreaUsuario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

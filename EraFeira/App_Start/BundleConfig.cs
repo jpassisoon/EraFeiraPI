@@ -30,7 +30,8 @@ namespace EraFeira
                       "~/Content/site.css","~/Content/Home.css","~/Content/Cadastro.css","~/Content/Login.css",
                       "~/Content/EsqueceuSenha.css", "~/Content/Endereco.css",
                       "~/Content/ResumoCompletoPedido.css",
-                      "~/Content/AutenticacaoAdministrador.css", "~/Content/DashboardAdministrador.css"
+                      "~/Content/AutenticacaoAdministrador.css", "~/Content/DashboardAdministrador.css",
+                      "~/Content/Cidade.css", "~/Content/Entregas.css", "~/Content/AreaUsuario.css"
                       ));
         }
     }
