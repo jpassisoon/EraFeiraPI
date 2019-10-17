@@ -5,7 +5,7 @@
     ViewBag.Title = "EsqueceuSenha";
     Layout = "~/Views/Shared/_Layout1.cshtml";
 }
-
+<link href="~/Content/EsqueceuSenha.css" rel="stylesheet" />
 @using (Html.BeginForm("EsqueceuSenha", "Usu_usuarios", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()

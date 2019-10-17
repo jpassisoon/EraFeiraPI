@@ -3,14 +3,14 @@
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout1.cshtml";
 }
-
+<link href="~/Content/Login.css" rel="stylesheet" />
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <section class="form-login">
         <form>
-            <h1 class="h1-login"> Realize o <span>Login</span> </h1>
+            <h1 class="h1-login"> Realize o <span class="span-login">Login</span> </h1>
 
             <div class="form-block">
                 <label class="label1"> Email </label><br>

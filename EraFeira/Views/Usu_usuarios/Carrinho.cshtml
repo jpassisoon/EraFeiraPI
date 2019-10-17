@@ -1,0 +1,56 @@
+﻿@model IEnumerable<EraFeira.Models.Pro_produto>
+@{
+    ViewBag.Title = "Carrinho";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Carrinho.css" rel="stylesheet" />
+
+<div class="car-section">
+
+    <aside>
+        <p class="car-aside-text">Valor<br>
+            <span class="car-just-color">Cesta</span>
+            <span class="car-background-aside">65,50</span>
+        </p>
+    </aside>
+
+    <div class="car-titulos">
+        <h1 class="car-h1">Digite um nome para sua <span class="car-diferente">cesta</span></h1>
+        <input class="car-input" type="text" placeholder="ex: Legumes da vovó">
+    </div>
+    <br />
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            @foreach (var produto in Model)
+            {
+                <div class="col col-lg-4">
+                    <div class="bloco-imagem-cinza">
+                        <img class="img-fluid" src="~/Uploads/@produto.Pro_foto" />
+                    </div>
+                    <h2 class="car-h2"> @produto.Pro_nome</h2>
+                
+                    <div class="row car-setas">
+                        <div class="col-md-5 text-right">
+                            <button class="btn  ">
+                                <img class="car-seta-tamanho" src="~/Imagens/esquerda.png" />
+                            </button>
+                        </div>
+                        <div class="col-md-2 car-quantidade text-center">0</div>
+                        <div class=" col-md-5 text-left">
+                            <button class="btn ">
+                                <img class="car-seta-tamanho" src="~/Imagens/direita.png" />
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            }
+        </div>
+    </div>
+
+
+</div>
+

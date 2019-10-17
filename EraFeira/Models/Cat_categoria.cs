@@ -13,7 +13,7 @@ namespace EraFeira.Models
         public int Cat_id { get; set; }
 
         [Required]
-        [Display(Name = "Nome")]
+        [Display(Name = "Categoria")]
         [MaxLength(45)]
         public string Cat_nome { get; set; }
 

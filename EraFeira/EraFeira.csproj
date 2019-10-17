@@ -183,8 +183,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Cadastro.css" />
+    <Content Include="Content\Carrinho.css" />
     <Content Include="Content\Cidade.css" />
     <Content Include="Content\DashboardAdministrador.css" />
+    <Content Include="Content\direita.png" />
     <Content Include="Content\Endereco.css" />
     <Content Include="Content\Entregas.css" />
     <Content Include="Content\EsqueceuSenha.css" />
@@ -204,9 +206,11 @@
     <Content Include="Imagens\cesta.png" />
     <Content Include="Imagens\circulo-laranja.png" />
     <Content Include="Imagens\cozinhando3.jpg" />
+    <Content Include="Imagens\direita.png" />
     <Content Include="Imagens\Erafeira-cesta-quantidade.png" />
     <Content Include="Imagens\Erafeira-cesta.png" />
     <Content Include="Imagens\Erafeira-Numero-entregas.png" />
+    <Content Include="Imagens\esquerda.png" />
     <Content Include="Imagens\Imagemdesfocada.png" />
     <Content Include="Imagens\LimaoOutlined.png" />
     <Content Include="Imagens\maca.png" />
@@ -456,6 +460,7 @@
     <Content Include="Views\Usu_usuarios\Cidade.cshtml" />
     <Content Include="Views\Usu_usuarios\Entregas.cshtml" />
     <Content Include="Views\Usu_usuarios\AreaUsuario.cshtml" />
+    <Content Include="Views\Usu_usuarios\Carrinho.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

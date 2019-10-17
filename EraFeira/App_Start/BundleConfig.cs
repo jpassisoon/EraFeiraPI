@@ -27,11 +27,11 @@ namespace EraFeira
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css", "~/Content/toastr.min.css",
-                      "~/Content/site.css","~/Content/Home.css","~/Content/Cadastro.css","~/Content/Login.css",
+                      "~/Content/site.css", "~/Content/DashboardAdministrador.css" /*"~/Content/Home.css","~/Content/Cadastro.css","~/Content/Login.css",
                       "~/Content/EsqueceuSenha.css", "~/Content/Endereco.css",
                       "~/Content/ResumoCompletoPedido.css",
-                      "~/Content/AutenticacaoAdministrador.css", "~/Content/DashboardAdministrador.css",
-                      "~/Content/Cidade.css", "~/Content/Entregas.css", "~/Content/AreaUsuario.css"
+                      "~/Content/AutenticacaoAdministrador.css",
+                      "~/Content/Cidade.css", "~/Content/Entregas.css", "~/Content/AreaUsuario.css"*/
                       ));
         }
     }

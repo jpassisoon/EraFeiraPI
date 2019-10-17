@@ -120,6 +120,11 @@ namespace EraFeira.Controllers
             return View();
         }
 
+        public ActionResult Carrinho()
+        {
+            return View(db.Pro_Produto.ToList());
+        }
+
         // GET: Usu_usuarios/Edit/5
         public ActionResult Edit(int? id)
         {
