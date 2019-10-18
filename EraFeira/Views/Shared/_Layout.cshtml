@@ -31,8 +31,8 @@
                     </a>
 
                     <div class="dropdown-menu menu" aria-labelledby="dropef">
-                        @*@Html.ActionLink("Dados Pessoais", "Edit", "Usu_usuarios", new { area = "" }, new { @class = "dropdown-item link" })*@
                         @*@Html.ActionLink("Dados Pessoais", "Edit", new { id = Usu_id } ,new { @class = "dropdown-item link"})*@
+                        <a href="@Url.Action("Edit", "Usu_usuarios", new { id = @User.Identity.Name.Split('|')[1]})" class="dropdown-item link">Dados Pessoais</a>
                         @Html.ActionLink("Endereços", "Create", "End_enderecos", new { area = "" }, new { @class = "dropdown-item link" })
                         <a href="#" class="dropdown-item link">Pedidos</a>
                         @Html.ActionLink("Sair", "Sair", "Home", new { area = "" }, new { @class = "dropdown-item link" })

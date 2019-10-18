@@ -1,0 +1,42 @@
+﻿.dp-bloco{
+    width: 950px;
+    margin: 0 auto;
+}
+
+.dp-titulo {
+    font-family: 'Josefin Sans';
+    font-size: 30px;
+    font-weight: 700;
+    color: #F96714;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.dp-col {
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.dp-salvar {
+    width: 240px;
+    height: 35px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 15px;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    padding: 7px;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: 16px;
+    transition: all .30s ease-in-out;
+}
+
+    .dp-salvar:hover {
+        border-bottom: 2px solid rgb(248, 119, 44);
+        color: #ffffff;
+    }

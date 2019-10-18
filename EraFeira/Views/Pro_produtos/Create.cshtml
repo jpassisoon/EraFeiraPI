@@ -5,15 +5,15 @@
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<h2>Create</h2>
+<link href="~/Content/CadastroProduto.css" rel="stylesheet" />
 
 @using (Html.BeginForm("Create", "Pro_produtos", FormMethod.Post, new { enctype = "multipart/form-data" })) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Pro_produto</h4>
-        <hr />
+        <h4 class="cp-titulo">Cadastro de produto</h4>
+        
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.Pro_nome, htmlAttributes: new { @class = "control-label col-md-2" })

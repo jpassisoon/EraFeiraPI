@@ -183,10 +183,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Cadastro.css" />
+    <Content Include="Content\CadastroProduto.css" />
     <Content Include="Content\Carrinho.css" />
     <Content Include="Content\Cidade.css" />
+    <Content Include="Content\DadosPessoais.css" />
     <Content Include="Content\DashboardAdministrador.css" />
-    <Content Include="Content\direita.png" />
     <Content Include="Content\Endereco.css" />
     <Content Include="Content\Entregas.css" />
     <Content Include="Content\EsqueceuSenha.css" />

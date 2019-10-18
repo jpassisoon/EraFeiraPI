@@ -36,14 +36,14 @@ namespace EraFeira.Controllers
                     permissoes = permissoes.Substring(0, permissoes.Length - 1); // o -1 é usado para tirar a vírgula
 
                 FormsAuthentication.SetAuthCookie(usu.Usu_email, false);
-                FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(1, usu.Usu_email, DateTime.Now, DateTime.Now.AddMinutes(30), false, permissoes);
+                FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(1, usu.Usu_email + "|" + usu.Usu_id, DateTime.Now, DateTime.Now.AddMinutes(30), false, permissoes);
                 string hash = FormsAuthentication.Encrypt(ticket);
                 HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName, hash);
                 if (ticket.IsPersistent)
                     cookie.Expires = ticket.Expiration;
                 Response.Cookies.Add(cookie);
                 if (String.IsNullOrEmpty(ReturnUrl))
-                    return RedirectToAction("Dashboard","Usu_usuarios");
+                    return RedirectToAction("AreaUsuario","Usu_usuarios");
                 else
                 {
                     var decodedUrl = Server.UrlDecode(ReturnUrl);
