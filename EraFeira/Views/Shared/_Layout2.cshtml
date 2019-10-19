@@ -23,7 +23,8 @@
             </button>
             <div class="dropdown-menu adm-submenu">
                 <a class="dropdown-item adm-link" href="#">Fornecedor</a>
-                <a class="dropdown-item adm-link" href="#">Produto</a>
+                @Html.ActionLink("Categoria", "Create", "Cat_categorias", new { area = "" }, new { @class = "dropdown-item adm-link" })
+                @Html.ActionLink("Produto", "Create", "Pro_Produtos", new { area = ""}, new { @class = "dropdown-item adm-link" })
             </div>
         </div>
 
@@ -32,7 +33,7 @@
                 Produtos
             </button>
             <div class="dropdown-menu adm-submenu">
-                <a class="dropdown-item adm-link" href="#">Visualização de produtos</a>
+                @Html.ActionLink("Visualização de produtos", "Index", "Pro_produtos", new { area = "" }, new { @class = "dropdown-item adm-link" })
                 <a class="dropdown-item adm-link" href="#">Nível de Estoque</a>
             </div>
         </div>
