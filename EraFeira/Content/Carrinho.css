@@ -11,6 +11,12 @@ aside {
     margin-top: 200px;
 }
 
+.container{
+    border: 1px solid black;
+}
+.testandoo{
+   width: 80%;
+}
 .car-aside-text {
     font-family: 'Poppins';
     font-weight: 500;
