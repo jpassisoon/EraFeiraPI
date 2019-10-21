@@ -1,0 +1,81 @@
+﻿@model EraFeira.Models.End_endereco
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>End_endereco</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.End_cep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.End_cep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.End_logradouro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.End_logradouro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.End_numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.End_numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.End_bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.End_bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.End_complemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.End_complemento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.End_cidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.End_cidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.End_estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.End_estado)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

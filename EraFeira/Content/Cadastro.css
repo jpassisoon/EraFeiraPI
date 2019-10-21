@@ -1,0 +1,88 @@
+﻿* {
+    text-decoration: none;
+}
+
+/*body {
+    background-image: url('../Imagens/Imagemdesfocada.png');
+    background-size: cover;
+}*/
+
+/* layout1 */
+.cabecalho1 {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(255,255,255,0.0);
+}
+
+.rodape1 {
+    width: 100%;
+    height: 70px;
+    background-color: #212121;
+    bottom: 0px;
+    position: absolute;
+}
+
+/* Corpo do Cadastro */
+
+.form-cadastro{
+    width: 470px;
+    /*height: 475px;*/
+    background-color: rgb(253, 253, 253);
+    margin: 0 auto;
+    box-shadow: 1px 1px 10px 1px #EAEAEA;
+    border-radius: 3px;
+}
+
+.form-group {
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 13px;
+    
+}
+
+
+.inpu {
+    width: 250px;
+    height: 30px;
+    border: #EAEAEA;
+    background-color: #ffffff;
+    border: 1px solid #d6d6d6;
+    border-radius: 1px;
+}
+
+.h1-cadastro {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+    color: #F96714;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.label1 {
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.Cadastro {
+    width: 250px;
+    height: 33px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 13px;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    padding: 7px;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    transition: all .30s ease-in-out;
+}
+
+    .Cadastro:hover {
+        border-bottom: 2px solid rgb(248, 119, 44);
+        color: #ffffff;
+    }

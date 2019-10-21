@@ -1,0 +1,31 @@
+﻿@model EraFeira.ViewModels.EsqueceuSenhaViewModel
+@{
+    /**/
+
+    ViewBag.Title = "EsqueceuSenha";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+<link href="~/Content/EsqueceuSenha.css" rel="stylesheet" />
+@using (Html.BeginForm("EsqueceuSenha", "Usu_usuarios", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <br />
+    <section class="form-esqueceusenha">
+        <form class="form-block">
+            <h1 class="h1-esqueceusenha">Esqueceu sua senha?</h1>
+            <h2 class="h2-textoes">Por favor, digite seu e-mail para que uma nova senha lhe seja enviada.</h2>
+            @Html.ValidationSummary("", new { @class = "text-danger" })
+
+            <div>
+                @Html.LabelFor(m => m.Email, new { @class = "col-md-3 control-label label2" })
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control inpu-es test-es" })
+            </div>
+
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default Enviar" value="Enviar" />
+            </div>
+
+        </form>
+    </section>
+
+}

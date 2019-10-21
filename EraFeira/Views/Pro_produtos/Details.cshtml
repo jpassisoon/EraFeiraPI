@@ -1,0 +1,91 @@
+﻿@model EraFeira.Models.Pro_produto
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pro_produto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cat_Categoria.Cat_nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cat_Categoria.Cat_nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pro_nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pro_nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pro_descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pro_descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pro_valor_venda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pro_valor_venda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pro_data_chegada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pro_data_chegada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pro_data_vencimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pro_data_vencimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pro_desconto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pro_desconto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pro_quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pro_quantidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pro_foto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pro_foto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Pro_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

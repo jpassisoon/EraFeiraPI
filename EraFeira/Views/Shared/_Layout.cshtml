@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap" rel="stylesheet">
+    <link href="~/Content/Home.css" rel="stylesheet" />
+    <title>@ViewBag.Title - EraFeira</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="background-color: #FDFFEF;">
+
+    <header class="cabecalho">
+        @*<img class="logo" src="~/Imagens/EraFeira.png" />*@
+        @Html.ActionLink("EraFeira", "Index", "Home", new { area = "" }, new { @class = "navbar-brand logo" })
+        <div class="group-btns">
+            @if (HttpContext.Current.User.Identity.Name == "")
+            {
+                @Html.ActionLink("Entrar", "Login", "Home", new { area = "" }, new { @class = "btn-login" })
+                @Html.ActionLink("Cadastrar", "Create", "Usu_usuarios", new { area = "" }, new { @class = "btn-cadastrar" })
+            }
+            else
+            {
+                @*@Html.ActionLink("Sair", "Sair", "Home")*@
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle user" data-toggle="dropdown" id="dropef" role="button" aria-haspopup="true" aria-expanded="false">
+                        <font style="vertical-align: inherit;"><img src="~/Imagens/user.png" /></font>
+                    </a>
+
+                    <div class="dropdown-menu menu" aria-labelledby="dropef">
+                        @*@Html.ActionLink("Dados Pessoais", "Edit", new { id = Usu_id } ,new { @class = "dropdown-item link"})*@
+                        <a href="@Url.Action("Edit", "Usu_usuarios", new { id = @User.Identity.Name.Split('|')[1]})" class="dropdown-item link">Dados Pessoais</a>
+                        @Html.ActionLink("Endereços", "Create", "End_enderecos", new { area = "" }, new { @class = "dropdown-item link" })
+                        <a href="#" class="dropdown-item link">Pedidos</a>
+                        @Html.ActionLink("Sair", "Sair", "Home", new { area = "" }, new { @class = "dropdown-item link" })
+
+                    </div>
+                </div>
+            }
+        </div>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer class="footer bg-success rodape2">
+        <div class="rod">
+            <a class="sure" href="">Sobre nós</a>
+            <a class="sure" href="">Ideia</a>
+            <a class="not" href="">Contato</a>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/popper")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+
+    @if (TempData["MSG"] != null)
+    {
+        <script>
+        $(document).ready(function () {
+            var titulo = "";
+            switch ("@TempData["MSG"].ToString().Split('|')[0]") {
+                case "success": titulo = "SUCESSO";
+                    break;
+                case "warning": titulo = "ATENÇÃO";
+                    break;
+                case "error": titulo = "ERRO";
+                    break;
+                case "info": titulo = "INFORMAÇÃO";
+                    break;
+            }
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-bottom-right",
+                "preventDuplicates": true,
+                "onclick": null,
+                "showDuration": "6000",
+                "hideDuration": "6000",
+                "timeOut": "6000",
+                "extendedTimeOut": "6000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr["@TempData["MSG"].ToString().Split('|')[0]"]("@Html.Raw(TempData["MSG"].ToString().Split('|')[1])", titulo)
+        });
+        </script>
+    }
+
+</body>
+</html>

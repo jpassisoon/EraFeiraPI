@@ -1,0 +1,83 @@
+﻿@model IEnumerable<EraFeira.Models.Pro_produto>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cat_Categoria.Cat_nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pro_nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pro_descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pro_valor_venda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pro_data_chegada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pro_data_vencimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pro_desconto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pro_quantidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pro_foto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cat_Categoria.Cat_nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pro_nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pro_descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pro_valor_venda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pro_data_chegada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pro_data_vencimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pro_desconto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pro_quantidade)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Pro_foto)*@
+            <img src="~/Uploads/@item.Pro_foto" style="max-width:70px;" />
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Pro_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Pro_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Pro_id })
+        </td>
+    </tr>
+}
+
+</table>

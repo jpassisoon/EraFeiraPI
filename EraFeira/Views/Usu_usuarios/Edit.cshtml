@@ -1,0 +1,83 @@
+﻿@model EraFeira.Models.Usu_usuario
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/DadosPessoais.css" rel="stylesheet" />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal dp-bloco">
+        <h4 class="dp-titulo">Dados Pessoais</h4>
+        
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Usu_id)
+
+        <div class="container row">
+            <div class="col-md-6 dp-col">
+                @Html.LabelFor(model => model.Usu_nome, htmlAttributes: new { @class = "control-label " })
+                @Html.EditorFor(model => model.Usu_nome, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Usu_nome, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-6 dp-col">
+                @Html.LabelFor(model => model.Usu_sobrenome, htmlAttributes: new { @class = "control-label " })
+                @Html.EditorFor(model => model.Usu_sobrenome, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Usu_sobrenome, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-6 dp-col">
+                @Html.LabelFor(model => model.Usu_email, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Usu_email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Usu_email, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-6 dp-col">
+                @Html.LabelFor(model => model.Usu_senha, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Usu_senha, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Usu_senha, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-6 dp-col">
+                @Html.LabelFor(model => model.Usu_data_nascimento, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Usu_data_nascimento, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Usu_data_nascimento, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-6 dp-col">
+                @Html.LabelFor(model => model.Usu_Cpf, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Usu_Cpf, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Usu_Cpf, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-6 dp-col">
+                @Html.LabelFor(model => model.Usu_sexo, htmlAttributes: new { @class = "control-label " })
+                @Html.EnumDropDownListFor(model => model.Usu_sexo, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Usu_sexo, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-6 dp-col">
+                @Html.LabelFor(model => model.Usu_telefone, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Usu_telefone, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Usu_telefone, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-6 dp-col">
+                @Html.LabelFor(model => model.Usu_celular, htmlAttributes: new { @class = "control-label " })
+                @Html.EditorFor(model => model.Usu_celular, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Usu_celular, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Salvar" class="btn dp-salvar" />
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

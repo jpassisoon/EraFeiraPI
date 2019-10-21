@@ -1,0 +1,68 @@
+﻿.form-adm-cadastro {
+    width: 470px;
+    background-color: rgb(253, 253, 253);
+    box-shadow: 1px 1px 10px 1px #EAEAEA;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+.h1-cadastro-adm {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+    color: #F96714;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.label-adm {
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 5px;
+    
+}
+
+.inpu-adm {
+    width: 250px;
+    height: 30px;
+    border: #EAEAEA;
+    background-color: #ffffff;
+    border: 1px solid #d6d6d6;
+    border-radius: 1px;
+}
+
+.form-group {
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 13px;
+}
+
+.msg-val{
+    font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: 500;
+    color: #F96714;
+}
+
+.btn-cadastro-adm {
+    width: 250px;
+    height: 33px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 13px;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    padding: 7px;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    transition: all .30s ease-in-out;
+    
+}
+
+    .btn-cadastro-adm:hover {
+        border-bottom: 2px solid rgb(248, 119, 44);
+        color: #ffffff;
+    }
