@@ -55,14 +55,17 @@ namespace EraFeira.Controllers
         {
             if (ModelState.IsValid)
             {
-                //adm_Administrador.Senha = Criptografia.Encrypt(adm_Administrador.Senha);
-
+                //Adm_Administrador administrador = new Adm_Administrador();
+                //administrador.Nome = adm_Administrador.Nome;
+                //adm_Administrador.Email = adm_Administrador.Email;
+                //administrador.Senha = Criptografia.Encrypt(adm_Administrador.Senha);
                 db.Adm_Administrador.Add(adm_Administrador);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                TempData["MSG"] = "success|Cadastro realizado";
+                return RedirectToAction("Login","Home");
             }
 
-            TempData["MSG"] = "success|Cadastro realizado";
+            //TempData["MSG"] = "success|Cadastro realizado";
             return View(adm_Administrador);
         }
 

@@ -76,6 +76,7 @@ namespace EraFeira.Controllers
                     pro_produto.Pro_foto = "foto.png";
                     db.Pro_Produto.Add(pro_produto);
                     db.SaveChanges();
+                    TempData["MSG"] = "success|Cadastro realizado b";
                     return RedirectToAction("Index");
                 }
             }

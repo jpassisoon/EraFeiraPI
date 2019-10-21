@@ -429,7 +429,6 @@
     <Content Include="Scripts\tinymce\skins\ui\oxide-dark\fonts\tinymce-mobile.woff" />
     <Content Include="Scripts\tinymce\langs\readme.md" />
     <Content Include="Views\Usu_usuarios\EsqueceuSenha.cshtml" />
-    <Content Include="Views\Usu_usuarios\Dashboard.cshtml" />
     <Content Include="Views\End_enderecos\Create.cshtml" />
     <Content Include="Views\End_enderecos\Delete.cshtml" />
     <Content Include="Views\End_enderecos\Details.cshtml" />

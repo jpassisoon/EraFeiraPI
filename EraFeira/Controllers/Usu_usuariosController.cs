@@ -57,10 +57,11 @@ namespace EraFeira.Controllers
                 usuario.Usu_senha = Criptografia.Encrypt(cuvm.Senha);
                 db.Usu_Usuario.Add(usuario);
                 db.SaveChanges();
-                return RedirectToAction("Index","Home");
+                TempData["MSG"] = "success|Cadastro realizado";
+                return RedirectToAction("Login","Home");
                
             }
-            TempData["MSG"] = "success|Cadastro realizado";
+            TempData["MSG"] = "success|Cadastro ggg realizado";
             return View(cuvm);
         }
 
