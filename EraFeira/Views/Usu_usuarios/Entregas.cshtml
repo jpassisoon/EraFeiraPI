@@ -12,10 +12,10 @@
     </div>
 
     <div class="ent-entregas">
-        <input class="ent-entregas-button" type="submit" value="1">
-        <input class="ent-entregas-button" type="submit" value="2">
-        <input class="ent-entregas-button" type="submit" value="3">
-        <input class="ent-entregas-button" type="submit" value="4">
+        <input class="ent-entregas-button" type="submit" funcao="qtdEntregas" value="1">
+        <input class="ent-entregas-button" type="submit" funcao="qtdEntregas" value="2">
+        <input class="ent-entregas-button" type="submit" funcao="qtdEntregas" value="3">
+        <input class="ent-entregas-button" type="submit" funcao="qtdEntregas" value="4">
     </div>
 
     <div class="ent-titulos">
@@ -24,9 +24,9 @@
     </div>
 
     <div class="ent-entregas">
-        <button class="ent-entregas-button">7</button>
-        <input class="ent-entregas-button" type="submit" value="10">
-        <input class="ent-entregas-button" type="submit" value="13">
+        <input class="ent-entregas-button" type="submit" funcao="tempEntregas" value="7">
+        <input class="ent-entregas-button" type="submit" funcao="tempEntregas" value="10">
+        <input class="ent-entregas-button" type="submit" funcao="tempEntregas" value="13">
     </div>
 
     <div class="ent-titulos">
@@ -35,8 +35,8 @@
     </div>
 
     <div class="ent-entregas">
-        <input class="input-size" type="submit" value="Cesta iguais">
-        <input class="input-size" type="submit" value="Cestas diferentes">
+        <input class="input-size" type="submit" funcao="isCestasIguais" value="Cesta iguais">
+        <input class="input-size" type="submit" funcao="isCestasIguais" value="Cestas diferentes">
     </div>
 
     <div class="ent-next">
@@ -46,8 +46,52 @@
 
 
 </section>
-
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
 <script>
+
+    var qtdEntregas;
+    var tempEntregas;
+    var isCestasIguais;
+
+    $(".ent-entregas-button").click(function () {
+
+        if ($(this).attr("funcao") == "qtdEntregas") {
+
+            qtdEntregas = $(this).attr("value");
+
+
+        } else if ($(this).attr("funcao") == "tempEntregas") {
+            tempEntregas = $(this).attr("value");
+        }
+    });
+
+    $(".input-size").click(function () {
+        if ($(this).attr("funcao") == "isCestasIguais") {
+            var valor = $(this).attr("value");
+            if (valor == "Cesta iguais") {
+                isCestasIguais = true;
+            } else {
+                isCestasIguais = false;
+
+            }
+        }
+    });
+
+    $(".ent-next").click(function () {
+
+        var config = {
+            numEntregas: qtdEntregas,
+            tempEntregas: tempEntregas,
+            cestasIguais: isCestasIguais
+        }
+
+        document.cookie = "configCestas = " + JSON.stringify(config);
+    });
+
+
+
+
+
 
 
 </script>
