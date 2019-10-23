@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using EraFeira.Models;
+using EraFeira.ViewModels; // biblioteca importada para pegar os dados da pasta ViewModel
 
 namespace EraFeira.Controllers
 {
@@ -15,12 +16,14 @@ namespace EraFeira.Controllers
         private Contexto db = new Contexto();
 
         // GET: Adm_Administradores
+        [Authorize(Roles = "Adm")]
         public ActionResult Index()
         {
             return View(db.Adm_Administrador.ToList());
         }
 
         // GET: Adm_Administradores/Details/5
+        [Authorize(Roles = "Adm")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,6 +38,7 @@ namespace EraFeira.Controllers
             return View(adm_Administrador);
         }
 
+        [Authorize(Roles = "Adm")]
         public ActionResult DashboardAdministrador()
         {
             return View();
@@ -51,25 +55,25 @@ namespace EraFeira.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Nome,Email,Senha")] Adm_Administrador adm_Administrador)
+        public ActionResult Create([Bind(Include = "Id,Nome,Email,Senha")] CadastroAdministradorViewModel cavm)
         {
             if (ModelState.IsValid)
             {
-                //Adm_Administrador administrador = new Adm_Administrador();
-                //administrador.Nome = adm_Administrador.Nome;
-                //adm_Administrador.Email = adm_Administrador.Email;
-                //administrador.Senha = Criptografia.Encrypt(adm_Administrador.Senha);
-                db.Adm_Administrador.Add(adm_Administrador);
+                Adm_Administrador administrador = new Adm_Administrador();
+                administrador.Nome = cavm.Nome;
+                administrador.Email = cavm.Email;
+                administrador.Senha = Criptografia.Encrypt(cavm.Senha);
+                db.Adm_Administrador.Add(administrador);
                 db.SaveChanges();
                 TempData["MSG"] = "success|Cadastro realizado";
                 return RedirectToAction("Login","Home");
             }
 
-            //TempData["MSG"] = "success|Cadastro realizado";
-            return View(adm_Administrador);
+            return View(cavm);
         }
 
         // GET: Adm_Administradores/Edit/5
+        [Authorize(Roles = "Adm")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -87,6 +91,7 @@ namespace EraFeira.Controllers
         // POST: Adm_Administradores/Edit/5
         // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Adm")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Nome,Email,Senha")] Adm_Administrador adm_Administrador)
@@ -101,6 +106,7 @@ namespace EraFeira.Controllers
         }
 
         // GET: Adm_Administradores/Delete/5
+        [Authorize(Roles = "Adm")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -116,6 +122,7 @@ namespace EraFeira.Controllers
         }
 
         // POST: Adm_Administradores/Delete/5
+        [Authorize(Roles = "Adm")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

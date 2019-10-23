@@ -16,6 +16,7 @@ namespace EraFeira.Controllers
         private Contexto db = new Contexto();
 
         // GET: Pro_produtos
+        [Authorize(Roles = "Adm")]
         public ActionResult Index()
         {
             var pro_Produto = db.Pro_Produto.Include(p => p.Cat_Categoria);
@@ -23,6 +24,7 @@ namespace EraFeira.Controllers
         }
 
         // GET: Pro_produtos/Details/5
+        [Authorize(Roles = "Adm")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -38,6 +40,7 @@ namespace EraFeira.Controllers
         }
 
         // GET: Pro_produtos/Create
+        [Authorize(Roles = "Adm")]
         public ActionResult Create()
         {
             ViewBag.Cat_id = new SelectList(db.Cat_Categoria, "Cat_id", "Cat_nome");
@@ -47,6 +50,7 @@ namespace EraFeira.Controllers
         // POST: Pro_produtos/Create
         // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Adm")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Pro_id,Pro_nome,Pro_descricao,Pro_valor_venda,Pro_data_chegada,Pro_data_vencimento,Pro_desconto,Pro_quantidade,Cat_id")] Pro_produto pro_produto, HttpPostedFileBase arq)
@@ -86,6 +90,7 @@ namespace EraFeira.Controllers
         }
 
         // GET: Pro_produtos/Edit/5
+        [Authorize(Roles = "Adm")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -104,6 +109,7 @@ namespace EraFeira.Controllers
         // POST: Pro_produtos/Edit/5
         // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Adm")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Pro_id,Pro_nome,Pro_descricao,Pro_valor_venda,Pro_data_chegada,Pro_data_vencimento,Pro_desconto,Pro_quantidade,Pro_foto,Cat_id")] Pro_produto pro_produto, HttpPostedFileBase arq)
@@ -138,6 +144,7 @@ namespace EraFeira.Controllers
         }
 
         // GET: Pro_produtos/Delete/5
+        [Authorize(Roles = "Adm")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -153,6 +160,7 @@ namespace EraFeira.Controllers
         }
 
         // POST: Pro_produtos/Delete/5
+        [Authorize(Roles = "Adm")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

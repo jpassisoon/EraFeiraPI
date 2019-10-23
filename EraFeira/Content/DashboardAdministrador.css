@@ -5,12 +5,14 @@
 
 /*menu lateral*/
 .menu-lateral{
-    width: 300px;
+    width: 22%;
     height: 100%;
-    position: absolute;
+    position: fixed;
+    float: left;
     background-color: #262626;
     text-decoration: none;
-    margin-top: 0px !important;
+    margin: 0;
+    padding: 0;
 }
 
 /*titulo/logo - EraFeira*/
@@ -29,15 +31,16 @@
     color: #F96714;
 }
 
-.adm-menu{
+.adm-menu {
     font-family: 'Josefin Sans';
     font-size: 22px;
     font-weight: 700;
     background-color: #262626;
     border-color: #2E2E2E;
-    width: 300px;
+    width: 100%;
     color: #FFFFFF;
     box-shadow: none;
+    /*text-align: left;*/
 }
 
 .adm-menu:hover{
@@ -71,7 +74,8 @@
 
 /*conteúdo do body*/ 
 .corpo{
-    margin-left: 300px;
+    width: 78%;
+    float: right;
 }
 
 /*caixa*/

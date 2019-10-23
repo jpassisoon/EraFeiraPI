@@ -28,12 +28,12 @@ namespace EraFeira.Controllers
         {
             senha = Criptografia.Encrypt(senha);
             Usu_usuario usu = db.Usu_Usuario.Where(t => t.Usu_email == email && t.Usu_senha == senha).ToList().FirstOrDefault();
-            Adm_Administrador adm_Administrador = db.Adm_Administrador.Where(x => x.Email == email && x.Senha == senha).ToList().FirstOrDefault();
+            Adm_Administrador adm = db.Adm_Administrador.Where(x => x.Email == email && x.Senha == senha).ToList().FirstOrDefault();
 
             if (usu != null)
             {
                 TempData["MSG"] = "success|Login efetuado com sucesso";
-                string permissoes = "";
+                string permissoes = "Comum,";
                 if (permissoes.Length > 0)
                     permissoes = permissoes.Substring(0, permissoes.Length - 1); // o -1 é usado para tirar a vírgula
 
@@ -55,15 +55,15 @@ namespace EraFeira.Controllers
                         return RedirectToAction("Index");
                 }
             }
-            else if (adm_Administrador != null)
+            else if (adm != null)
             {
-                TempData["MSG"] = "info|Login efetuado com sucesso";
-                string permissoes = "";
+                TempData["MSG"] = "success|Login efetuado com sucesso";
+                string permissoes = "Adm,";
                 if (permissoes.Length > 0)
                     permissoes = permissoes.Substring(0, permissoes.Length - 1); // o -1 é usado para tirar a vírgula
 
-                FormsAuthentication.SetAuthCookie(adm_Administrador.Email, false);
-                FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(2, adm_Administrador.Email + "|" + adm_Administrador.Id, DateTime.Now, DateTime.Now.AddMinutes(30), false, permissoes);
+                FormsAuthentication.SetAuthCookie(adm.Email, false);
+                FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(1, adm.Email + "|" + adm.Id, DateTime.Now, DateTime.Now.AddMinutes(30), false, permissoes);
                 string hash = FormsAuthentication.Encrypt(ticket);
                 HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName, hash);
                 if (ticket.IsPersistent)

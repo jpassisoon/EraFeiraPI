@@ -16,6 +16,7 @@ namespace EraFeira.Controllers
         private Contexto db = new Contexto();
 
         // GET: Usu_usuarios
+        [Authorize(Roles = "Adm")]
         public ActionResult Index()
         {
             return View(db.Usu_Usuario.ToList());
@@ -61,14 +62,11 @@ namespace EraFeira.Controllers
                 return RedirectToAction("Login","Home");
                
             }
-            TempData["MSG"] = "success|Cadastro ggg realizado";
+            
             return View(cuvm);
         }
 
-        public ActionResult Dashboard()
-        {
-            return View();
-        }
+       
 
         public ActionResult EsqueceuSenha()
         {
@@ -100,32 +98,37 @@ namespace EraFeira.Controllers
             return View();
         }
 
-
+        [Authorize(Roles = "Comum")]
         public ActionResult ResumoCompletoPedido()
         {
             return View();
         }
 
+        [Authorize(Roles = "Comum")]
         public ActionResult Cidade()
         {
             return View();
         }
 
+        [Authorize(Roles = "Comum")]
         public ActionResult Entregas()
         {
             return View();
         }
         
+        [Authorize(Roles = "Comum")]
         public ActionResult AreaUsuario()
         {
             return View();
         }
 
+        [Authorize(Roles = "Comum")]
         public ActionResult Carrinho()
         {
             return View(db.Pro_Produto.ToList());
         }
 
+        [Authorize(Roles = "Comum")]
         // GET: Usu_usuarios/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -144,6 +147,7 @@ namespace EraFeira.Controllers
         // POST: Usu_usuarios/Edit/5
         // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Comum")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Usu_id,Usu_nome,Usu_sobrenome,Usu_email,Usu_senha,Usu_data_nascimento,Usu_Cpf,Usu_sexo,Usu_telefone,Usu_celular")] Usu_usuario usu_usuario)
@@ -158,6 +162,7 @@ namespace EraFeira.Controllers
         }
 
         // GET: Usu_usuarios/Delete/5
+        [Authorize(Roles = "Adm")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -173,6 +178,7 @@ namespace EraFeira.Controllers
         }
 
         // POST: Usu_usuarios/Delete/5
+        [Authorize(Roles = "Adm")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
