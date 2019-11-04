@@ -1,25 +1,30 @@
 ﻿
 @{
     ViewBag.Title = "Cidade";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
 }
 <link href="~/Content/Cidade.css" rel="stylesheet" />
 <section class="cid-bloco">
 
-    <div class="cid-titulos">
-        <h1 class="cid-h1"> De onde você é? </h1>
-        <h2 class="cid-h2"> Escolha uma das cidades Abaixo</h2>
+    <h1 class="cid-title-1"> Olá!, Por enquanto Era Feira so está disponível nas sequintes localidades </h1>
+
+    <div class="cid-block-center">
+        <div class="block-cidade-orange">
+            <h2 class="cid-title-2"> Guaratinguetá </h2>
+            <div class="cid-orange-line-1"></div>
+        </div>
+        <div class="block-cidade-orange">
+            <h3 class="cid-title-2"> Lorena </h3>
+            <div class="cid-orange-line-1"></div>
+        </div>
+
+        @Html.ActionLink("Desejo Continuar", "Entregas", "Usu_usuarios", new { area = "" }, new { @class = "cid-entregas" })
+
     </div>
 
-    <div class="cid-escolha">
-        <input class="cid-escolha-button" type="submit" value="Guaratinguetá">
-        <input class="cid-escolha-button" type="submit" value="Aparecida">
-        <input class="cid-escolha-button" type="submit" value="Lorena">
-    </div>
-
-    <div class="cid-bloco2">
-        <input class="cid-next btn" type="submit" value="Continuar">
-        <h3 class="cid-h3"> Logo estaremos em sua cidade!</h3>
+    <div class="cid-entenda-block">
+        <h4 class="cid-entenda-text"> Entenda o por quê </h4>
+        <div class="cid-orange-line-2"></div>
     </div>
 
 </section>

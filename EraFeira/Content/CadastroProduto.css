@@ -1,4 +1,95 @@
-﻿.cp-titulo {
+﻿/*página de cadastro de produtos*/
+.cp-titulo {
+    font-family: 'Josefin Sans';
+    font-size: 25px;
+    font-weight: 700;
+    color: #F96714;
+    padding-top: 50px;
+    margin-bottom: 40px;
+    margin-left: 195px;
+}
+
+.pro_form{
+    margin-left: 160px;
+}
+
+.pro_label {
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+    font-weight: 400;
+    color: #262626;
+    margin-top: 5px;
+}
+
+.pro_input{
+    border: 1px solid #262626;
+    border-radius: 0px;
+}
+
+.msg-val {
+    font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: 500;
+    color: #F96714;
+}
+
+.pro_cadastro {
+    width: 220px;
+    height: 35px;
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 17px;
+    background-color: #F96714;
+    color: #FFFFFF;
+    border-radius: 0px;
+    margin-top: 45px;
+    margin-bottom: 35px;
+    margin-left: 200px;
+    transition: all .30s ease-in-out;
+}
+
+.pro_cadastro:hover{
+    border-bottom: 3px solid #262626;
+    color: #FFFFFF;
+}
+
+/*página de visualização de produtos*/
+.pro_h2 {
+    font-family: 'Josefin Sans';
+    font-size: 25px;
+    font-weight: 700;
+    color: #F96714;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.btn-pro-edit {
+    width: 75px;
+    height: 30px;
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 15px;
+    background-color: #F96714;
+    color: #FFFFFF;
+    border-radius: 0px;
+    text-align: center;
+}
+
+.btn-pro-delet {
+    width: 75px;
+    height: 30px;
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 15px;
+    background-color: #F96714;
+    color: #FFFFFF;
+    border-radius: 0px;
+    margin-top: 5px;
+}
+
+/*página de editar*/
+.pro-edit-h2 {
     font-family: 'Josefin Sans';
     font-size: 25px;
     font-weight: 700;
@@ -6,4 +97,62 @@
     padding-top: 50px;
     margin-bottom: 40px;
     text-align: center;
+    margin-right: 50px;
 }
+
+/*página de editar*/
+.pro-h3 {
+    font-family: 'Josefin Sans';
+    font-size: 25px;
+    font-weight: 700;
+    color: #F96714;
+    padding-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-right: 50px;
+}
+
+.pro-delete {
+    font-family: 'Josefin Sans';
+    color: #262626;
+}
+
+.btn-deletar {
+    width: 180px;
+    height: 33px;
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 17px;
+    background-color: #F96714;
+    color: #FFFFFF;
+    border-radius: 0px;
+    margin-top: 45px;
+    margin-bottom: 35px;
+    margin-left: 20px;
+    transition: all .30s ease-in-out;
+}
+
+    .btn-deletar:hover {
+        border-bottom: 3px solid #262626;
+        color: #FFFFFF;
+    }
+
+.btn-voltar {
+    width: 180px;
+    height: 33px;
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 17px;
+    background-color: #F96714;
+    color: #FFFFFF;
+    border-radius: 0px;
+    margin-top: 45px;
+    margin-bottom: 35px;
+    margin-left: 50px;
+    transition: all .30s ease-in-out;
+}
+
+    .btn-voltar:hover {
+        border-bottom: 3px solid #262626;
+        color: #FFFFFF;
+    }

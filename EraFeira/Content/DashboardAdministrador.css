@@ -76,6 +76,7 @@
 .corpo{
     width: 78%;
     float: right;
+
 }
 
 /*caixa*/
@@ -84,11 +85,7 @@
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #262626;
-    margin-left: 80px;
-    
+    margin-top: 80px;
 }
 
 
@@ -97,21 +94,21 @@
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    width: 300px;
-    height: 200px;
-    margin-left: 470px;
-    border: 1px solid #262626;
-   margin-top: -50px;
-   padding-top: 15px;
+    margin-top: 80px;
+}
+
+
+.adm-espaco{
+    margin-left: 600px;
+    margin-top: 90px;
+    margin-bottom: 15px;
 }
 
 .circulo1{
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
     border: 1px solid #1D1C1C;
-    margin-left: 650px;
-    margin-top: 90px;
 }
 
 .adm-c1{
@@ -119,17 +116,14 @@
     font-weight: 600;
     font-size: 18px;
     color: #1D1C1C;
-    margin-left: 675px;
-    margin-top: -50px;
-    
 }
 
+
 .circulo2 {
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
     border: 1px solid #1D1C1C;
-    margin-left: 650px;
     background-color: green;
 }
 
@@ -137,17 +131,14 @@
     font-family: 'Poppins';
     font-weight: 600;
     font-size: 18px;
-    color: #1D1C1C;
-    margin-left: 675px;
-    margin-top: -50px;
+    color: #1D1C1C;    
 }
 
 .circulo3 {
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
     border: 1px solid #1D1C1C;
-    margin-left: 650px;
 }
 
 .adm-c3 {
@@ -155,7 +146,5 @@
     font-weight: 600;
     font-size: 18px;
     color: #1D1C1C;
-    margin-left: 675px;
-    margin-top: -50px;
 }
 

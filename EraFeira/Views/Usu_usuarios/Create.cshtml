@@ -20,7 +20,7 @@
 
             <div class="form-group">
                 @Html.LabelFor(model => model.Cpf, htmlAttributes: new { @class = "control-label label1" })
-                @Html.EditorFor(model => model.Cpf, new { htmlAttributes = new { @class = "form-control inpu" } })
+                @Html.EditorFor(model => model.Cpf, new { htmlAttributes = new { @class = "form-control inpu cpf" } })
                 @Html.ValidationMessageFor(model => model.Cpf, "", new { @class = "msg-val" })
             </div>
 

@@ -1,0 +1,54 @@
+﻿@model EraFeira.Models.For_fornecedor
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/Fornecedor.css" rel="stylesheet" />
+
+<h3 class="for-h3">Você tem certeza que deseja deletar esse fornecedor?</h3>
+<div class="text-center">    
+    <dl class="dl-horizontal for-delet">
+        <dt>
+            @Html.DisplayNameFor(model => model.End_Endereco.End_cep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.End_Endereco.End_cep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.For_nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.For_nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.For_telefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.For_telefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.For_documento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.For_documento)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions">
+        @Html.ActionLink("Voltar", "Index", new { }, new { @class = "btn btn-for-voltar" })
+        <input type="submit" value="Deletar" class="btn btn-for-deletar" />
+    </div>
+    }
+</div>

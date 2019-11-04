@@ -27,5 +27,8 @@ namespace EraFeira.Models
         public int Usu_id { get; set; }
         public virtual Usu_usuario Usu_Usuario { get; set; }
 
+        public int Ass_id { get; set; }
+        public virtual Ass_assinatura Ass_Assinatura { get; set; }
+
     }
 }

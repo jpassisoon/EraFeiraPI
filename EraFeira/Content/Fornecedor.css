@@ -1,0 +1,137 @@
+﻿.for-h1 {
+    font-family: 'Josefin Sans';
+    font-size: 25px;
+    font-weight: 700;
+    color: #F96714;
+    padding-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.for-form {
+    margin-left: 250px;
+}
+
+.for-label {
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+    font-weight: 400;
+    color: #262626;
+    margin-top: 5px;
+}
+
+.for-input {
+    border: 1px solid #262626;
+    border-radius: 0px;
+}
+
+.msg-val {
+    font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: 500;
+    color: #F96714;
+}
+
+.for-cadastro {
+    width: 220px;
+    height: 35px;
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 17px;
+    background-color: #F96714;
+    color: #FFFFFF;
+    border-radius: 0px;
+    margin-top: 45px;
+    margin-bottom: 35px;
+    margin-left: 180px;
+    transition: all .30s ease-in-out;
+}
+
+    .for-cadastro:hover {
+        border-bottom: 3px solid #262626;
+        color: #FFFFFF;
+    }
+
+
+    /*página index*/
+.btn-for-edit {
+    width: 80px;
+    height: 36px;
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 17px;
+    background-color: #F96714;
+    color: #FFFFFF;
+    border-radius: 0px;
+    text-align: center;
+}
+
+.btn-for-delet {
+    width: 80px;
+    height: 36px;
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 17px;
+    background-color: #F96714;
+    color: #FFFFFF;
+    border-radius: 0px;
+    text-align: center;
+}
+
+
+/*deletar*/
+.for-h3 {
+    font-family: 'Josefin Sans';
+    font-size: 25px;
+    font-weight: 700;
+    color: #F96714;
+    padding-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-right: 50px;
+}
+
+.for-delet {
+    font-family: 'Josefin Sans';
+    color: #262626;
+}
+
+.btn-for-voltar {
+    width: 180px;
+    height: 33px;
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 17px;
+    background-color: #F96714;
+    color: #FFFFFF;
+    border-radius: 0px;
+    margin-top: 45px;
+    margin-bottom: 35px;
+    margin-left: 50px;
+    transition: all .30s ease-in-out;
+}
+
+    .btn-for-voltar:hover {
+        border-bottom: 3px solid #262626;
+        color: #FFFFFF;
+    }
+
+.btn-for-deletar {
+    width: 180px;
+    height: 33px;
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 17px;
+    background-color: #F96714;
+    color: #FFFFFF;
+    border-radius: 0px;
+    margin-top: 45px;
+    margin-bottom: 35px;
+    margin-left: 20px;
+    transition: all .30s ease-in-out;
+}
+
+    .btn-for-deletar:hover {
+        border-bottom: 3px solid #262626;
+        color: #FFFFFF;
+    }

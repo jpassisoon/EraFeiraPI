@@ -9,7 +9,7 @@
             <div class="shadow-in">
                 <div class="slogan">
                     <p> Conheça o serviço de entrega<br> mais inovador dos ultimos tempos </p>
-                    <a class="Start-now" href="">Começe já</a>
+                    @Html.ActionLink("Comece já", "Create", "Usu_usuarios", new { area = "" }, new { @class = "Start-now" })
                 </div>
             </div>
         </div>
@@ -26,12 +26,12 @@
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="text-block">
                         <div class="top-orange-2"></div>
-                        <h2 class="title-h2">Você escolhe uma cesta </h2>
+                        <h2 class="title-h2">Você clica na cesta </h2>
                         <div class="bottom-orange-2"></div>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center">
-                    <img class="img-responsive" width="80%" src="~/Imagens/Erafeira-cesta.png" />
+                    <img class="img-responsive" width="60%" src="~/Imagens/Cesta-Unica.png" />
                 </div>
             </div>
 
@@ -68,7 +68,7 @@
         <div class="cover-2">
             <div class="footer-suporte">
                 <div class="text-block-cesta">
-                    <a class="monte-cesta-btn" href=""> Monte sua cesta! </a>
+                    @Html.ActionLink("Monte sua cesta!", "Create", "Usu_usuarios", new { area = "" }, new { @class = "monte-cesta-btn" })
                     <div class="white-underline"></div>
                 </div>
             </div>
