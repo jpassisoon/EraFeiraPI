@@ -1,6 +1,6 @@
 ﻿.ent-bloco {
     max-width: 900px;
-    height: 610px;
+    height: 550px;
     background-color: none;
     margin: 0 auto;
 }
@@ -32,7 +32,6 @@
 
 .ent-entregas-button {
     text-align: center;
-    border: 1px solid rgb(233, 233, 233);
     background-color: #FAFAFA;
     border-radius: 500px;
     width: 40px;
@@ -45,9 +44,6 @@
     margin-top: 10px;
 }
 
-    .ent-entregas-button:hover {
-        border: 1px solid #F96714;
-    }
 
 .input-size {
     text-align: center;
@@ -63,7 +59,7 @@
     /*cursor: pointer;*/
     margin-top: 10px;
 }
-
+ 
 .ent-next {
     max-width: 300px;
     margin-left: 120px;
@@ -76,7 +72,7 @@
     font-weight: 500;
     font-size: 20px;
     display: inline-block;
-    padding-top: 30px;
+    padding-top: 10px;
     transition: all .30s ease-in-out;
 }
 
@@ -85,8 +81,7 @@
         font-weight: 500;
         font-size: 20px;
         display: inline-block;
-        padding-top: 30px;
-        transform: scale(1.1);
+        padding-top: 15px;
         text-decoration: none;
     }
 

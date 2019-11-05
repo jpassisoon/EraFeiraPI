@@ -1,21 +1,38 @@
 ﻿
 @{
     ViewBag.Title = "Entregas";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
 }
-<link href="~/Content/Entregas.css" rel="stylesheet" />
+<link href="~/Content/EntregasNovo.css" rel="stylesheet" />
 <section class="ent-bloco">
 
     <div class="ent-titulos">
-        <h1 class="ent-h1"> Quantas Entregas? </h1>
+        <h1 class="ent-h1 "> Quantas Entregas? </h1>
         <h2 class="ent-h2"> Escolha apenas uma opção</h2>
     </div>
 
     <div class="ent-entregas">
-        <input class="ent-entregas-button" type="submit" funcao="qtdEntregas" value="1">
-        <input class="ent-entregas-button" type="submit" funcao="qtdEntregas" value="2">
-        <input class="ent-entregas-button" type="submit" funcao="qtdEntregas" value="3">
-        <input class="ent-entregas-button" type="submit" funcao="qtdEntregas" value="4">
+        <div style="display: inline-block">
+            <label>
+
+                <input type="radio" value="type" name="tipoCasa" class="card-input-element" />
+                <div class="card-input">
+                    <p class="btn-size">
+                        1
+                    </p>
+                </div>
+            </label>
+
+            <label>
+                <!--                                            v-on:click="typeChange()"-->
+                <input type="radio" value="type2" name="tipoCasa" class="card-input-element" />
+                <div class="card-input">
+                    <p class="btn-size">
+                        2
+                    </p>
+                </div>
+            </label>
+        </div>
     </div>
 
     <div class="ent-titulos">
@@ -24,9 +41,9 @@
     </div>
 
     <div class="ent-entregas">
-        <input class="ent-entregas-button" type="submit" funcao="tempEntregas" value="7">
-        <input class="ent-entregas-button" type="submit" funcao="tempEntregas" value="10">
-        <input class="ent-entregas-button" type="submit" funcao="tempEntregas" value="13">
+        <input  class="ent-entregas-button clicked" type="submit" funcao="tempEntregas" value="7">
+        <input  class="ent-entregas-button clicked" type="submit" funcao="tempEntregas" value="10">
+        <input  class="ent-entregas-button clicked" type="submit" funcao="tempEntregas" value="13">
     </div>
 
     <div class="ent-titulos">
@@ -35,18 +52,39 @@
     </div>
 
     <div class="ent-entregas">
-        <input class="input-size" type="submit" funcao="isCestasIguais" value="Cesta iguais">
-        <input class="input-size" type="submit" funcao="isCestasIguais" value="Cestas diferentes">
+        <input class="input-size clicked" type="submit" funcao="isCestasIguais" value="Cesta iguais">
+        <input class="input-size clicked" type="submit" funcao="isCestasIguais" value="Cestas diferentes">
     </div>
 
     <div class="ent-next">
-        <a class="ent-button" href=""> Comece a montar sua cesta!</a>
+        @Html.ActionLink("Comece a montar sua cesta!", "Carrinho", "Usu_usuarios", new { area = "" }, new { @class = "ent-button" })
         <div class="orange-line"></div>
     </div>
 
 
 </section>
 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+<script>
+
+
+    $("input[name='a']").change(function(){
+    alert($(this).val());
+});
+
+    
+
+   
+  
+
+    
+    //$(".clicked").click(function () {
+
+    //    $(this).toggleClass("active")
+    //})
+
+
+</script>
 <script>
 
     var qtdEntregas;
@@ -88,10 +126,9 @@
         document.cookie = "configCestas = " + JSON.stringify(config);
     });
 
+     // seleciona apenas um checkbox
 
-
-
-
+    
 
 
 </script>
