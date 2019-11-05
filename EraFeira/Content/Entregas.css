@@ -45,6 +45,13 @@
 }
 
 
+.ent-entregas-button.active {
+    
+    border:1px solid #F96714;
+   
+}
+    
+
 .input-size {
     text-align: center;
     border: 1px solid rgb(233, 233, 233);
@@ -59,7 +66,13 @@
     /*cursor: pointer;*/
     margin-top: 10px;
 }
+
  
+
+    .input-size.active {
+        border: 1px solid #F96714;
+    }
+
 .ent-next {
     max-width: 300px;
     margin-left: 120px;

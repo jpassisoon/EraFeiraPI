@@ -47,12 +47,12 @@
         @RenderBody()
     </div>
 
-    <footer class="footer bg-success rodape2">
-        <div class="rod">
+    <footer>
+       
             <a class="sure" href="">Sobre nós</a>
             <a class="sure" href="">Ideia</a>
             <a class="not" href="">Contato</a>
-        </div>
+     
     </footer>
 
     @Scripts.Render("~/bundles/jquery")
@@ -61,7 +61,14 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 
+    <script src="~/Scripts/jquery.mask.min.js"></script>
 
+    <script>
+        $(document).ready(function () {
+            $(".cpf").mask("999.999.999-99");
+        })
+
+    </script>
 
     @if (TempData["MSG"] != null)
     {

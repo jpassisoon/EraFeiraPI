@@ -33,8 +33,19 @@
     </footer>
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/popper")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <script src="~/Scripts/jquery.mask.min.js"></script>
+
+    <script>
+            $(document).ready(function () {
+                $(".cpf").mask("999.999.999-99");
+            })
+
+        </script>
 
     @if (TempData["MSG"] != null)
     {

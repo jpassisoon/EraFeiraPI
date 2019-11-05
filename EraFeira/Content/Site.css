@@ -105,22 +105,17 @@ body-content{
 
 /*rodapé*/
 
-.rodape1 {
+footer{
+    background-color: #212121;
     width: 100%;
     height: 70px;
-    background-color: #212121; 
-    margin-bottom: 0px;
-}
-
-.rodape2{
-    background-color: #212121 !important;
-    margin-bottom: 0px;
-}
-
-.rod {
-    padding: 20px;
     text-align: center;
-    top: 5px;
+
+    
+}
+.footer2{
+    position: absolute;
+    bottom: 0;
 }
 
 .sure {
@@ -142,6 +137,10 @@ body-content{
     padding-left: 20px;
     color: white;
     transition: all .30s ease-in-out;
+}
+.sure, .not{
+   position: relative;
+   top: 25px;
 }
 
     .not:hover {

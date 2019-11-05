@@ -15,5 +15,8 @@ namespace EraFeira.Models
         public DbSet<Cat_categoria> Cat_Categoria { get; set; }
         public DbSet<Pro_produto> Pro_Produto { get; set; }
         public DbSet<Img_imagem> Img_Imagem { get; set; }
+        public DbSet<Ass_assinatura> Ass_Assinatura { get; set; }
+        public DbSet<Ces_cesta> Ces_Cesta { get; set; }
+        public DbSet<For_fornecedor> For_Fornecedor { get; set; }
     }
 }

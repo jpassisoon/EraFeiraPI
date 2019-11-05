@@ -1,0 +1,58 @@
+﻿@model IEnumerable<EraFeira.Models.Ass_assinatura>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Usu_Usuario.Usu_nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ass_tempo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ass_descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ass_status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ass_tipo_cesta)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usu_Usuario.Usu_nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ass_tempo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ass_descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ass_status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ass_tipo_cesta)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Ass_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Ass_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Ass_id })
+        </td>
+    </tr>
+}
+
+</table>

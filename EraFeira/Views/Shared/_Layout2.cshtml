@@ -14,17 +14,20 @@
 
 </head>
 <body>
-
+    @if (HttpContext.Current.User.Identity.Name == "") { }
+    else
+    {
     <div class="menu-lateral">
+
         @Html.ActionLink("EraFeira", "Index", "Home", new { area = "" }, new { @class = "navbar-brand titulo-menu" })
         <div class="dropright">
             <button type="button" class="btn dropdown-toggle adm-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Cadastros
             </button>
             <div class="dropdown-menu adm-submenu">
-                <a class="dropdown-item adm-link" href="#">Fornecedor</a>
+                @Html.ActionLink("Fornecedor", "Create", "For_fornecedores", new { area = "" }, new { @class = "dropdown-item adm-link" })
                 @Html.ActionLink("Categoria", "Create", "Cat_categorias", new { area = "" }, new { @class = "dropdown-item adm-link" })
-                @Html.ActionLink("Produto", "Create", "Pro_Produtos", new { area = ""}, new { @class = "dropdown-item adm-link" })
+                @Html.ActionLink("Produto", "Create", "Pro_Produtos", new { area = "" }, new { @class = "dropdown-item adm-link" })
             </div>
         </div>
 
@@ -61,22 +64,32 @@
             </div>
         </div>
 
-        <a class="btn adm-menu" href="#">Sair</a>
+        @Html.ActionLink("Sair", "Sair", "Home", new { area = "" }, new { @class = "btn adm-menu" })
 
     </div>
+    }
+            <div class="corpo">
+                @RenderBody()
+            </div>
 
-    <div class="corpo">
-        @RenderBody()
-    </div>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryval")
-    @Scripts.Render("~/bundles/popper")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/jqueryval")
+            @Scripts.Render("~/bundles/popper")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
 
-    @if (TempData["MSG"] != null)
-    {
-        <script>
+            <script src="~/Scripts/jquery.mask.min.js"></script>
+
+            @*<script>
+                    $(document).ready(function () {
+                        $(".cpf").mask("999.999.999-99");
+                    })
+
+                </script>*@
+
+            @if (TempData["MSG"] != null)
+            {
+                <script>
         $(document).ready(function () {
             var titulo = "";
             switch ("@TempData["MSG"].ToString().Split('|')[0]") {
@@ -108,9 +121,9 @@
             }
             toastr["@TempData["MSG"].ToString().Split('|')[0]"]("@Html.Raw(TempData["MSG"].ToString().Split('|')[1])", titulo)
         });
-        </script>
-    }
+                </script>
+            }
 
 
-</body>
+        </body>
 </html>

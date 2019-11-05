@@ -1,14 +1,15 @@
 ﻿
 @{
     ViewBag.Title = "AreaUsuario";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
 }
 <link href="~/Content/AreaUsuario.css" rel="stylesheet" />
 <div class="as-bloco">
 
     <h1 class="as-h1">Vamos começar</h1>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 602.46 602.459">
+    <a href="@Url.Action("Cidade", "Usu_usuarios", new { id = "" })">
+       <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 602.46 602.459">
         <g transform="translate(3.5 3.5)" fill="none" stroke="#ff9124" stroke-width="7">
             <path data-name="Path 13" d="M313.132 287.463h-30.8a10.268 10.268 0 0 1-10.27-10.263V10.267A10.268 10.268 0 0 1 282.332 0h30.8a10.268 10.268 0 0 1 10.267 10.267V277.2a10.267 10.267 0 0 1-10.267 10.263z" />
             <path data-name="Path 14" d="M10.267 277.197l22.065 299.239a20.533 20.533 0 0 0 20.476 19.023H542.65a20.536 20.536 0 0 0 20.478-19.024l22.065-299.239H10.267zm92.4 277.2a10.267 10.267 0 1 1-20.534 0v-215.6a10.267 10.267 0 1 1 20.534 0zm51.333 0a10.267 10.267 0 1 1-20.534 0v-215.6a10.267 10.267 0 1 1 20.534 0zm51.333 0a10.267 10.267 0 1 1-20.534 0v-215.6a10.267 10.267 0 1 1 20.534 0zm51.333 0a10.267 10.267 0 1 1-20.534 0v-215.6a10.267 10.267 0 1 1 20.534 0zm51.333 0a10.267 10.267 0 1 1-20.534 0v-215.6a10.267 10.267 0 1 1 20.534 0zm51.333 0a10.267 10.267 0 1 1-20.534 0v-215.6a10.267 10.267 0 1 1 20.534 0zm51.332 0a10.267 10.267 0 1 1-20.534 0v-215.6a10.267 10.267 0 1 1 20.534 0zm51.333 0a10.267 10.267 0 1 1-20.534 0v-215.6a10.267 10.267 0 1 1 20.534 0zm51.333 0a10.267 10.267 0 1 1-20.534 0v-215.6a10.267 10.267 0 0 1 20.534 0z" />
@@ -17,7 +18,7 @@
             <circle data-name="Ellipse 89" cx="15.399" cy="15.399" r="15.399" transform="translate(282.33 241.264)" />
         </g>
     </svg>
-
+    </a>
     <div class="as-linha-laranja">
         <h2 class="as-h2"> Clique na cesta </h2>
         <div class="as-orange-line"></div>

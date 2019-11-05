@@ -10,8 +10,9 @@
         <h1 class="ent-h1 "> Quantas Entregas? </h1>
         <h2 class="ent-h2"> Escolha apenas uma opção</h2>
     </div>
-
+    
     <div class="ent-entregas">
+
         <div style="display: inline-block">
             <label>
 
@@ -33,6 +34,12 @@
                 </div>
             </label>
         </div>
+
+        <input  class="ent-entregas-button clicked" type="submit" funcao="qtdEntregas" value="1">
+        <input  class="ent-entregas-button clicked" type="submit" funcao="qtdEntregas" value="2">
+        <input class="ent-entregas-button  clicked" type="submit" funcao="qtdEntregas" value="3">
+        <input  class="ent-entregas-button clicked" type="submit" funcao="qtdEntregas" value="4">
+
     </div>
 
     <div class="ent-titulos">
@@ -66,8 +73,6 @@
 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
 
 <script>
-
-
     $("input[name='a']").change(function(){
     alert($(this).val());
 });
@@ -83,6 +88,8 @@
     //    $(this).toggleClass("active")
     //})
 
+
+    $(".clicked").click(function() {$(this).toggleClass("active")})
 
 </script>
 <script>

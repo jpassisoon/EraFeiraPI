@@ -15,14 +15,14 @@ namespace EraFeira.Controllers
         private Contexto db = new Contexto();
 
         // GET: Cat_categorias
-        [Authorize(Roles = "Adm")]
+        //[Authorize(Roles = "Adm")]
         public ActionResult Index()
         {
             return View(db.Cat_Categoria.ToList());
         }
 
         // GET: Cat_categorias/Details/5
-        [Authorize(Roles = "Adm")]
+        //[Authorize(Roles = "Adm")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -38,7 +38,7 @@ namespace EraFeira.Controllers
         }
 
         // GET: Cat_categorias/Create
-        [Authorize(Roles = "Adm")]
+        //[Authorize(Roles = "Adm")]
         public ActionResult Create()
         {
             return View();
@@ -47,7 +47,7 @@ namespace EraFeira.Controllers
         // POST: Cat_categorias/Create
         // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize(Roles = "Adm")]
+        //[Authorize(Roles = "Adm")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Cat_id,Cat_nome,Cat_descricao,Cat_status")] Cat_categoria cat_categoria)
@@ -56,6 +56,7 @@ namespace EraFeira.Controllers
             {
                 db.Cat_Categoria.Add(cat_categoria);
                 db.SaveChanges();
+                TempData["MSG"] = "success|Cadastro realizado";
                 return RedirectToAction("Index");
             }
 
@@ -63,7 +64,7 @@ namespace EraFeira.Controllers
         }
 
         // GET: Cat_categorias/Edit/5
-        [Authorize(Roles = "Adm")]
+        //[Authorize(Roles = "Adm")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -81,7 +82,7 @@ namespace EraFeira.Controllers
         // POST: Cat_categorias/Edit/5
         // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize(Roles = "Adm")]
+        //[Authorize(Roles = "Adm")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Cat_id,Cat_nome,Cat_descricao,Cat_status")] Cat_categoria cat_categoria)
@@ -96,7 +97,7 @@ namespace EraFeira.Controllers
         }
 
         // GET: Cat_categorias/Delete/5
-        [Authorize(Roles = "Adm")]
+        //[Authorize(Roles = "Adm")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -112,7 +113,7 @@ namespace EraFeira.Controllers
         }
 
         // POST: Cat_categorias/Delete/5
-        [Authorize(Roles = "Adm")]
+        //[Authorize(Roles = "Adm")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

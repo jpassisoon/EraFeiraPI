@@ -1,0 +1,55 @@
+﻿@model IEnumerable<EraFeira.Models.For_fornecedor>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<link href="~/Content/Fornecedor.css" rel="stylesheet" />
+<h1 class="for-h1">Index</h1>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table table-hover">
+    <thead>
+        <tr class="text-center">
+            <th>
+                @Html.DisplayNameFor(model => model.End_Endereco.End_cep)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.For_nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.For_telefone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.For_documento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr class="text-center">
+            <td>
+                @Html.DisplayFor(modelItem => item.End_Endereco.End_cep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.For_nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.For_telefone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.For_documento)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.For_id }, new { @class = "btn btn-for-edit" }) 
+                @*@Html.ActionLink("Details", "Details", new { id = item.For_id }) |*@
+                @Html.ActionLink("Delete", "Delete", new { id = item.For_id }, new { @class = "btn btn-for-delet" })
+            </td>
+        </tr>
+    }
+
+</table>

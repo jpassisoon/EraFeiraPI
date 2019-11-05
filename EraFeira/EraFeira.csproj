@@ -141,8 +141,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\Adm_AdministradoresController.cs" />
+    <Compile Include="Controllers\Ass_assinaturasController.cs" />
     <Compile Include="Controllers\Cat_categoriasController.cs" />
+    <Compile Include="Controllers\Ces_cestasController.cs" />
     <Compile Include="Controllers\End_enderecosController.cs" />
+    <Compile Include="Controllers\For_fornecedoresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Img_imagemsController.cs" />
     <Compile Include="Controllers\Pro_produtosController.cs" />
@@ -156,6 +159,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Adm_Administrador.cs" />
+    <Compile Include="Models\Ass_assinatura.cs" />
     <Compile Include="Models\Cat_categoria.cs" />
     <Compile Include="Models\Ces_cesta.cs" />
     <Compile Include="Models\Contexto.cs" />
@@ -168,6 +172,9 @@
     <Compile Include="Models\Pxf_produto_fornecedor.cs" />
     <Compile Include="Models\Upload.cs" />
     <Compile Include="Models\Usu_usuario.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\CadastroAdministradorViewModel.cs" />
     <Compile Include="ViewModels\CadastroViewModel.cs" />
@@ -175,6 +182,83 @@
     <Compile Include="ViewModels\EsqueceuSenhaViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\EraFeira.dll" />
+    <Content Include="bin\EraFeira.pdb" />
+    <Content Include="bin\Microsoft.AspNet.TelemetryCorrelation.dll" />
+    <Content Include="bin\Microsoft.AspNet.TelemetryCorrelation.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\MySql.Data.Entity.EF6.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\pt-br\System.Web.Helpers.resources.dll" />
+    <Content Include="bin\pt-br\System.Web.Mvc.resources.dll" />
+    <Content Include="bin\pt-br\System.Web.Optimization.resources.dll" />
+    <Content Include="bin\pt-br\System.Web.Razor.resources.dll" />
+    <Content Include="bin\pt-br\System.Web.WebPages.Deployment.resources.dll" />
+    <Content Include="bin\pt-br\System.Web.WebPages.Razor.resources.dll" />
+    <Content Include="bin\pt-br\System.Web.WebPages.resources.dll" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\System.Diagnostics.DiagnosticSource.xml" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.xml" />
+    <Content Include="bin\WebGrease.dll" />
     <Content Include="Content\AreaUsuario.css" />
     <Content Include="Content\AutenticacaoAdministrador.css" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -186,17 +270,20 @@
     <Content Include="Content\Cadastro.css" />
     <Content Include="Content\CadastroProduto.css" />
     <Content Include="Content\Carrinho.css" />
+    <Content Include="Content\Categoria.css" />
     <Content Include="Content\Cidade.css" />
     <Content Include="Content\DadosPessoais.css" />
     <Content Include="Content\DashboardAdministrador.css" />
     <Content Include="Content\Endereco.css" />
     <Content Include="Content\Entregas.css" />
     <Content Include="Content\EsqueceuSenha.css" />
+    <Content Include="Content\Fornecedor.css" />
     <Content Include="Content\Home.css" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\ResumoCompletoPedido.css" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
+    <Content Include="Cssfix\CidadeFix.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -237,10 +324,14 @@
     <Content Include="Imagens\SalsinhaOutlined.png" />
     <Content Include="Imagens\tomate.png" />
     <Content Include="Imagens\user.png" />
+    <Content Include="obj\Debug\EraFeira.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\EraFeira.dll" />
+    <Content Include="obj\Debug\EraFeira.pdb" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Carrinho.js" />
     <Content Include="Scripts\Cpf.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
@@ -262,12 +353,31 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\EraFeira.csproj.CopyComplete" />
+    <Content Include="obj\Debug\EraFeira.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\EraFeira.csproj.GenerateResource.cache" />
+    <Content Include="obj\Debug\EraFeira.csprojAssemblyReference.cache" />
+    <Content Include="obj\Debug\Tsc.out" />
+    <Content Include="bin\EraFeira.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.mask.js" />
+    <Content Include="Scripts\jquery.mask.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -477,9 +587,26 @@
     <Content Include="Views\Usu_usuarios\Entregas.cshtml" />
     <Content Include="Views\Usu_usuarios\AreaUsuario.cshtml" />
     <Content Include="Views\Usu_usuarios\Carrinho.cshtml" />
+    <Content Include="Views\Shared\_Layout3.cshtml" />
+    <Content Include="Views\For_fornecedores\Create.cshtml" />
+    <Content Include="Views\For_fornecedores\Delete.cshtml" />
+    <Content Include="Views\For_fornecedores\Details.cshtml" />
+    <Content Include="Views\For_fornecedores\Edit.cshtml" />
+    <Content Include="Views\For_fornecedores\Index.cshtml" />
+    <Content Include="Views\Ces_cestas\Create.cshtml" />
+    <Content Include="Views\Ces_cestas\Delete.cshtml" />
+    <Content Include="Views\Ces_cestas\Details.cshtml" />
+    <Content Include="Views\Ces_cestas\Edit.cshtml" />
+    <Content Include="Views\Ces_cestas\Index.cshtml" />
+    <Content Include="Views\Ass_assinaturas\Create.cshtml" />
+    <Content Include="Views\Ass_assinaturas\Delete.cshtml" />
+    <Content Include="Views\Ass_assinaturas\Details.cshtml" />
+    <Content Include="Views\Ass_assinaturas\Edit.cshtml" />
+    <Content Include="Views\Ass_assinaturas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
@@ -497,6 +624,7 @@
     <EmbeddedResource Include="Migrations\201910110103350_Versao2.resx">
       <DependentUpon>201910110103350_Versao2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\EraFeira.Migrations.Versao2.resources" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

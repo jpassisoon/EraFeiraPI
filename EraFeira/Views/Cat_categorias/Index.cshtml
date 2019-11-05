@@ -4,28 +4,29 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
+<link href="~/Content/Categoria.css" rel="stylesheet" />
+<h1 class="cat-h1">Index</h1>
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Cat_nome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Cat_descricao)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Cat_status)
-        </th>
-        <th></th>
-    </tr>
-
+@*<p>
+    @Html.ActionLink("Cadastrar nova categoria", "Create")
+</p>*@
+<table class="table table-hover">
+    <thead>
+        <tr class="text-center">
+            <th>
+                @Html.DisplayNameFor(model => model.Cat_nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cat_descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cat_status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
 @foreach (var item in Model) {
-    <tr>
+    <tr class="text-center">
         <td>
             @Html.DisplayFor(modelItem => item.Cat_nome)
         </td>
@@ -36,9 +37,9 @@
             @Html.DisplayFor(modelItem => item.Cat_status)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Cat_id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Cat_id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Cat_id })
+            @Html.ActionLink("Edit", "Edit", new { id=item.Cat_id }, new { @class = "btn btn-cat-edit" }) 
+            @*@Html.ActionLink("Details", "Details", new { id=item.Cat_id }) |*@
+            @Html.ActionLink("Delete", "Delete", new { id=item.Cat_id }, new { @class = "btn btn-cat-delet" })
         </td>
     </tr>
 }

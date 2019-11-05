@@ -4,51 +4,44 @@
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
-
-<h2>Create</h2>
+<link href="~/Content/Categoria.css" rel="stylesheet" />
+<h1 class="cat-h1">Cadastro de Categoria</h1>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        <h4>Cat_categoria</h4>
-        <hr />
+    <div class="form-horizontal cat-form">
+        
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.Cat_nome, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Cat_nome, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Cat_nome, "", new { @class = "text-danger" })
+            @Html.LabelFor(model => model.Cat_nome, htmlAttributes: new { @class = "control-label col-md-6 cat-label" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Cat_nome, new { htmlAttributes = new { @class = "form-control cat-input" } })
+                @Html.ValidationMessageFor(model => model.Cat_nome, "", new { @class = "msg-val" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Cat_descricao, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Cat_descricao, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Cat_descricao, "", new { @class = "text-danger" })
+            @Html.LabelFor(model => model.Cat_descricao, htmlAttributes: new { @class = "control-label col-md-6 cat-label" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Cat_descricao, new { htmlAttributes = new { @class = "form-control cat-input" } })
+                @Html.ValidationMessageFor(model => model.Cat_descricao, "", new { @class = "msg-val" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Cat_status, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.Cat_status, htmlAttributes: new { @class = "control-label col-md-6 cat-label" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.Cat_status)
-                    @Html.ValidationMessageFor(model => model.Cat_status, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(model => model.Cat_status, "", new { @class = "msg-val" })
                 </div>
             </div>
         </div>
 
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
+                <input type="submit" value="Cadastrar" class="btn cat-cadastro" />
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
