@@ -4,6 +4,7 @@
     Layout = "~/Views/Shared/_Layout3.cshtml";
 }
 <link href="~/Content/EntregasNovo.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
 <section class="ent-bloco">
 
     <div class="ent-titulos">
@@ -16,7 +17,7 @@
         <div style="display: inline-block">
             <label>
 
-                <input type="radio" value="type" name="tipoCasa" class="card-input-element" />
+                <input type="radio" value="1" name="QtdEntregas" funcao="qtdEntregas" class="card-input-element" />
                 <div class="card-input">
                     <p class="btn-size">
                         1
@@ -26,19 +27,33 @@
 
             <label>
                 <!--                                            v-on:click="typeChange()"-->
-                <input type="radio" value="type2" name="tipoCasa" class="card-input-element" />
-                <div class="card-input">
+                <input type="radio" value="2" name="QtdEntregas" funcao="qtdEntregas" class="card-input-element" />
+                <div class="card-input exc"">
                     <p class="btn-size">
                         2
                     </p>
                 </div>
             </label>
+            <label>
+                <!--                                            v-on:click="typeChange()"-->
+                <input type="radio" value="3" name="QtdEntregas" funcao="qtdEntregas" class="card-input-element exc" />
+                <div class="card-input exc"">
+                    <p class="btn-size">
+                        3
+                    </p>
+                </div>
+            </label>
+            <label>
+                <!--                                            v-on:click="typeChange()"-->
+                <input type="radio" value="4" name="QtdEntregas" funcao="qtdEntregas" class="card-input-element exc" />
+                <div class="card-input exc"">
+                    <p class="btn-size">
+                        4
+                    </p>
+                </div>
+            </label>
         </div>
 
-        <input  class="ent-entregas-button clicked" type="submit" funcao="qtdEntregas" value="1">
-        <input  class="ent-entregas-button clicked" type="submit" funcao="qtdEntregas" value="2">
-        <input class="ent-entregas-button  clicked" type="submit" funcao="qtdEntregas" value="3">
-        <input  class="ent-entregas-button clicked" type="submit" funcao="qtdEntregas" value="4">
 
     </div>
 
@@ -48,9 +63,37 @@
     </div>
 
     <div class="ent-entregas">
-        <input  class="ent-entregas-button clicked" type="submit" funcao="tempEntregas" value="7">
-        <input  class="ent-entregas-button clicked" type="submit" funcao="tempEntregas" value="10">
-        <input  class="ent-entregas-button clicked" type="submit" funcao="tempEntregas" value="13">
+        <div style="display: inline-block">
+            <label>
+
+                <input type="radio" value="7" name="TempEntregas" funcao="tempEntregas" class="card-input-element" />
+                <div class="card-input">
+                    <p class="btn-size">
+                        7
+                    </p>
+                </div>
+            </label>
+
+            <label>
+                <!--                                            v-on:click="typeChange()"-->
+                <input type="radio" value="10" name="TempEntregas" funcao="tempEntregas" class="card-input-element" />
+                <div class="card-input exc">
+                    <p class="btn-size">
+                        10
+                    </p>
+                </div>
+            </label>
+            <label>
+                <!--                                            v-on:click="typeChange()"-->
+                <input type="radio" value="13" name="TempEntregas" funcao="tempEntregas" class="card-input-element" />
+                <div class="card-input exc">
+                    <p class="btn-size">
+                        13
+                    </p>
+                </div>
+            </label>
+      
+        </div>
     </div>
 
     <div class="ent-titulos">
@@ -59,8 +102,29 @@
     </div>
 
     <div class="ent-entregas">
-        <input class="input-size clicked" type="submit" funcao="isCestasIguais" value="Cesta iguais">
-        <input class="input-size clicked" type="submit" funcao="isCestasIguais" value="Cestas diferentes">
+        <div style="display: inline-block">
+            <label>
+
+                <input type="radio" value="CestasIguais" name="3" funcao="isCestasIguais" class="card-input-element" />
+                <div class="card-input sizingbox">
+                    <p class="btn-size sizingbox-text">
+                       Cestas Iguais
+                    </p>
+                </div>
+            </label>
+
+            <label>
+                <!--                                            v-on:click="typeChange()"-->
+                <input type="radio" value="CestasDiferentes" name="3" funcao="isCestasIguais" class="card-input-element" />
+                <div class="card-input exc sizingbox">
+                    <p class="btn-size sizingbox-text">
+                       Cestas Diferentes
+                    </p>
+                </div>
+            </label>
+        
+
+        </div>
     </div>
 
     <div class="ent-next">
@@ -70,9 +134,9 @@
 
 
 </section>
-<script src="~/Scripts/jquery-3.3.1.min.js"></script>
 
-<script>
+
+@*<script>
     $("input[name='a']").change(function(){
     alert($(this).val());
 });
@@ -91,15 +155,16 @@
 
     $(".clicked").click(function() {$(this).toggleClass("active")})
 
-</script>
+</script>*@
 <script>
 
     var qtdEntregas;
     var tempEntregas;
     var isCestasIguais;
 
-    $(".ent-entregas-button").click(function () {
+    $(".card-input-element").click(function () {
 
+       
         if ($(this).attr("funcao") == "qtdEntregas") {
 
             qtdEntregas = $(this).attr("value");
@@ -110,10 +175,10 @@
         }
     });
 
-    $(".input-size").click(function () {
+    $(".card-input-element").click(function () {
         if ($(this).attr("funcao") == "isCestasIguais") {
             var valor = $(this).attr("value");
-            if (valor == "Cesta iguais") {
+            if (valor == "CestasIguais") {
                 isCestasIguais = true;
             } else {
                 isCestasIguais = false;

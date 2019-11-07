@@ -41,7 +41,8 @@
                             </button>
                         </div>
 
-                        <input class="col-md-2 car-quantidade" id="input_@produto.Pro_id"  produtoID="h_@produto.Pro_id" value="0" />
+
+                        <input  class="col-md-2 car-quantidade" id="input_@produto.Pro_id"  produtoID="h_@produto.Pro_id" value="0" />
 
                         <div class=" col-md-2">
                             <button @*class="btn btn-hook-0"*@ class="btn btn-mais" produtoID="@produto.Pro_id" tipo="mais">
@@ -56,6 +57,8 @@
         </div>
     </div>
 
+    <button class="btn btn-next btn-cadastrar" > Salvar </button>
+
 </div>
 
 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
@@ -63,8 +66,10 @@
 <script>
     var cesta = [];
 
-    document.cookie = "ItensCesta = " + JSON.stringify(cesta);
+    
 
+    var idProduto;
+    var quantidade;
     //var cestaCookie = JSON.parse(getCookie("ItensCesta"));
     //var idDoProduto = $(this).attr("produtoID");
     //var posDoObj = cestaCookie.findIndex(x => x.produtoID == idDoProduto)
@@ -79,12 +84,14 @@
             if ($.isNumeric(now)) {
                 if (parseInt(now) - 1 >= 0) { now--; }
                 $(id).val(now);
-               
+                
                 soma();
             } else {
                 $(id).val("0");
             }
         })
+
+        // Calcula o valor da cesta
         $(".btn-mais").on("click", function () {
             var id = "#input_" + $(this).attr("produtoID");
             var idH = "#h_" + $(this).attr("produtoID");
@@ -101,6 +108,7 @@
             }
         });
 
+        // funcao para calcular o carrinho
         function soma() {
             var valor = parseFloat(0);
             $(".car-quantidade").each(function () {
@@ -108,12 +116,34 @@
                 var preco = parseFloat($(pro).attr("valor").replace(',','.'));
              
                 valor = valor + parseFloat(($(this).val() * preco));
-            
+                
                 //alert(pro + " - " + preco + " - " + valor);
             });
             $(".carrinho").text(valor.toFixed(2));
         }
 
+        // identificar a quantidade e o id dos produtos > 0
+        // Varrer os elementos input
+        // Verificar se os inputs possuem um value maior > 0
+        // adicionar o id do produto + o valor dentro do cookie
+        var i = 0;
+        $(".btn-next").click(function(){
+
+            var dados = []
+            
+            $(".car-quantidade").each(function () {
+                if (!isNaN(this.value)) {
+                        
+                    dados[i] = this.id + "Quantidade = " + this.value
+                    i++
+                        
+                
+                };
+               
+            })
+             document.cookie = "CarrinhoCookie = " + JSON.stringify(dados);
+           
+        });
         // document.cookie = "ItensCesta = " + JSON.stringify(cestaCookie);
     })
 </script>
