@@ -32,7 +32,6 @@
 
 .ent-entregas-button {
     text-align: center;
-    border: 1px solid rgb(233, 233, 233);
     background-color: #FAFAFA;
     border-radius: 500px;
     width: 40px;
@@ -45,14 +44,13 @@
     margin-top: 10px;
 }
 
- 
+
 .ent-entregas-button.active {
     
     border:1px solid #F96714;
    
 }
     
-
 
 .input-size {
     text-align: center;
@@ -68,6 +66,9 @@
     /*cursor: pointer;*/
     margin-top: 10px;
 }
+
+ 
+
     .input-size.active {
         border: 1px solid #F96714;
     }
@@ -105,3 +106,146 @@
     margin: 0 auto;
     margin-top: 5px;
 }
+
+.card-input-element {
+    display: none;
+}
+
+.holder_buttons {
+    border-top: 1px solid #dddddd;
+    background-color: white;
+    height: 60px;
+    padding: 12px;
+    text-align: center;
+    bottom: 0;
+    z-index: 99999;
+}
+
+.card-input {
+    padding: 0;
+    color: rgba(19, 44, 51, 0.79) !important;
+    font-size: 16px;
+    height: 50px;
+    font-family: "Arial";
+    line-height: 16px;
+    font-size: 18px !important;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 50px;
+    width: 50px;
+    text-align: center;
+    //border-top: 6px solid transparent;
+    h1
+
+{
+    margin-top: 3px !important;
+}
+
+//border-radius: 3px;
+transition: background-color 0.3s ease-in-out, border-top 0.1s ease-in-out;
+}
+
+.card-input:hover {
+    cursor: pointer;
+    //background: #06E089;
+    //border-top: #06E089 6px solid;
+    transition: background-color 0.3s ease-in-out, border-top 0.1s ease-in-out;
+}
+
+.card-input-element:checked + .card-input {
+    //border: 6px solid #5f60e9;
+    //border-radius: 0px;
+    background: #f96714;
+    transition: background-color 0.3s ease-in-out, border-top 0.1s ease-in-out;
+    color: white !important;
+    h1
+
+{
+    color: #06e089;
+}
+
+p {
+    font-weight: bold;
+}
+
+&:hover {
+    //border-top: #464692 6px solid;
+}
+
+&::after {
+    content: "\f14a";
+    font-size: 25px;
+    position: absolute;
+    z-index: 9999;
+    color: #06e089;
+    right: 20px;
+    font-family: Ionicons;
+    top: 0;
+    display: block;
+    //background: url("icon.jpg") no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 6px 0 0;
+}
+
+}
+
+//other checkboxes
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+    [type="radio"]:checked + label,
+    [type="radio"]:not(:checked) + label {
+        position: relative;
+        padding-left: 28px;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 20px;
+        display: inline-block;
+        color: #0e2126;
+    }
+
+        [type="radio"]:checked + label:before,
+        [type="radio"]:not(:checked) + label:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #ddd;
+            border-radius: 100%;
+            background: #fff;
+        }
+
+        [type="radio"]:checked + label:after,
+        [type="radio"]:not(:checked) + label:after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: #06e089;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            border-radius: 100%;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+
+        [type="radio"]:not(:checked) + label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+
+        [type="radio"]:checked + label:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
