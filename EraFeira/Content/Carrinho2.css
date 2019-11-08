@@ -1,6 +1,5 @@
 ﻿.car-section {
     max-width: 900px;
-    
     margin: 0 auto;
     margin-bottom: 200px;
 }
@@ -12,12 +11,13 @@ aside {
     margin-top: 200px;
 }
 
-.container{
-   
+.container {
 }
-.testandoo{
-   width: 80%;
+
+.testandoo {
+    width: 80%;
 }
+
 .car-aside-text {
     font-family: 'Poppins';
     font-weight: 500;
@@ -61,7 +61,7 @@ aside {
     text-align: center;
 }
 
-.car-diferente{
+.car-diferente {
     font-family: 'Poppins';
     font-size: 30px;
     font-weight: 600;
@@ -92,9 +92,11 @@ aside {
     justify-content: center;
     align-items: center;
 }
-.size-img{
+
+.size-img {
     width: 80%;
 }
+
 .car-h2 {
     font-family: 'Poppins';
     padding-top: 18px;
@@ -125,11 +127,12 @@ aside {
     width: 20px;
     display: inline-block;
     outline: none;
-    
 }
-.spacing{
+
+.spacing {
     margin-bottom: 40px;
 }
+
 .car-quantidade {
     font-family: 'Poppins';
     font-size: 19px;
@@ -137,4 +140,6 @@ aside {
     /*margin-top: 1px;*/
     padding: 5px;
     text-align: center;
+}
+body {
 }
