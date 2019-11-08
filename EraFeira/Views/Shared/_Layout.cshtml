@@ -48,11 +48,11 @@
     </div>
 
     <footer>
-       
-            <a class="sure" href="">Sobre nós</a>
-            <a class="sure" href="">Ideia</a>
-            <a class="not" href="">Contato</a>
-     
+
+        <a class="sure" href="">Sobre nós</a>
+        <a class="sure" href="">Ideia</a>
+        <a class="not" href="">Contato</a>
+
     </footer>
 
     @Scripts.Render("~/bundles/jquery")
@@ -67,6 +67,42 @@
         $(document).ready(function () {
             $(".cpf").mask("999.999.999-99");
         })
+
+    </script>
+
+
+    <script src="~/Scripts/globalize.js"></script>
+    <script src="~/Scripts/globalize.culture.pt-BR.js"></script>
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script>
+
+        $.validator.methods.number = function (value, element) {
+            var val = Globalize.parseFloat(value);
+            return this.optional(element) ||
+                (val);
+        }
+
+        $.validator.methods.date = function (value, element) {
+            var val = Globalize.parseDate(value);
+            return this.optional(element) ||
+                (val);
+        }
+
+        $(function () {
+
+            Globalize.culture('pt-BR');
+
+            jQuery.extend(jQuery.validator.methods, {
+                range: function (value, element, param) {
+                    //Use the Globalization plugin to parse the value
+                    var val = Globalize.parseFloat(value);
+                    return this.optional(element) || (
+                        val >= param[0] && val <= param[1]);
+                }
+            });
+
+        });
 
     </script>
 

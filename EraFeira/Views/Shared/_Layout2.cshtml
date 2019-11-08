@@ -17,79 +17,116 @@
     @if (HttpContext.Current.User.Identity.Name == "") { }
     else
     {
-    <div class="menu-lateral">
+        <div class="menu-lateral">
 
-        @Html.ActionLink("EraFeira", "Index", "Home", new { area = "" }, new { @class = "navbar-brand titulo-menu" })
-        <div class="dropright">
-            <button type="button" class="btn dropdown-toggle adm-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Cadastros
-            </button>
-            <div class="dropdown-menu adm-submenu">
-                @Html.ActionLink("Fornecedor", "Create", "For_fornecedores", new { area = "" }, new { @class = "dropdown-item adm-link" })
-                @Html.ActionLink("Categoria", "Create", "Cat_categorias", new { area = "" }, new { @class = "dropdown-item adm-link" })
-                @Html.ActionLink("Produto", "Create", "Pro_Produtos", new { area = "" }, new { @class = "dropdown-item adm-link" })
+            @Html.ActionLink("EraFeira", "Index", "Home", new { area = "" }, new { @class = "navbar-brand titulo-menu" })
+            <div class="dropright">
+                <button type="button" class="btn dropdown-toggle adm-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cadastros
+                </button>
+                <div class="dropdown-menu adm-submenu">
+                    @Html.ActionLink("Fornecedor", "Create", "For_fornecedores", new { area = "" }, new { @class = "dropdown-item adm-link" })
+                    @Html.ActionLink("Categoria", "Create", "Cat_categorias", new { area = "" }, new { @class = "dropdown-item adm-link" })
+                    @Html.ActionLink("Produto", "Create", "Pro_Produtos", new { area = "" }, new { @class = "dropdown-item adm-link" })
+                </div>
             </div>
-        </div>
 
-        <div class="dropright">
-            <button type="button" class="btn dropdown-toggle adm-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Produtos
-            </button>
-            <div class="dropdown-menu adm-submenu">
-                @Html.ActionLink("Visualização de produtos", "Index", "Pro_produtos", new { area = "" }, new { @class = "dropdown-item adm-link" })
-                <a class="dropdown-item adm-link" href="#">Nível de Estoque</a>
+            <div class="dropright">
+                <button type="button" class="btn dropdown-toggle adm-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Produtos
+                </button>
+                <div class="dropdown-menu adm-submenu">
+                    @Html.ActionLink("Visualização de produtos", "Index", "Pro_produtos", new { area = "" }, new { @class = "dropdown-item adm-link" })
+                    <a class="dropdown-item adm-link" href="#">Nível de Estoque</a>
+                </div>
             </div>
-        </div>
 
-        <div class="dropright">
-            <button type="button" class="btn dropdown-toggle adm-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Movimentações
-            </button>
-            <div class="dropdown-menu adm-submenu">
-                <a class="dropdown-item adm-link" href="#">Entradas/Saídas</a>
-                <a class="dropdown-item adm-link" href="#">Gastos</a>
+            <div class="dropright">
+                <button type="button" class="btn dropdown-toggle adm-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Movimentações
+                </button>
+                <div class="dropdown-menu adm-submenu">
+                    <a class="dropdown-item adm-link" href="#">Entradas/Saídas</a>
+                    <a class="dropdown-item adm-link" href="#">Gastos</a>
+                </div>
             </div>
-        </div>
 
-        <a class="btn adm-menu" href="#">Pedidos</a>
+            <a class="btn adm-menu" href="#">Pedidos</a>
 
-        <div class="dropright">
-            <button type="button" class="btn dropdown-toggle adm-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Relatórios
-            </button>
-            <div class="dropdown-menu adm-submenu">
-                <a class="dropdown-item adm-link" href="#">Relatório de produtos</a>
-                <a class="dropdown-item adm-link" href="#">Relatório de movimentações</a>
-                <a class="dropdown-item adm-link" href="#">Relatório de vendas</a>
+            <div class="dropright">
+                <button type="button" class="btn dropdown-toggle adm-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Relatórios
+                </button>
+                <div class="dropdown-menu adm-submenu">
+                    <a class="dropdown-item adm-link" href="#">Relatório de produtos</a>
+                    <a class="dropdown-item adm-link" href="#">Relatório de movimentações</a>
+                    <a class="dropdown-item adm-link" href="#">Relatório de vendas</a>
+                </div>
             </div>
+
+            @Html.ActionLink("Sair", "Sair", "Home", new { area = "" }, new { @class = "btn adm-menu" })
+
         </div>
-
-        @Html.ActionLink("Sair", "Sair", "Home", new { area = "" }, new { @class = "btn adm-menu" })
-
-    </div>
     }
-            <div class="corpo">
-                @RenderBody()
-            </div>
+    <div class="corpo">
+        @RenderBody()
+    </div>
 
-            @Scripts.Render("~/bundles/jquery")
-            @Scripts.Render("~/bundles/jqueryval")
-            @Scripts.Render("~/bundles/popper")
-            @Scripts.Render("~/bundles/bootstrap")
-            @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/popper")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 
-            <script src="~/Scripts/jquery.mask.min.js"></script>
+    <script src="~/Scripts/jquery.mask.min.js"></script>
 
-            @*<script>
-                    $(document).ready(function () {
-                        $(".cpf").mask("999.999.999-99");
-                    })
+    @*<script>
+            $(document).ready(function () {
+                $(".cpf").mask("999.999.999-99");
+            })
 
-                </script>*@
+        </script>*@
 
-            @if (TempData["MSG"] != null)
-            {
-                <script>
+    <script src="~/Scripts/globalize.js"></script>
+    <script src="~/Scripts/globalize.culture.pt-BR.js"></script>
+
+    <script>
+
+        $.validator.methods.number = function (value, element) {
+            var val = Globalize.parseFloat(value);
+            return this.optional(element) ||
+                (val);
+        }
+
+        $.validator.methods.date = function (value, element) {
+            var val = Globalize.parseDate(value);
+            return this.optional(element) ||
+                (val);
+        }
+
+        $(function () {
+
+            Globalize.culture('pt-BR');
+
+            jQuery.extend(jQuery.validator.methods, {
+                range: function (value, element, param) {
+                    //Use the Globalization plugin to parse the value
+                    var val = Globalize.parseFloat(value);
+                    return this.optional(element) || (
+                        val >= param[0] && val <= param[1]);
+                }
+            });
+
+        });
+
+    </script>
+
+
+
+
+    @if (TempData["MSG"] != null)
+    {
+        <script>
         $(document).ready(function () {
             var titulo = "";
             switch ("@TempData["MSG"].ToString().Split('|')[0]") {
@@ -121,9 +158,9 @@
             }
             toastr["@TempData["MSG"].ToString().Split('|')[0]"]("@Html.Raw(TempData["MSG"].ToString().Split('|')[1])", titulo)
         });
-                </script>
-            }
+        </script>
+    }
 
 
-        </body>
+</body>
 </html>
