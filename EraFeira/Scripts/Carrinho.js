@@ -1,4 +1,8 @@
-﻿//$(document).ready(function () {
+﻿//var cesta = [];
+//var idProduto;
+//var quantidade;
+
+//$(document).ready(function () {
 
 //    //-- Clique para adicionar ou retirar
 //    $(".btn-menos").on("click", function () {
@@ -14,10 +18,11 @@
 //            $(id).val("0");
 //        }
 //    })
+
+//    // Calcula o valor da cesta
 //    $(".btn-mais").on("click", function () {
 //        var id = "#input_" + $(this).attr("produtoID");
 //        var idH = "#h_" + $(this).attr("produtoID");
-
 //        //alert(id);
 //        //alert($(idH).attr("valor"));
 //        var now = $(id).val();
@@ -30,6 +35,7 @@
 //        }
 //    });
 
+//    // funcao para calcular o carrinho
 //    function soma() {
 //        var valor = parseFloat(0);
 //        $(".car-quantidade").each(function () {
@@ -43,5 +49,25 @@
 //        $(".carrinho").text(valor.toFixed(2));
 //    }
 
-//    // document.cookie = "ItensCesta = " + JSON.stringify(cestaCookie);
+//    // identificar a quantidade e o id dos produtos > 0
+//    // Varrer os elementos input
+//    // Verificar se os inputs possuem um value maior > 0
+//    // adicionar o id do produto + o valor dentro do cookie
+//    var i = 0;
+//    $(".btn-next").click(function () {
+
+//        var dados = []
+
+//        $(".car-quantidade").each(function () {
+//            if (!isNaN(this.value)) {
+
+//                dados[i] = this.id + "Quantidade = " + this.value
+//                i++
+
+//            };
+
+//        })
+//        document.cookie = "CarrinhoCookie = " + JSON.stringify(dados);
+
+//    });
 //})
