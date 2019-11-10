@@ -11,6 +11,9 @@
     margin-top: 50px;
 }
 
+
+
+
 .ent-h1 {
     font-family: 'Poppins';
     font-weight: 600;
@@ -45,12 +48,10 @@
 }
 
 
-.ent-entregas-button.active {
-    
-    border:1px solid #F96714;
-   
-}
-    
+    .ent-entregas-button.active {
+        border: 1px solid #F96714;
+    }
+
 
 .input-size {
     text-align: center;
@@ -67,7 +68,6 @@
     margin-top: 10px;
 }
 
- 
 
     .input-size.active {
         border: 1px solid #F96714;
@@ -125,55 +125,46 @@
     padding: 0;
     color: rgba(19, 44, 51, 0.79) !important;
     font-size: 16px;
-    height: 50px;
-    font-family: "Arial";
+    height: 40px;
     line-height: 16px;
     font-size: 18px !important;
-    border: 1px solid rgba(0, 0, 0, 0.16);
+    border: 1px solid #8a8a8a;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 50px;
-    width: 50px;
+    width: 40px;
     text-align: center;
-    //border-top: 6px solid transparent;
-    h1
-
-{
-    margin-top: 3px !important;
+    
 }
-
-//border-radius: 3px;
-transition: background-color 0.3s ease-in-out, border-top 0.1s ease-in-out;
+.exc{
+    margin-left: 5px;
 }
-
-.card-input:hover {
+.sizingbox{
+    width: 150px;
+    height: 30px;
+}
+.sizingbox-text{
+    margin-top: 6px !important;
+}
+.btn-size{
+    font-size: 13px;
+    margin-top: 12px;
+    color: black;
+}
+.card-input:hover{
     cursor: pointer;
-    //background: #06E089;
-    //border-top: #06E089 6px solid;
+    
     transition: background-color 0.3s ease-in-out, border-top 0.1s ease-in-out;
 }
 
 .card-input-element:checked + .card-input {
-    //border: 6px solid #5f60e9;
-    //border-radius: 0px;
-    background: #f96714;
+    border: 1px solid #f96714;
     transition: background-color 0.3s ease-in-out, border-top 0.1s ease-in-out;
     color: white !important;
-    h1
-
-{
-    color: #06e089;
 }
 
-p {
-    font-weight: bold;
-}
 
-&:hover {
-    //border-top: #464692 6px solid;
-}
-
-&::after {
+/*&::after {
     content: "\f14a";
     font-size: 25px;
     position: absolute;
@@ -188,19 +179,18 @@ p {
     height: 20px;
     float: left;
     margin: 0 6px 0 0;
-}
+}*/
 
-}
 
-//other checkboxes
 
-[type="radio"]:checked,
+
+/*[type="radio"]:checked,
 [type="radio"]:not(:checked) {
     position: absolute;
     left: -9999px;
-}
+}*/
 
-    [type="radio"]:checked + label,
+    /*[type="radio"]:checked + label,
     [type="radio"]:not(:checked) + label {
         position: relative;
         padding-left: 28px;
@@ -209,9 +199,9 @@ p {
         line-height: 20px;
         display: inline-block;
         color: #0e2126;
-    }
+    }*/
 
-        [type="radio"]:checked + label:before,
+        /*[type="radio"]:checked + label:before,
         [type="radio"]:not(:checked) + label:before {
             content: "";
             position: absolute;
@@ -222,9 +212,9 @@ p {
             border: 1px solid #ddd;
             border-radius: 100%;
             background: #fff;
-        }
+        }*/
 
-        [type="radio"]:checked + label:after,
+        /*[type="radio"]:checked + label:after,
         [type="radio"]:not(:checked) + label:after {
             content: "";
             width: 12px;
@@ -236,16 +226,16 @@ p {
             border-radius: 100%;
             -webkit-transition: all 0.2s ease;
             transition: all 0.2s ease;
-        }
+        }*/
 
-        [type="radio"]:not(:checked) + label:after {
+        /*[type="radio"]:not(:checked) + label:after {
             opacity: 0;
             -webkit-transform: scale(0);
             transform: scale(0);
-        }
+        }*/
 
-        [type="radio"]:checked + label:after {
+        /*[type="radio"]:checked + label:after {
             opacity: 1;
             -webkit-transform: scale(1);
             transform: scale(1);
-        }
+        }*/
