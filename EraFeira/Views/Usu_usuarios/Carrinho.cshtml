@@ -27,38 +27,38 @@
         <div class="row justify-content-md-center">
             @foreach (var produto in Model)
             {
-            <div class="col col-lg-4 spacing">
-                <div class="bloco-imagem-cinza">
-                    <img class="img-fluid size-img" src="~/Uploads/@produto.Pro_foto" />
-                </div>
-                <h2 class="car-h2"> @produto.Pro_descricao</h2>
-                <h2 class="car-preco">R$ @produto.Pro_valor_venda</h2>
+                <div class="col col-lg-4 spacing">
+                    <div class="bloco-imagem-cinza">
+                        <img class="img-fluid size-img" src="~/Uploads/@produto.Pro_foto" />
+                    </div>
+                    <h2 class="car-h2"> @produto.Pro_descricao</h2>
+                    <h2 class="car-preco">R$ @produto.Pro_valor_venda</h2>
 
-                <div class="row car-setas ">
-                    <div class="col-md-3 offset-2">
-                        <input type="hidden" id="h_@produto.Pro_id" valor="@produto.Pro_valor_venda" value="@produto.Pro_valor_venda" />
-                        <button @*class="btn btn-hook-0"*@ class="btn btn-menos" tipo="menos" produtoID="@produto.Pro_id">
-                            <img class="car-seta-tamanho" src="~/Imagens/esquerda.png" @*produtoID = produto.Pro_id*@ />
-                        </button>
+                    <div class="row car-setas ">
+                        <div class="col-md-3 offset-2">
+                            <input type="hidden" id="h_@produto.Pro_id" valor="@produto.Pro_valor_venda" value="@produto.Pro_valor_venda" />
+                            <button @*class="btn btn-hook-0"*@ class="btn btn-menos" tipo="menos" produtoID="@produto.Pro_id">
+                                <img class="car-seta-tamanho" src="~/Imagens/esquerda.png" @*produtoID = produto.Pro_id*@ />
+                            </button>
+                        </div>
+
+
+                        <input class="col-md-2 car-quantidade" id="input_@produto.Pro_id" produtoID="h_@produto.Pro_id" value="0" />
+
+                        <div class=" col-md-2">
+                            <button @*class="btn btn-hook-0"*@ class="btn btn-mais" produtoID="@produto.Pro_id" tipo="mais">
+                                <img class="car-seta-tamanho" src="~/Imagens/direita.png" @*produtoID = produto.Pro_id*@ />
+                            </button>
+                        </div>
                     </div>
 
-
-                    <input class="col-md-2 car-quantidade" id="input_@produto.Pro_id" produtoID="h_@produto.Pro_id" value="0" />
-
-                    <div class=" col-md-2">
-                        <button @*class="btn btn-hook-0"*@ class="btn btn-mais" produtoID="@produto.Pro_id" tipo="mais">
-                            <img class="car-seta-tamanho" src="~/Imagens/direita.png" @*produtoID = produto.Pro_id*@ />
-                        </button>
-                    </div>
                 </div>
-
-            </div>
 
             }
         </div>
     </div>
 
-    <button class="btn btn-next btn-cadastrar" > Salvar </button>
+    <button class="btn btn-next btn-cadastrar"> Salvar </button>
 
 </div>
 
@@ -71,6 +71,10 @@
 
     $(document).ready(function () {
 
+       
+
+
+
         //-- Clique para adicionar ou retirar
         $(".btn-menos").on("click", function () {
             var id = "#input_" + $(this).attr("produtoID");
@@ -79,7 +83,7 @@
             if ($.isNumeric(now)) {
                 if (parseInt(now) - 1 >= 0) { now--; }
                 $(id).val(now);
-                
+
                 soma();
             } else {
                 $(id).val("0");
@@ -90,7 +94,7 @@
         $(".btn-mais").on("click", function () {
             var id = "#input_" + $(this).attr("produtoID");
             var idH = "#h_" + $(this).attr("produtoID");
-         
+
             //alert(id);
             //alert($(idH).attr("valor"));
             var now = $(id).val();
@@ -107,11 +111,11 @@
         function soma() {
             var valor = parseFloat(0);
             $(".car-quantidade").each(function () {
-                var pro = "#"+$(this).attr("produtoID");
-                var preco = parseFloat($(pro).attr("valor").replace(',','.'));
-             
+                var pro = "#" + $(this).attr("produtoID");
+                var preco = parseFloat($(pro).attr("valor").replace(',', '.'));
+
                 valor = valor + parseFloat(($(this).val() * preco));
-                
+
                 //alert(pro + " - " + preco + " - " + valor);
             });
             $(".carrinho").text(valor.toFixed(2));
@@ -121,23 +125,55 @@
         // Varrer os elementos input
         // Verificar se os inputs possuem um value maior > 0
         // adicionar o id do produto + o valor dentro do cookie
-        var i = 0;
-        $(".btn-next").click(function(){
-
+        
+        
+        $(".btn-next").click(function () {
             var dados = []
+            var i = 0;
             
+
             $(".car-quantidade").each(function () {
-                if (!isNaN(this.value)) {
-                        
-                    dados[i] = this.id + "Quantidade = " + this.value
+                if (this.value != null) {
+
+                    dados[i] = this.value;
                     i++
 
                 };
-               
+
             })
-             document.cookie = "CarrinhoCookie = " + JSON.stringify(dados);
-           
+            document.cookie = "CarrinhoCookie = " + JSON.stringify(dados);
+            
+
         });
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+
+         if (getCookie("CarrinhoCookie") != null) {
+            var cookie = getCookie("CarrinhoCookie");
+            var oi = JSON.parse(cookie);
+            var i = 0;
+ 
+            $(".car-quantidade").each(function () {
+                this.value = oi[i];
+                i++;
+            })
+
+        }
+        
         // document.cookie = "ItensCesta = " + JSON.stringify(cestaCookie);
     })
 </script>
