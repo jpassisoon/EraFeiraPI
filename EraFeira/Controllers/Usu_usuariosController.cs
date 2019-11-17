@@ -54,7 +54,8 @@ namespace EraFeira.Controllers
             {
                 Usu_usuario usuario = new Usu_usuario();
                 usuario.Usu_email = cuvm.Email;
-                usuario.Usu_Cpf = cuvm.Cpf;
+                //usuario.Usu_Cpf = cuvm.Cpf;
+                usuario.Usu_Cpf = Cpf.validaCPF(cuvm.Cpf);
                 usuario.Usu_senha = Criptografia.Encrypt(cuvm.Senha);
                 db.Usu_Usuario.Add(usuario);
                 db.SaveChanges();
