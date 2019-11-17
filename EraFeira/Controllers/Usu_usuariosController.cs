@@ -127,6 +127,18 @@ namespace EraFeira.Controllers
         {
             return View(db.Pro_Produto.ToList());
         }
+        public ActionResult Carrinho2()
+        {
+            return View(db.Pro_Produto.ToList());
+        }
+        public ActionResult Carrinho3()
+        {
+            return View(db.Pro_Produto.ToList());
+        }
+        public ActionResult Carrinho4()
+        {
+            return View(db.Pro_Produto.ToList());
+        }
 
         //[Authorize(Roles = "Comum")]
         // GET: Usu_usuarios/Edit/5

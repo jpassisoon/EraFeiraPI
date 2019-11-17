@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<EraFeira.Models.Pro_produto>
+
 @{
-    ViewBag.Title = "Carrinho";
+    ViewBag.Title = "carrinho3";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -62,25 +63,26 @@
 
         <div class="row pers">
 
-            <div class="col-md-4 ">
-
+            <div class="col-md-4">
+                @Html.ActionLink("Cesta Anterior", "Carrinho2", "Usu_usuarios", new { area = "" }, new { @class = "btn-return-bask" })
             </div>
             <div class="col-md-4">
-                <h3 class="bask-num"> Cesta <br /><span class="page-num">1</span> </h3>
+                <h3 class="bask-num"> Cesta <br /><span class="page-num">3</span> </h3>
             </div>
             <div class="col-md-4">
-                @Html.ActionLink("Próxima Cesta", "Carrinho2", "Usu_usuarios", new { area = "" }, new { @class = "btn-next-bask" })
+                @Html.ActionLink("Próxima Cesta", "Carrinho4", "Usu_usuarios", new { area = "" }, new { @class = "btn-next-bask" })
                 @Html.ActionLink("Finalizar", "Carrinho3", "Usu_usuarios", new { area = "" }, new { @class = "btn-next-bask-fim" })
+
             </div>
         </div>
-        
 
-        
-       
+
+
+
     </div>
-       
 
-   
+
+
 
 </div>
 
@@ -93,33 +95,29 @@
 
     $(document).ready(function () {
 
-       // verificar se essa é a ultima pagina para mudar de proximo para finalizar
+        // verificar se essa é a ultima pagina para mudar de proximo para finalizar
 
-            if (getCookie("configCestas") != null) {
-                var test = getCookie("configCestas")
-                var cookie = JSON.stringify(test);
-                var verify = cookie.indexOf("false")
+        if (getCookie("configCestas") != null) {
+            var test = getCookie("configCestas")
+            var cookie = JSON.stringify(test);
+            var verify = cookie.indexOf("false")
 
-                if (verify > 0) {
+            if (verify > 0) {
+                var num = cookie.replace(/(^.+\D)(\d+)(\D.+$)/i, '$1');
+                num = num.replace(/(^.+\D)(\d+)(\D.+$)/i, '$2');
+                var pagenum = $(".page-num").text()
+                if (pagenum == num) {
 
-                    var num = cookie.replace(/(^.+\D)(\d+)(\D.+$)/i, '$1');
-                    num = num.replace(/(^.+\D)(\d+)(\D.+$)/i, '$2');
-
-                    var pagenum = $(".page-num").text()
-
-                    if (pagenum == num) {
-
-                        $(".btn-next-bask").hide()
-                        $(".btn-next-bask-fim").show()
-
-
-                    }
-
-                } else {
                     $(".btn-next-bask").hide()
                     $(".btn-next-bask-fim").show()
-                } 
+
+
+                }
+
             }
+        }
+
+
 
 
         //-- Clique para adicionar ou retirar
@@ -172,12 +170,12 @@
         // Varrer os elementos input
         // Verificar se os inputs possuem um value maior > 0
         // adicionar o id do produto + o valor dentro do cookie
-        
-        
+
+
         $(".btn-next-bask, .btn-next-bask-fim").click(function () {
             var dados = []
             var i = 0;
-            
+
 
             $(".car-quantidade").each(function () {
                 if (this.value != null) {
@@ -188,8 +186,8 @@
                 };
 
             })
-            document.cookie = "CarrinhoCookie1 = " + JSON.stringify(dados);
-            
+            document.cookie = "CarrinhoCookie3 = " + JSON.stringify(dados);
+
 
         });
 
@@ -209,11 +207,11 @@
         }
 
 
-         if (getCookie("CarrinhoCookie1") != null) {
-            var cookie = getCookie("CarrinhoCookie1");
+        if (getCookie("CarrinhoCookie3") != null) {
+            var cookie = getCookie("CarrinhoCookie3");
             var oi = JSON.parse(cookie);
             var i = 0;
- 
+
             $(".car-quantidade").each(function () {
                 this.value = oi[i];
                 i++;
@@ -223,12 +221,13 @@
 
         // puxar quantidade de entregas
 
-        
-       
-        
 
-        
+
+
+
+
         // document.cookie = "ItensCesta = " + JSON.stringify(cestaCookie);
     })
 </script>
+
 

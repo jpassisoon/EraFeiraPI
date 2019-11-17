@@ -12,6 +12,7 @@ aside {
 }
 
 .container {
+   
 }
 
 .testandoo {
@@ -142,4 +143,83 @@ aside {
     text-align: center;
 }
 body {
+}
+#bot{
+    max-width: 900px;
+    height: 300px;
+    
+
+}
+.btn-next-bask {
+    margin-right: 50px;
+    border-radius: 30px;
+    padding: 10px;
+    color: white;
+    background: #FF9124;
+    position: relative;
+    top: 10px;
+    left: 75px;
+    text-decoration: none;
+    transition: all .30s ease-in-out;
+}
+.btn-return-bask {
+    margin-right: 50px;
+    border-radius: 30px;
+    padding: 10px;
+    color: white;
+    background: #FF9124;
+    position: relative;
+    top: 10px;
+    left: 75px;
+    text-decoration: none;
+    transition: all .30s ease-in-out;
+}
+    .btn-return-bask:hover {
+        color: white;
+        cursor: pointer;
+        background-color: #ff7f00;
+        text-decoration: none;
+    }
+    .btn-next-bask:hover {
+        color: white;
+        cursor: pointer;
+        background-color: #ff7f00;
+   
+        text-decoration: none;
+    }
+.btn-next-bask-fim {
+    margin-right: 50px;
+    border-radius: 50px;
+    padding: 10px 30px 10px 30px;
+    display:none;
+    color: white;
+    background: #262626;
+    position: relative;
+    top: 10px;
+    left: 75px;
+   
+    text-decoration: none;
+    transition: all .30s ease-in-out;
+   
+}
+
+.colorized{
+    color:green;
+}
+    .btn-next-bask-fim:hover {
+        color: white;
+        cursor: pointer;
+        background-color: #181818;
+        text-decoration: none;
+    }
+ 
+
+    .bask-num {
+        text-align: center;
+    }
+.pers{
+    max-width: 900px;
+    
+    margin: 0 auto;
+    margin-top: 30px;
 }

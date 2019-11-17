@@ -270,6 +270,7 @@
     <Content Include="Content\Cadastro.css" />
     <Content Include="Content\CadastroProduto.css" />
     <Content Include="Content\Carrinho.css" />
+    <Content Include="Content\Carrinho2.css" />
     <Content Include="Content\Categoria.css" />
     <Content Include="Content\Cidade.css" />
     <Content Include="Content\DadosPessoais.css" />
@@ -617,6 +618,9 @@
     <Content Include="Views\Ass_assinaturas\Details.cshtml" />
     <Content Include="Views\Ass_assinaturas\Edit.cshtml" />
     <Content Include="Views\Ass_assinaturas\Index.cshtml" />
+    <Content Include="Views\Usu_usuarios\Carrinho2.cshtml" />
+    <Content Include="Views\Usu_usuarios\Carrinho3.cshtml" />
+    <Content Include="Views\Usu_usuarios\Carrinho4.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -3,7 +3,7 @@
     ViewBag.Title = "Entregas";
     Layout = "~/Views/Shared/_Layout3.cshtml";
 }
-<link href="~/Content/EntregasNovo.css" rel="stylesheet" />
+<link href="~/Content/Entregas.css" rel="stylesheet" />
 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
 <section class="ent-bloco">
 
@@ -18,7 +18,7 @@
             <label>
 
                 <input type="radio" value="1" name="QtdEntregas" funcao="qtdEntregas" class="card-input-element" />
-                <div class="card-input">
+                <div id="hidesame" class="card-input r">
                     <p class="btn-size">
                         1
                     </p>
@@ -28,7 +28,7 @@
             <label>
                 <!-- v-on:click="typeChange()"-->
                 <input type="radio" value="2" name="QtdEntregas" funcao="qtdEntregas" class="card-input-element" />
-                <div class="card-input exc"">
+                <div class="card-input exc r">
                     <p class="btn-size">
                         2
                     </p>
@@ -37,7 +37,7 @@
             <label>
                 <!-- v-on:click="typeChange()"-->
                 <input type="radio" value="3" name="QtdEntregas" funcao="qtdEntregas" class="card-input-element exc" />
-                <div class="card-input exc"">
+                <div class="card-input exc r">
                     <p class="btn-size">
                         3
                     </p>
@@ -46,7 +46,7 @@
             <label>
                 <!-- v-on:click="typeChange()"-->
                 <input type="radio" value="4" name="QtdEntregas" funcao="qtdEntregas" class="card-input-element exc" />
-                <div class="card-input exc"">
+                <div class="card-input exc r">
                     <p class="btn-size">
                         4
                     </p>
@@ -115,8 +115,8 @@
 
             <label>
                 <!-- v-on:click="typeChange()"-->
-                <input type="radio" value="CestasDiferentes" name="3" funcao="isCestasIguais" class="card-input-element" />
-                <div class="card-input exc sizingbox">
+                <input type="radio"  value="CestasDiferentes" name="3" funcao="isCestasIguais" class="card-input-element" />
+                <div class="card-input exc sizingbox" id="differ">
                     <p class="btn-size sizingbox-text">
                        Cestas Diferentes
                     </p>
@@ -161,6 +161,30 @@
     var qtdEntregas;
     var tempEntregas;
     var isCestasIguais;
+
+  
+   // se o usuario escolher apenas uma cesta a opcao de cestas diferentes desaparece
+    $(".r").each(function () {
+        $(".r").click(function () {
+           
+                if (this.id == "hidesame") {
+
+                      $("#differ").hide()
+
+                } else {
+
+                      $("#differ").show()
+            }
+
+        })
+       
+
+    })
+        
+
+   
+  
+     
 
     $(".card-input-element").click(function () {
 
