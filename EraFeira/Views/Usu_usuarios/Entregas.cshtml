@@ -17,7 +17,7 @@
         <div style="display: inline-block">
             <label>
 
-                <input type="radio" value="1" name="QtdEntregas" funcao="qtdEntregas" class="card-input-element" />
+                <input type="radio" value="1" required name="QtdEntregas" funcao="qtdEntregas" class="card-input-element" />
                 <div id="hidesame" class="card-input r">
                     <p class="btn-size">
                         1
@@ -27,7 +27,7 @@
 
             <label>
                 <!-- v-on:click="typeChange()"-->
-                <input type="radio" value="2" name="QtdEntregas" funcao="qtdEntregas" class="card-input-element" />
+                <input type="radio" value="2" required name="QtdEntregas" funcao="qtdEntregas" class="card-input-element" />
                 <div class="card-input exc r">
                     <p class="btn-size">
                         2
@@ -36,7 +36,7 @@
             </label>
             <label>
                 <!-- v-on:click="typeChange()"-->
-                <input type="radio" value="3" name="QtdEntregas" funcao="qtdEntregas" class="card-input-element exc" />
+                <input type="radio" value="3" required name="QtdEntregas" funcao="qtdEntregas" class="card-input-element exc" />
                 <div class="card-input exc r">
                     <p class="btn-size">
                         3
@@ -45,7 +45,7 @@
             </label>
             <label>
                 <!-- v-on:click="typeChange()"-->
-                <input type="radio" value="4" name="QtdEntregas" funcao="qtdEntregas" class="card-input-element exc" />
+                <input type="radio" value="4" required name="QtdEntregas" funcao="qtdEntregas" class="card-input-element exc" />
                 <div class="card-input exc r">
                     <p class="btn-size">
                         4
@@ -66,7 +66,7 @@
         <div style="display: inline-block">
             <label>
 
-                <input type="radio" value="7" name="TempEntregas" funcao="tempEntregas" class="card-input-element" />
+                <input type="radio" value="7" required name="TempEntregas" funcao="tempEntregas" class="card-input-element" />
                 <div class="card-input">
                     <p class="btn-size">
                         7
@@ -76,7 +76,7 @@
 
             <label>
                 <!-- v-on:click="typeChange()"-->
-                <input type="radio" value="10" name="TempEntregas" funcao="tempEntregas" class="card-input-element" />
+                <input type="radio" value="10" required name="TempEntregas" funcao="tempEntregas" class="card-input-element" />
                 <div class="card-input exc">
                     <p class="btn-size">
                         10
@@ -85,7 +85,7 @@
             </label>
             <label>
                 <!-- v-on:click="typeChange()"-->
-                <input type="radio" value="13" name="TempEntregas" funcao="tempEntregas" class="card-input-element" />
+                <input type="radio" value="13" required name="TempEntregas" funcao="tempEntregas" class="card-input-element" />
                 <div class="card-input exc">
                     <p class="btn-size">
                         13
@@ -105,7 +105,7 @@
         <div style="display: inline-block">
             <label>
 
-                <input type="radio" value="CestasIguais" name="3" funcao="isCestasIguais" class="card-input-element" />
+                <input type="radio" value="CestasIguais" required name="3" funcao="isCestasIguais" class="card-input-element" />
                 <div class="card-input sizingbox">
                     <p class="btn-size sizingbox-text">
                        Cestas Iguais
@@ -115,7 +115,7 @@
 
             <label>
                 <!-- v-on:click="typeChange()"-->
-                <input type="radio"  value="CestasDiferentes" name="3" funcao="isCestasIguais" class="card-input-element" />
+                <input type="radio"  value="CestasDiferentes" required name="3" funcao="isCestasIguais" class="card-input-element" />
                 <div class="card-input exc sizingbox" id="differ">
                     <p class="btn-size sizingbox-text">
                        Cestas Diferentes
@@ -134,28 +134,27 @@
 
 
 </section>
+<script>
 
 
-@*<script>
-    $("input[name='a']").change(function(){
-    alert($(this).val());
+
+    // permite ao usuário ir para o carrinho somente com 3 alternativas selecionadas
+    $(".ent-button").click(function (e) {
+        var i = 0;
+
+        $('input[type=radio]:checked').each(function () {
+            i++;
+        })
+
+        if (i < 3) {
+            alert(" selecione pelo menos uma opção de cada seção")
+            e.preventDefault()
+        } 
+
 });
 
     
-
-   
-  
-
-    
-    //$(".clicked").click(function () {
-
-    //    $(this).toggleClass("active")
-    //})
-
-
-    $(".clicked").click(function() {$(this).toggleClass("active")})
-
-</script>*@
+</script>
 <script>
 
     var qtdEntregas;
@@ -163,7 +162,7 @@
     var isCestasIguais;
 
   
-   // se o usuario escolher apenas uma cesta a opcao de cestas diferentes desaparece
+   // se o usuario escolher apenas uma entrega a opcao de cestas diferentes desaparece
     $(".r").each(function () {
         $(".r").click(function () {
            
