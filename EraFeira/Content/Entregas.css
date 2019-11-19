@@ -75,7 +75,7 @@
 
 .ent-next {
     max-width: 300px;
-    margin-left: 120px;
+    margin-left:100px;
     margin-top: 40px;
     text-align: center;
 }
@@ -87,6 +87,8 @@
     display: inline-block;
     padding-top: 10px;
     transition: all .30s ease-in-out;
+    
+
 }
 
     .ent-button:hover {
@@ -98,14 +100,7 @@
         text-decoration: none;
     }
 
-.orange-line {
-    width: 200px;
-    height: 3px;
-    background-color: #F96714;
-    border-radius: 50px;
-    margin: 0 auto;
-    margin-top: 5px;
-}
+
 
 .card-input-element {
     display: none;

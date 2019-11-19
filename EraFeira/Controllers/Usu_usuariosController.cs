@@ -14,6 +14,15 @@ namespace EraFeira.Controllers
     public class Usu_usuariosController : Controller
     {
         private Contexto db = new Contexto();
+       
+        [AcceptVerbs(HttpVerbs.Post)]
+        public JsonResult CadastrarProdutos(string[] listaprodutos, string IdUsu)
+        {
+
+            return Json("ok");
+        }
+
+
 
         // GET: Usu_usuarios
         //[Authorize(Roles = "Adm")]

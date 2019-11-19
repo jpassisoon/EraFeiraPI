@@ -21,6 +21,9 @@ namespace EraFeira.Controllers
             return View(ces_Cesta.ToList());
         }
 
+       
+
+
         // GET: Ces_cestas/Details/5
         public ActionResult Details(int? id)
         {
