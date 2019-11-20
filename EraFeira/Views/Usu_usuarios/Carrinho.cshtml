@@ -6,6 +6,11 @@
 
 <link href="~/Content/Carrinho2.css" rel="stylesheet" />
 
+
+<script>
+
+    
+</script>
 <div class="car-section">
 
     <aside>
@@ -70,7 +75,7 @@
             </div>
             <div class="col-md-4">
                 @Html.ActionLink("Próxima Cesta", "Carrinho2", "Usu_usuarios", new { area = "" }, new { @class = "btn-next-bask" })
-                @Html.ActionLink("Finalizar", "Carrinho3", "Usu_usuarios", new { area = "" }, new { @class = "btn-next-bask-fim" })
+                @Html.ActionLink("Finalizar", "Carrinho", "Usu_usuarios", new { area = "" }, new { @class = "btn-next-bask-fim" })
             </div>
         </div>
 
@@ -93,6 +98,18 @@
 
     $(document).ready(function () {
 
+     
+          // Aviso de cesta finalizada
+
+        $(".btn-next-bask-fim").click(function () {
+
+
+            alert("Sua cesta foi finalizada!")
+
+        })
+        
+
+
         // verificar se essa é a ultima pagina para mudar de proximo para finalizar
 
         if (getCookie("configCestas") != null) {
@@ -108,7 +125,7 @@
                 var pagenum = $(".page-num").text()
 
                 if (pagenum == num) {
-
+                    
                     $(".btn-next-bask").hide()
                     $(".btn-next-bask-fim").show()
 
@@ -116,6 +133,7 @@
                 }
 
             } else {
+                
                 $(".btn-next-bask").hide()
                 $(".btn-next-bask-fim").show()
             }
@@ -174,9 +192,14 @@
         // adicionar o id do produto + o valor dentro do cookie
 
 
+        // Cria o cookie e adiciona dados a ele
+
         $(".btn-next-bask, .btn-next-bask-fim").click(function () {
-            var dados = []
+            var nomecesta = $(".car-input").val()
             var i = 0;
+            var dados = []
+            dados [i] = nomecesta
+            i = 1;
 
 
             $(".car-quantidade").each(function () {
@@ -188,6 +211,7 @@
                 };
 
             })
+            
             document.cookie = "CarrinhoCookie1 = " + JSON.stringify(dados);
 
 
@@ -209,19 +233,25 @@
         }
 
 
+        // Atualiza os campos com os dados do cookie
+
         if (getCookie("CarrinhoCookie1") != null) {
             var cookie = getCookie("CarrinhoCookie1");
             var oi = JSON.parse(cookie);
-            var i = 0;
-
+            var i = 1;
+            $('.car-input').val(oi[0]);
             $(".car-quantidade").each(function () {
                 this.value = oi[i];
                 i++;
             })
+           
+
+               
+            
 
         }
 
-        // puxar quantidade de entregas
+        
 
 
         $("#novobotao").click(function () {
@@ -234,9 +264,8 @@
                 var jsonText = JSON.stringify({ listaprodutos: oi, IdUsu: usuario });
                 $.ajax({
                     dataType: 'json',
-                    contentType: 'application/json; charset=utf-8',
                     type: 'POST',
-                    url: '/Usu_usuarios/CadastrarProdutos',
+                    url: 'CadastrarProdutos',
                     data: jsonText,
                   
                     
@@ -254,6 +283,14 @@
 
 
 
+        // atualizar soma carrinho onload
+
+        if (getCookie("CarrinhoCesta1") != null) {
+
+            soma()
+
+        }
+        
         // document.cookie = "ItensCesta = " + JSON.stringify(cestaCookie);
     })
 </script>

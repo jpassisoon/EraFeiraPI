@@ -94,6 +94,17 @@
 
     $(document).ready(function () {
 
+
+          
+          // Aviso de cesta finalizada
+
+        $(".btn-next-bask-fim").click(function () {
+
+
+            alert("Sua cesta foi finalizada!")
+
+        })
+        
         // verificar se essa é a ultima pagina para mudar de proximo para finalizar
 
         if (getCookie("configCestas") != null) {
@@ -171,10 +182,15 @@
         // adicionar o id do produto + o valor dentro do cookie
 
 
-        $(".btn-next-bask, .btn-next-bask-fim").click(function () {
-            var dados = []
-            var i = 0;
 
+         // Cria o cookie e adiciona dados a ele
+
+        $(".btn-next-bask, .btn-next-bask-fim").click(function () {
+           var nomecesta = $(".car-input").val()
+            var i = 0;
+            var dados = []
+            dados [i] = nomecesta
+            i = 1;
 
             $(".car-quantidade").each(function () {
                 if (this.value != null) {
@@ -205,20 +221,31 @@
             return "";
         }
 
+        // Atualiza os campos com os dados do cookie
 
         if (getCookie("CarrinhoCookie4") != null) {
             var cookie = getCookie("CarrinhoCookie4");
             var oi = JSON.parse(cookie);
-            var i = 0;
-
+            var i = 1;
+            $('.car-input').val(oi[0]);
             $(".car-quantidade").each(function () {
                 this.value = oi[i];
                 i++;
             })
+           
+
+               
+            
 
         }
 
-        // puxar quantidade de entregas
+       // atualizar soma carrinho onload
+
+        if (getCookie("CarrinhoCesta1") != null) {
+
+            soma()
+
+        }
 
 
 

@@ -161,7 +161,21 @@
     var tempEntregas;
     var isCestasIguais;
 
-  
+  // Limpar cookies
+
+    if (getCookie('CarrinhoCookie1') != null) {
+        document.cookie = "CarrinhoCookie1 = ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+        document.cookie = "CarrinhoCookie2 = ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+        document.cookie = "CarrinhoCookie3 = ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+        document.cookie = "CarrinhoCookie4 = ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+        document.cookie = "configCestas = ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+       
+    }
+    //$.removeCookie('CarrinhoCookie1', { path: '/' });
+    //$.removeCookie('CarrinhoCookie2', { path: '/' });
+    //$.removeCookie('CarrinhoCookie3', { path: '/' });
+    //$.removeCookie('CarrinhoCookie4', { path: '/' });
+
    // se o usuario escolher apenas uma entrega a opcao de cestas diferentes desaparece
     $(".r").each(function () {
         $(".r").click(function () {
@@ -179,8 +193,22 @@
        
 
     })
-        
 
+    // get gookie func
+     function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
    
   
      //cookie config cestas
