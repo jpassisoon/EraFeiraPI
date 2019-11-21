@@ -167,6 +167,7 @@
     <Compile Include="Models\Cxp_cesta_produto.cs" />
     <Compile Include="Models\End_endereco.cs" />
     <Compile Include="Models\For_fornecedor.cs" />
+    <Compile Include="Models\getItens.cs" />
     <Compile Include="Models\Img_imagem.cs" />
     <Compile Include="Models\Pro_produto.cs" />
     <Compile Include="Models\Pxf_produto_fornecedor.cs" />

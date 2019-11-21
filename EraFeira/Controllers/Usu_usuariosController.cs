@@ -16,8 +16,18 @@ namespace EraFeira.Controllers
         private Contexto db = new Contexto();
        
         [AcceptVerbs(HttpVerbs.Post)]
-        public JsonResult CadastrarProdutos(string[] listaprodutos, string IdUsu)
+        public JsonResult CadastrarProdutos(List<getItens> dados)
         {
+            foreach(getItens gi in dados)
+            {
+              if(Convert.ToInt32(gi.Qtd) > 0)
+                {
+
+                }
+            }
+
+
+
 
             return Json("ok");
         }
