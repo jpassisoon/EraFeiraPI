@@ -240,9 +240,14 @@
             var oi = JSON.parse(cookie);
             var i = 1;
             $('.car-input').val(oi[0]);
+            
             $(".car-quantidade").each(function () {
-                this.value = oi[i];
-                i++;
+
+                    var separa = []
+                    var a = oi[i]
+                    var separa = a.split("-")
+                    this.value = separa[2]
+                    i++;
             })
            
 
@@ -253,6 +258,8 @@
 
         
 
+        // Envia os dados Id,Valor e Quantidade para o metodo do controler Usu_usuario e realiza
+        // o processo de cadastro no banco
 
         $("#novobotao").click(function () {
             if (getCookie("CarrinhoCookie1") != null) {
@@ -274,7 +281,7 @@
                             id: separa[0],
                             valor: separa[1],
                             qtd: separa[2],
-                            valotTotal: $("#valorTotal").val(),
+                            Total: $(".carrinho").text(),
                             nomeCestausu: $(".car-input").val(),
                             identificacao: "Cesta 1"
                         }
