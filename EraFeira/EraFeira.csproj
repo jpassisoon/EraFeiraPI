@@ -144,6 +144,7 @@
     <Compile Include="Controllers\Ass_assinaturasController.cs" />
     <Compile Include="Controllers\Cat_categoriasController.cs" />
     <Compile Include="Controllers\Ces_cestasController.cs" />
+    <Compile Include="Controllers\Cxp_cesta_produtosController.cs" />
     <Compile Include="Controllers\End_enderecosController.cs" />
     <Compile Include="Controllers\Est_estoquesController.cs" />
     <Compile Include="Controllers\For_fornecedoresController.cs" />
@@ -634,6 +635,11 @@
     <Content Include="Views\Pxf_produto_fornecedores\Details.cshtml" />
     <Content Include="Views\Pxf_produto_fornecedores\Edit.cshtml" />
     <Content Include="Views\Pxf_produto_fornecedores\Index.cshtml" />
+    <Content Include="Views\Cxp_cesta_produtos\Create.cshtml" />
+    <Content Include="Views\Cxp_cesta_produtos\Delete.cshtml" />
+    <Content Include="Views\Cxp_cesta_produtos\Details.cshtml" />
+    <Content Include="Views\Cxp_cesta_produtos\Edit.cshtml" />
+    <Content Include="Views\Cxp_cesta_produtos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

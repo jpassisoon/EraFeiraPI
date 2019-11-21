@@ -1,0 +1,57 @@
+﻿@model EraFeira.Models.Cxp_cesta_produto
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Cxp_cesta_produto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ces_Cesta.Ces_nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ces_Cesta.Ces_nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pro_Produto.Pro_descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pro_Produto.Pro_descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cxp_valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cxp_valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cxp_quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cxp_quantidade)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

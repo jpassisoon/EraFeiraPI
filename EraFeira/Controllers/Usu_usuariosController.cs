@@ -19,21 +19,26 @@ namespace EraFeira.Controllers
         [AcceptVerbs(HttpVerbs.Post)]
         public JsonResult CadastrarProdutos(List<getItens> dados)
         {
+           
+       
+            
             foreach(getItens gi in dados)
             {
               if(Convert.ToInt32(gi.Qtd) > 0)
                 {
-                    Ces_cesta a = new Ces_cesta();
-                    a.Ces_criacao = DateTime.Now;
-                    a.Ces_nome = gi.NomeCestausu;
-                    a.Ces_valor_total = Convert.ToDouble(gi.Total);
-                    a.Ass_id = 1;
-                    a.Usu_id = 1;
-                    db.Ces_Cesta.Add(a);
+                    
+                    Cxp_cesta_produto a = new Cxp_cesta_produto();
+                    a.Cxp_quantidade = Convert.ToInt32(gi.Qtd);
+                    a.Cxp_valor = Convert.ToDouble(gi.Valor);
+                    a.Pro_id = Convert.ToInt32(gi.Id);
+                    a.Ces_id = 1;
+                    db.Cxp_Cesta_Produto.Add(a);
                     db.SaveChanges();
                 }
-            }
+                
 
+            }
+           
             return Json("ok");
         }
         

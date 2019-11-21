@@ -1,0 +1,52 @@
+﻿@model IEnumerable<EraFeira.Models.Cxp_cesta_produto>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ces_Cesta.Ces_nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pro_Produto.Pro_descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cxp_valor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cxp_quantidade)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ces_Cesta.Ces_nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pro_Produto.Pro_descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cxp_valor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cxp_quantidade)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Cxp_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Cxp_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Cxp_id })
+        </td>
+    </tr>
+}
+
+</table>

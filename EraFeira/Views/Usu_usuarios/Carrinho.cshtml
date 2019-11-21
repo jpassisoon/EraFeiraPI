@@ -79,7 +79,7 @@
             </div>
         </div>
 
-        <a href="#" id="novobotao">VER AQUI</a>
+        @*<a href="#" id="novobotao">VER AQUI</a>*@
 
 
     </div>
@@ -261,7 +261,7 @@
         // Envia os dados Id,Valor e Quantidade para o metodo do controler Usu_usuario e realiza
         // o processo de cadastro no banco
 
-        $("#novobotao").click(function () {
+        $(".btn-next-bask-fim").click(function () {
             if (getCookie("CarrinhoCookie1") != null) {
                 var cookie = getCookie("CarrinhoCookie1");
                 var oi = JSON.parse(cookie);

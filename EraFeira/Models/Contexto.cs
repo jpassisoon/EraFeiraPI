@@ -20,6 +20,7 @@ namespace EraFeira.Models
         public DbSet<For_fornecedor> For_Fornecedor { get; set; }
         public DbSet<Est_estoque> Est_Estoque { get; set; }
         public DbSet<Pxf_produto_fornecedor> Pxf_Produto_Fornecedor { get; set; }
-        
+        public DbSet<Cxp_cesta_produto> Cxp_Cesta_Produto { get; set; }
+
     }
 }

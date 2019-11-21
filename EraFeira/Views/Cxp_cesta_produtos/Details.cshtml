@@ -1,0 +1,51 @@
+﻿@model EraFeira.Models.Cxp_cesta_produto
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cxp_cesta_produto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ces_Cesta.Ces_nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ces_Cesta.Ces_nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pro_Produto.Pro_descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pro_Produto.Pro_descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cxp_valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cxp_valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cxp_quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cxp_quantidade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Cxp_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
