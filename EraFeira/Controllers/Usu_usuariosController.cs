@@ -14,7 +14,10 @@ namespace EraFeira.Controllers
     public class Usu_usuariosController : Controller
     {
         private Contexto db = new Contexto();
-       
+
+
+     
+
         [AcceptVerbs(HttpVerbs.Post)]
         public JsonResult CadastrarProdutos(List<getItens> dados)
         {
@@ -22,15 +25,25 @@ namespace EraFeira.Controllers
             {
               if(Convert.ToInt32(gi.Qtd) > 0)
                 {
-
+                    Ces_cesta a = new Ces_cesta();
+                    a.Ces_criacao = DateTime.Now;
+                    a.Ces_nome = gi.NomeCestausu;
+                    a.Ces_valor_total = Convert.ToDouble(gi.Total);
+                    a.Ass_id = 1;
+                    a.Usu_id = 1;
+                    db.Ces_Cesta.Add(a);
+                    db.SaveChanges();
                 }
             }
+           
 
 
 
 
             return Json("ok");
         }
+
+       
 
 
 
