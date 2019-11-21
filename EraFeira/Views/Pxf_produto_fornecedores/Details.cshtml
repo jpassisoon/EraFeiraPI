@@ -1,0 +1,43 @@
+﻿@model EraFeira.Models.Pxf_produto_fornecedor
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Produto_fornecedor</h4>
+    <br />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_Estoque.Est_motivo_saida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_Estoque.Est_motivo_saida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.For_Fornecedor.For_nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.For_Fornecedor.For_nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pro_Produto.Pro_descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pro_Produto.Pro_descricao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Pxf_id }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

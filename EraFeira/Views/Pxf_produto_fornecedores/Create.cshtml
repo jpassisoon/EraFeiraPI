@@ -1,0 +1,44 @@
+﻿@model EraFeira.Models.Pxf_produto_fornecedor
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<link href="~/Content/Categoria.css" rel="stylesheet" />
+<h1 class="cat-h1">Produto e Fornecedor</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "msg-val" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Pro_id, "Pro_id", htmlAttributes: new { @class = "control-label col-md-6 cat-label" })
+            <div class="col-md-6">
+                @Html.DropDownList("Pro_id", null, htmlAttributes: new { @class = "form-control pro-input" })
+                @Html.ValidationMessageFor(model => model.Pro_id, "", new { @class = "msg-val" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.For_id, "For_id", htmlAttributes: new { @class = "control-label col-md-6 cat-label" })
+            <div class="col-md-6">
+                @Html.DropDownList("For_id", null, htmlAttributes: new { @class = "form-control cat-input" })
+                @Html.ValidationMessageFor(model => model.For_id, "", new { @class = "msg-val" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Est_id, "Est_id", htmlAttributes: new { @class = "control-label col-md-6 cat-label" })
+            <div class="col-md-9">
+                @Html.DropDownList("Est_id", null, htmlAttributes: new { @class = "form-control cat-input" })
+                @Html.ValidationMessageFor(model => model.Est_id, "", new { @class = "msg-val" })
+            </div>
+        </div>
+
+        <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn pro_cadastro" />
+        </div>
+    </div>
+}

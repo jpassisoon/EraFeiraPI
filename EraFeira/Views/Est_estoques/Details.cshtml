@@ -1,0 +1,67 @@
+﻿@model EraFeira.Models.Est_estoque
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    @*<h4>Est_estoque</h4>*@
+    <br />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_quantidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_entrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_entrada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_saida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_saida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_motivo_saida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_motivo_saida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_valor_entrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_valor_entrada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_data_vencimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_data_vencimento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Est_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -18,26 +18,16 @@
                 @Html.DisplayNameFor(model => model.Cat_Categoria.Cat_nome)
             </th>
             <th scope="col">
-                @Html.DisplayNameFor(model => model.Pro_nome)
-            </th>
-            <th scope="col">
                 @Html.DisplayNameFor(model => model.Pro_descricao)
             </th>
             <th scope="col">
                 @Html.DisplayNameFor(model => model.Pro_valor_venda)
             </th>
+            
             <th scope="col">
-                @Html.DisplayNameFor(model => model.Pro_data_chegada)
-            </th>
-            <th scope="col">
-                @Html.DisplayNameFor(model => model.Pro_data_vencimento)
-            </th>
-            @*<th scope="col">
                 @Html.DisplayNameFor(model => model.Pro_desconto)
-            </th>*@
-            <th scope="col">
-                @Html.DisplayNameFor(model => model.Pro_quantidade)
             </th>
+            
             <th scope="col">
                 @Html.DisplayNameFor(model => model.Pro_foto)
             </th>
@@ -49,27 +39,18 @@
         <td scope="row">
             @Html.DisplayFor(modelItem => item.Cat_Categoria.Cat_nome)
         </td>
-        <td scope="row">
-            @Html.DisplayFor(modelItem => item.Pro_nome)
-        </td>
+        
         <td scope="row">
             @Html.DisplayFor(modelItem => item.Pro_descricao)
         </td>
         <td scope="row">
             @Html.DisplayFor(modelItem => item.Pro_valor_venda)
         </td>
+        
         <td scope="row">
-            @Html.DisplayFor(modelItem => item.Pro_data_chegada)
-        </td>
-        <td scope="row">
-            @Html.DisplayFor(modelItem => item.Pro_data_vencimento)
-        </td>
-        @*<td scope="row">
             @Html.DisplayFor(modelItem => item.Pro_desconto)
-        </td>*@
-        <td scope="row">
-            @Html.DisplayFor(modelItem => item.Pro_quantidade)
         </td>
+       
         <td scope="row">
             @*@Html.DisplayFor(modelItem => item.Pro_foto)*@
             <img src="~/Uploads/@item.Pro_foto" style="max-width:70px;" />

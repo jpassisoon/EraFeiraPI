@@ -1,0 +1,72 @@
+﻿@model EraFeira.Models.Est_estoque
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<link href="~/Content/CadastroProduto.css" rel="stylesheet" />
+@*<h2>Deletar</h2>*@
+
+<h3 class="pro-h3">Você tem certeza que deseja deletar isso?</h3>
+<div class="text-center">
+    <dl class="dl-horizontal pro-delete">
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_quantidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_entrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_entrada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_saida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_saida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_motivo_saida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_motivo_saida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_valor_entrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_valor_entrada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_data_vencimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_data_vencimento)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions">
+        @Html.ActionLink("Voltar", "Index", new { }, new { @class = "btn btn-voltar" })
+        <input type="submit" value="Deletar" class="btn btn-deletar" /> 
+    </div>
+    }
+</div>

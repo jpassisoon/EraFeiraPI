@@ -1,0 +1,48 @@
+﻿@model EraFeira.Models.Pxf_produto_fornecedor
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<link href="~/Content/Categoria.css" rel="stylesheet" />
+<h2>Deletar</h2>
+<h3>Você tem certeza que deseja deletar isso?</h3>
+<div>
+   
+    <dl class="dl-horizontal cat-delet">
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_Estoque.Est_motivo_saida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_Estoque.Est_motivo_saida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.For_Fornecedor.For_nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.For_Fornecedor.For_nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pro_Produto.Pro_descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pro_Produto.Pro_descricao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions">
+        @Html.ActionLink("Voltar", "Index", new { }, new { @class = "btn btn-cat-voltar" })
+        <input type="submit" value="Deletar" class="btn btn-cat-deletar" />
+    </div>
+    }
+</div>

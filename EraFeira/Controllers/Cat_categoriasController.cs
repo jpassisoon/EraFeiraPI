@@ -50,7 +50,7 @@ namespace EraFeira.Controllers
         //[Authorize(Roles = "Adm")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Cat_id,Cat_nome,Cat_descricao,Cat_status")] Cat_categoria cat_categoria)
+        public ActionResult Create([Bind(Include = "Cat_id,Cat_nome,Cat_status")] Cat_categoria cat_categoria)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace EraFeira.Controllers
         //[Authorize(Roles = "Adm")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Cat_id,Cat_nome,Cat_descricao,Cat_status")] Cat_categoria cat_categoria)
+        public ActionResult Edit([Bind(Include = "Cat_id,Cat_nome,Cat_status")] Cat_categoria cat_categoria)
         {
             if (ModelState.IsValid)
             {

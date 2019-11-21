@@ -45,6 +45,7 @@
                 <button type="button" class="btn dropdown-toggle adm-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Movimentações
                 </button>
+                @Html.ActionLink("Movimentações", "Index", "Est_estoques", new { area = "" }, new { @class = "dropdown-item adm-link" })
                 <div class="dropdown-menu adm-submenu">
                     <a class="dropdown-item adm-link" href="#">Entradas/Saídas</a>
                     <a class="dropdown-item adm-link" href="#">Gastos</a>

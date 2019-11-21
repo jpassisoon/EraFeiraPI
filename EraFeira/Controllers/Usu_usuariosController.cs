@@ -15,9 +15,7 @@ namespace EraFeira.Controllers
     {
         private Contexto db = new Contexto();
 
-
-     
-
+        //[Authorize(Roles = "Comum")]
         [AcceptVerbs(HttpVerbs.Post)]
         public JsonResult CadastrarProdutos(List<getItens> dados)
         {
@@ -35,18 +33,10 @@ namespace EraFeira.Controllers
                     db.SaveChanges();
                 }
             }
-           
-
-
-
 
             return Json("ok");
         }
-
-       
-
-
-
+        
         // GET: Usu_usuarios
         //[Authorize(Roles = "Adm")]
         public ActionResult Index()
@@ -86,7 +76,7 @@ namespace EraFeira.Controllers
             {
                 Usu_usuario usuario = new Usu_usuario();
                 usuario.Usu_email = cuvm.Email;
-                //usuario.Usu_Cpf = cuvm.Cpf;
+                usuario.Usu_Cpf = cuvm.Cpf;
                 //usuario.Usu_Cpf = Cpf.validaCPF(cuvm.Cpf);
                 usuario.Usu_senha = Criptografia.Encrypt(cuvm.Senha);
                 db.Usu_Usuario.Add(usuario);

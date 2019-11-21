@@ -145,10 +145,12 @@
     <Compile Include="Controllers\Cat_categoriasController.cs" />
     <Compile Include="Controllers\Ces_cestasController.cs" />
     <Compile Include="Controllers\End_enderecosController.cs" />
+    <Compile Include="Controllers\Est_estoquesController.cs" />
     <Compile Include="Controllers\For_fornecedoresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Img_imagemsController.cs" />
     <Compile Include="Controllers\Pro_produtosController.cs" />
+    <Compile Include="Controllers\Pxf_produto_fornecedoresController.cs" />
     <Compile Include="Controllers\Usu_usuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -166,6 +168,7 @@
     <Compile Include="Models\Criptografia.cs" />
     <Compile Include="Models\Cxp_cesta_produto.cs" />
     <Compile Include="Models\End_endereco.cs" />
+    <Compile Include="Models\Est_estoque.cs" />
     <Compile Include="Models\For_fornecedor.cs" />
     <Compile Include="Models\getItens.cs" />
     <Compile Include="Models\Img_imagem.cs" />
@@ -621,6 +624,16 @@
     <Content Include="Views\Usu_usuarios\Carrinho2.cshtml" />
     <Content Include="Views\Usu_usuarios\Carrinho3.cshtml" />
     <Content Include="Views\Usu_usuarios\Carrinho4.cshtml" />
+    <Content Include="Views\Est_estoques\Create.cshtml" />
+    <Content Include="Views\Est_estoques\Delete.cshtml" />
+    <Content Include="Views\Est_estoques\Details.cshtml" />
+    <Content Include="Views\Est_estoques\Edit.cshtml" />
+    <Content Include="Views\Est_estoques\Index.cshtml" />
+    <Content Include="Views\Pxf_produto_fornecedores\Create.cshtml" />
+    <Content Include="Views\Pxf_produto_fornecedores\Delete.cshtml" />
+    <Content Include="Views\Pxf_produto_fornecedores\Details.cshtml" />
+    <Content Include="Views\Pxf_produto_fornecedores\Edit.cshtml" />
+    <Content Include="Views\Pxf_produto_fornecedores\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

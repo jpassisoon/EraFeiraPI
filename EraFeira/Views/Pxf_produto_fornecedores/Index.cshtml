@@ -1,0 +1,46 @@
+﻿@model IEnumerable<EraFeira.Models.Pxf_produto_fornecedor>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Est_Estoque.Est_motivo_saida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.For_Fornecedor.For_nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pro_Produto.Pro_descricao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Est_Estoque.Est_motivo_saida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.For_Fornecedor.For_nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pro_Produto.Pro_descricao)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Pxf_id }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.Pxf_id }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.Pxf_id })
+        </td>
+    </tr>
+}
+
+</table>

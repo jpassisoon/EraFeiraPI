@@ -53,7 +53,7 @@ namespace EraFeira.Controllers
         //[Authorize(Roles = "Adm")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Pro_id,Pro_nome,Pro_descricao,Pro_valor_venda,Pro_data_chegada,Pro_data_vencimento,Pro_desconto,Pro_quantidade,Cat_id")] Pro_produto pro_produto, HttpPostedFileBase arq)
+        public ActionResult Create([Bind(Include = "Pro_id,Pro_descricao,Pro_valor_venda,Pro_desconto,Cat_id")] Pro_produto pro_produto, HttpPostedFileBase arq)
         {
             string valor = "";
             if (ModelState.IsValid)
@@ -113,7 +113,7 @@ namespace EraFeira.Controllers
         //[Authorize(Roles = "Adm")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Pro_id,Pro_nome,Pro_descricao,Pro_valor_venda,Pro_data_chegada,Pro_data_vencimento,Pro_desconto,Pro_quantidade,Pro_foto,Cat_id")] Pro_produto pro_produto, HttpPostedFileBase arq)
+        public ActionResult Edit([Bind(Include = "Pro_id,Pro_descricao,Pro_valor_venda,Pro_desconto,Pro_foto,Cat_id")] Pro_produto pro_produto, HttpPostedFileBase arq)
         {
             string valor = "";
             if (ModelState.IsValid)

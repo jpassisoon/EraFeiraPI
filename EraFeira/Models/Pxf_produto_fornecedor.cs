@@ -12,19 +12,20 @@ namespace EraFeira.Models
         [Display(Name = "ID")]
         public int Pxf_id { get; set; }
 
-        [Required]
-        [Display(Name = "Valor da entrada")]
-        public double Pxf_valor_entrada { get; set; }
-
-        [Required]
-        [Display(Name = "Quantidade")]
-        public int Pxf_quantidade { get; set; }
-
         [Display(Name = "Produto")]
         public int Pro_id { get; set; }
+
         [Display(Name = "Fornecedor")]
         public int For_id { get; set; }
+
+        [Display(Name = "Produto")]
         public virtual Pro_produto Pro_Produto { get; set; }
+
+        [Display(Name = "Fornecedor")]
         public virtual For_fornecedor For_Fornecedor { get; set; }
+
+        [Display(Name = "Estoque")]
+        public int Est_id { get; set; }
+        public virtual Est_estoque Est_Estoque { get; set; }
     }
 }

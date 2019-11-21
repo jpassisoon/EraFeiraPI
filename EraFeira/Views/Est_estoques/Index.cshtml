@@ -1,0 +1,65 @@
+﻿@model IEnumerable<EraFeira.Models.Est_estoque>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<link href="~/Content/CadastroProduto.css" rel="stylesheet" />
+<h2 class="pro_h2">Movimentações</h2>
+@*<p>
+    @Html.ActionLink("Cadastrar", "Create")
+</p>*@
+<table class="table table-hover">
+    <thead>
+        <tr class="text-center">
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Est_quantidade)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Est_entrada)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Est_saida)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Est_motivo_saida)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Est_valor_entrada)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Est_data_vencimento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr class="text-center">
+            <td scope="col">
+                @Html.DisplayFor(modelItem => item.Est_quantidade)
+            </td>
+            <td scope="col">
+                @Html.DisplayFor(modelItem => item.Est_entrada)
+            </td>
+            <td scope="col">
+                @Html.DisplayFor(modelItem => item.Est_saida)
+            </td>
+            <td scope="col">
+                @Html.DisplayFor(modelItem => item.Est_motivo_saida)
+            </td>
+            <td scope="col">
+                @Html.DisplayFor(modelItem => item.Est_valor_entrada)
+            </td>
+            <td scope="col">
+                @Html.DisplayFor(modelItem => item.Est_data_vencimento)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Est_id }, new { @class = "btn btn-pro-edit" })
+                @*@Html.ActionLink("Details", "Details", new { id=item.Est_id }) |*@
+                @Html.ActionLink("Deletar", "Delete", new { id = item.Est_id }, new { @class = "btn btn-pro-delet" })
+            </td>
+        </tr>
+    }
+
+</table>
