@@ -17,26 +17,42 @@ namespace EraFeira.Controllers
 
         //[Authorize(Roles = "Comum")]
         [AcceptVerbs(HttpVerbs.Post)]
-        public JsonResult CadastrarProdutos(List<getItens> dados)
+        public JsonResult CadastrarProdutos(List<getItens> dados, ConfigCesta config)
         {
            
-       
-            
+            Ass_assinatura ass = new Ass_assinatura();
+            ass.Usu_id = 1;
+            ass.Ass_descricao = config.Descricao;
+
+            string nomecesta = "";
+            int cont = 0;
             foreach(getItens gi in dados)
             {
               if(Convert.ToInt32(gi.Qtd) > 0)
                 {
-                    
+                    if(nomecesta != gi.Identificacao)
+                    {
+                        nomecesta = gi.Identificacao;
+                        Ces_cesta cesta = new Ces_cesta();
+                        cesta.Ces_nome = gi.Identificacao;
+                        cesta.Ces_criacao = DateTime.Now;
+                        cesta.Usu_id = 1;
+                        cesta.Ces_valor_total = 100;
+                        cesta.Ass_id = 1;
+                        db.Ces_Cesta.Add(cesta);
+                        db.SaveChanges();
+                        cont = cesta.Ces_id;
+                    }
+
+
                     Cxp_cesta_produto a = new Cxp_cesta_produto();
                     a.Cxp_quantidade = Convert.ToInt32(gi.Qtd);
                     a.Cxp_valor = Convert.ToDouble(gi.Valor);
                     a.Pro_id = Convert.ToInt32(gi.Id);
-                    a.Ces_id = 1;
+                    a.Ces_id = cont;
                     db.Cxp_Cesta_Produto.Add(a);
                     db.SaveChanges();
                 }
-                
-
             }
            
             return Json("ok");

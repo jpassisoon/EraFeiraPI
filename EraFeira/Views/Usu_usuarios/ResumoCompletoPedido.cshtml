@@ -13,9 +13,203 @@
 <label class="rcp-data-entrega">A primeira entrega do mês será <span class="rcp-data-entrega1">03/11/2019</span></label>
 <br />
 
-<section class="rcp-quadrado">
-    <div class="rcp-canto-direito"><img src="~/Imagens/circulo-laranja.png" />Quantidade</div>
-    <br />
-    <h2 class="rcp-h2">Itens da cesta</h2>
+<div class="form-horizontal">
+    <section>
+        <div class="rcp-canto-direito"><img src="~/Imagens/circulo-laranja.png" />Quantidade</div>
+        <br />
+        <h2 class="rcp-h2">Itens da cesta</h2>
+        <ul id="cesta1"> </ul>
+        <br />
+        <ul id="cesta2"> </ul>
+        <br />
+        <ul id="cesta3"> </ul>
+        <br />
+        <ul id="cesta4"> </ul>
 
-</section>
+        <a class="btn btn-primary" id="btnfinalizar">Confirmar</a>
+        <br /><br />
+
+    </section>
+</div>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        Ler("CarrinhoCookie1");
+        Ler("CarrinhoCookie2");
+        Ler("CarrinhoCookie3");
+        Ler("CarrinhoCookie4");
+    });
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+
+    function Ler(nomeCookie) {
+        if (getCookie(nomeCookie) != null) {
+            var cookie = getCookie(nomeCookie);
+            var oi = JSON.parse(cookie);
+            var dados = [];
+            var produto = {};
+
+            for (var i = 1; i <= oi.length; i++) {
+                var separa = [];
+                var a = oi[i];
+                if (a != null || typeof a !== "undefined") {
+                    separa = a.split("-");
+                    switch (nomeCookie) {
+
+                        case "CarrinhoCookie1":
+                            $("#cesta1").append("<li>ID: " + separa[0] + " - Valor: " + separa[1] + " - Qtd: " + separa[2] + "</li>");
+                            break;
+                        case "CarrinhoCookie2":
+                            $("#cesta2").append("<li>ID: " + separa[0] + " - Valor: " + separa[1] + " - Qtd: " + separa[2] + "</li>");
+                            break;
+                        case "CarrinhoCookie3":
+                            $("#cesta3").append("<li>ID: " + separa[0] + " - Valor: " + separa[1] + " - Qtd: " + separa[2] + "</li>");
+                            break;
+                        case "CarrinhoCookie4":
+                            $("#cesta4").append("<li>ID: " + separa[0] + " - Valor: " + separa[1] + " - Qtd: " + separa[2] + "</li>");
+                            break;
+                    }
+                }
+            }
+
+        }
+    }
+
+    $("#btnfinalizar").click(function () {
+        var dados = [];
+        var produto = {};
+
+        if (getCookie("CarrinhoCookie1") != null) {
+            var cookie = getCookie("CarrinhoCookie1");
+            if (cookie != "") {
+                var oi = JSON.parse(cookie);
+
+                for (var i = 1; i <= oi.length; i++) {
+                    var separa = [];
+                    var a = oi[i];
+                    if (a != null || typeof a !== "undefined") {
+                        separa = a.split("-");
+                        //isso
+                        produto = {
+                            id: separa[0],
+                            valor: separa[1],
+                            qtd: separa[2],
+                            Total: $(".carrinho").text(),
+                            nomeCestausu: $(".car-input").val(),
+                            identificacao: "Cesta 1"
+                        }
+                        dados.push(produto);
+                    }
+                }
+            }
+        }
+
+        if (getCookie("CarrinhoCookie2") != null) {
+            var cookie = getCookie("CarrinhoCookie2");
+            if (cookie != "") {
+                var oi = JSON.parse(cookie);
+
+                for (var i = 1; i <= oi.length; i++) {
+                    var separa = [];
+                    var a = oi[i];
+                    if (a != null || typeof a !== "undefined") {
+                        separa = a.split("-");
+                        produto = {
+                            id: separa[0],
+                            valor: separa[1],
+                            qtd: separa[2],
+                            Total: $(".carrinho").text(),
+                            nomeCestausu: $(".car-input").val(),
+                            identificacao: "Cesta 2"
+                        }
+                        dados.push(produto);
+                    }
+                }
+            }
+        }
+
+        if (getCookie("CarrinhoCookie3") != null) {
+            var cookie = getCookie("CarrinhoCookie3");
+            if (cookie != "") {
+                var oi = JSON.parse(cookie);
+
+                for (var i = 1; i <= oi.length; i++) {
+                    var separa = [];
+                    var a = oi[i];
+                    if (a != null || typeof a !== "undefined") {
+                        separa = a.split("-");
+                        produto = {
+                            id: separa[0],
+                            valor: separa[1],
+                            qtd: separa[2],
+                            Total: $(".carrinho3").text(),
+                            nomeCestausu: $(".car-input").val(),
+                            identificacao: "Cesta 3"
+                        }
+                        dados.push(produto);
+                    }
+                }
+            }
+        }
+
+        if (getCookie("CarrinhoCookie4") != null) {
+            var cookie = getCookie("CarrinhoCookie4");
+            if (cookie != "") {
+                var oi = JSON.parse(cookie);
+
+                for (var i = 1; i <= oi.length; i++) {
+                    var separa = [];
+                    var a = oi[i];
+                    if (a != null || typeof a !== "undefined") {
+                        separa = a.split("-");
+                        produto = {
+                            id: separa[0],
+                            valor: separa[1],
+                            qtd: separa[2],
+                            Total: $(".carrinho4").text(),
+                            nomeCestausu: $(".car-input").val(),
+                            identificacao: "Cesta 4"
+                        }
+                        dados.push(produto);
+                    }
+                }
+            }
+        }
+
+        var jsonText = JSON.stringify(dados);
+
+        $.ajax({
+            type: 'POST',
+            url: 'CadastrarProdutos',
+            data: jsonText,
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            success: function (r) {
+                if (r.d == "não") {
+                    alert("Houve um erro ao cadastrar!");
+                } else {
+                    alert("Produtos cadastrados com sucesso!");
+                }
+            }
+        });
+
+    });
+
+
+
+</script>

@@ -43,7 +43,7 @@
                         </div>
 
 
-                        <input class="col-md-2 car-quantidade" id="input_@produto.Pro_id" produtoID="h_@produto.Pro_id" value="0" />
+                        <input class="col-md-2 car-quantidade" idProd="@produto.Pro_id" valorV="@produto.Pro_valor_venda" id="input_@produto.Pro_id" produtoID="h_@produto.Pro_id" value="0" />
 
                         <div class=" col-md-2">
                             <button @*class="btn btn-hook-0"*@ class="btn btn-mais" produtoID="@produto.Pro_id" tipo="mais">
@@ -66,28 +66,201 @@
                 @Html.ActionLink("Cesta Anterior", "Carrinho", "Usu_usuarios", new { area = "" }, new { @class = "btn-return-bask" })
             </div>
             <div class="col-md-4">
-                <h3 class="bask-num"> Cesta <br /><span  class="page-num">2</span> </h3>
+                <h3 class="bask-num"> Cesta <br /><span class="page-num">2</span> </h3>
             </div>
             <div class="col-md-4">
                 @Html.ActionLink("Próxima Cesta", "Carrinho3", "Usu_usuarios", new { area = "" }, new { @class = "btn-next-bask" })
-                @Html.ActionLink("Finalizar", "Carrinho2", "Usu_usuarios", new { area = "" }, new { @class = "btn-next-bask-fim" })
-               
+                @Html.ActionLink("Finalizar", "ResumoCompletoPedido", "Usu_usuarios", new { area = "" }, new { @class = "btn-next-bask-fim" })
             </div>
         </div>
 
-
-
-
+        @*<a href="#" id="novobotao">VER AQUI</a>*@
     </div>
-
-
-
-
 </div>
 
 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
 
+
 <script>
+    var cesta = [];
+    var idProduto;
+    var quantidade;
+
+    $(document).ready(function () {
+        // Aviso de cesta finalizada
+        $(".btn-next-bask-fim").click(function () {
+            alert("Sua cesta foi finalizada!")
+        })
+
+        // verificar se essa é a ultima pagina para mudar de proximo para finalizar
+        if (getCookie("configCestas") != null) {
+            var test = getCookie("configCestas")
+            var cookie = JSON.stringify(test);
+            var verify = cookie.indexOf("false")
+            if (verify > 0) {
+                var num = cookie.replace(/(^.+\D)(\d+)(\D.+$)/i, '$1');
+                num = num.replace(/(^.+\D)(\d+)(\D.+$)/i, '$2');
+                var pagenum = $(".page-num").text()
+                if (pagenum == num) {
+                    $(".btn-next-bask").hide()
+                    $(".btn-next-bask-fim").show()
+                }
+            } else {
+                $(".btn-next-bask").hide()
+                $(".btn-next-bask-fim").show()
+            }
+        }
+
+        //-- Clique para adicionar ou retirar
+        $(".btn-menos").on("click", function () {
+            var id = "#input_" + $(this).attr("produtoID");
+            //alert(id);
+            var now = $(id).val();
+            if ($.isNumeric(now)) {
+                if (parseInt(now) - 1 >= 0) { now--; }
+                $(id).val(now);
+                soma();
+            } else {
+                $(id).val("0");
+            }
+        })
+
+        // Calcula o valor da cesta
+        $(".btn-mais").on("click", function () {
+            var id = "#input_" + $(this).attr("produtoID");
+            var idH = "#h_" + $(this).attr("produtoID");
+
+            //alert(id);
+            //alert($(idH).attr("valor"));
+            var now = $(id).val();
+            if ($.isNumeric(now)) {
+                $(id).val(parseInt(now) + 1);
+                soma();
+            } else {
+                $(id).val("0");
+            }
+        });
+
+        // funcao para calcular o carrinho
+        function soma() {
+            var valor = parseFloat(0);
+            $(".car-quantidade").each(function () {
+                var pro = "#" + $(this).attr("produtoID");
+                var preco = parseFloat($(pro).attr("valor").replace(',', '.'));
+                valor = valor + parseFloat(($(this).val() * preco));
+                //alert(pro + " - " + preco + " - " + valor);
+            });
+            $(".carrinho").text(valor.toFixed(2));
+        }
+
+        // identificar a quantidade e o id dos produtos > 0
+        // Varrer os elementos input
+        // Verificar se os inputs possuem um value maior > 0
+        // adicionar o id do produto + o valor dentro do cookie
+
+        // Cria o cookie e adiciona dados a ele
+        $(".btn-next-bask, .btn-next-bask-fim").click(function () {
+            var nomecesta = $(".car-input").val()
+            var i = 0;
+            var dados = []
+            dados[i] = nomecesta
+            i = 1;
+
+            $(".car-quantidade").each(function () {
+                if (this.value != null) {
+                    dados[i] = $(this).attr("idProd") + "-" + $(this).attr("valorV") + "-" + this.value;
+                    i++
+                };
+            })
+            document.cookie = "CarrinhoCookie2 = " + JSON.stringify(dados);
+        });
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        
+        // Atualiza os campos com os dados do cookie
+        if (getCookie("CarrinhoCookie2") != null) {
+            var cookie = getCookie("CarrinhoCookie2");
+            var oi = JSON.parse(cookie);
+            var i = 1;
+            $('.car-input').val(oi[0]);
+            $(".car-quantidade").each(function () {
+                var separa = []
+                var a = oi[i]
+                var separa = a.split("-")
+                this.value = separa[2]
+                i++;
+            })
+        }
+
+        // Envia os dados Id,Valor e Quantidade para o metodo do controler Usu_usuario e realiza
+        // o processo de cadastro no banco
+        $(".btn-next-bask-fim").click(function () {
+            if (getCookie("CarrinhoCookie2") != null) {
+                var cookie = getCookie("CarrinhoCookie2");
+                var oi = JSON.parse(cookie);
+                var dados = [];
+                var produto = {};
+
+                for (var i = 1; i <= oi.length; i++) {
+                    var separa = [];
+                    var a = oi[i];
+                    if (a != null || typeof a !== "undefined") {
+                        separa = a.split("-");
+                        produto = {
+                            id: separa[0],
+                            valor: separa[1],
+                            qtd: separa[2],
+                            Total: $(".carrinho").text(),
+                            nomeCestausu: $(".car-input").val(),
+                            identificacao: "Cesta 2"
+                        }
+                        dados.push(produto);
+                    }
+                }
+
+                var jsonText = JSON.stringify({ dados: dados });
+                $.ajax({
+                    type: 'POST',
+                    url: 'CadastrarProdutos',
+                    data: jsonText,
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (r) {
+                        if (r.d == "não") {
+                            alert("Houve um erro ao cadastrar!");
+                        } else {
+                            alert("Produtos cadastrados com sucesso!");
+                        }
+                    }
+                });
+            }
+        });
+
+        // atualizar soma carrinho onload
+        if (getCookie("CarrinhoCesta1") != null) {
+            soma()
+        }
+    })
+</script>
+
+
+
+
+
+@*<script>
     var cesta = [];
     var idProduto;
     var quantidade;
@@ -99,15 +272,10 @@
           // Aviso de cesta finalizada
 
         $(".btn-next-bask-fim").click(function () {
-
-
             alert("Sua cesta foi finalizada!")
-
-        })
-          
+        })          
         
         // verificar se essa é a ultima pagina para mudar de proximo para finalizar
-
             if (getCookie("configCestas") != null) {
                 var test = getCookie("configCestas")
                 var cookie = JSON.stringify(test);
@@ -126,10 +294,7 @@
                     }
 
                 } 
-            }
-
-        
-
+            }       
 
         //-- Clique para adicionar ou retirar
         $(".btn-menos").on("click", function () {
@@ -191,18 +356,13 @@
             var dados = []
             dados [i] = nomecesta
             i = 1;
-
             $(".car-quantidade").each(function () {
                 if (this.value != null) {
-
                     dados[i] = this.value;
                     i++
-
                 };
-
             })
             document.cookie = "CarrinhoCookie2 = " + JSON.stringify(dados);
-
 
         });
 
@@ -232,27 +392,15 @@
                 this.value = oi[i];
                 i++;
             })
-           
-
         }
 
         // atualizar soma carrinho onload
-
         if (getCookie("CarrinhoCesta1") != null) {
-
             soma()
-
         }
-
-  
-
-
-
-
-
         // document.cookie = "ItensCesta = " + JSON.stringify(cestaCookie);
     })
-</script>
+</script>*@
 
 
 

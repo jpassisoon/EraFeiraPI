@@ -165,6 +165,7 @@
     <Compile Include="Models\Ass_assinatura.cs" />
     <Compile Include="Models\Cat_categoria.cs" />
     <Compile Include="Models\Ces_cesta.cs" />
+    <Compile Include="Models\ConfigCesta.cs" />
     <Compile Include="Models\Contexto.cs" />
     <Compile Include="Models\Criptografia.cs" />
     <Compile Include="Models\Cxp_cesta_produto.cs" />

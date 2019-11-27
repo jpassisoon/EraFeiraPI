@@ -6,11 +6,6 @@
 
 <link href="~/Content/Carrinho2.css" rel="stylesheet" />
 
-
-<script>
-
-    
-</script>
 <div class="car-section">
 
     <aside>
@@ -75,7 +70,7 @@
             </div>
             <div class="col-md-4">
                 @Html.ActionLink("Próxima Cesta", "Carrinho2", "Usu_usuarios", new { area = "" }, new { @class = "btn-next-bask" })
-                @Html.ActionLink("Finalizar", "Carrinho", "Usu_usuarios", new { area = "" }, new { @class = "btn-next-bask-fim" })
+                @Html.ActionLink("Finalizar", "ResumoCompletoPedido", "Usu_usuarios", new { area = "" }, new { @class = "btn-next-bask-fim" })
             </div>
         </div>
 
@@ -249,10 +244,6 @@
                     this.value = separa[2]
                     i++;
             })
-           
-
-               
-            
 
         }
 
@@ -267,8 +258,6 @@
                 var oi = JSON.parse(cookie);
                 var dados = [];
                 var produto = {};
-
-
 
                 for (var i = 1; i <= oi.length; i++) {
 
