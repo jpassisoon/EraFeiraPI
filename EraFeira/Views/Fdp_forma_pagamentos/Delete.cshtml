@@ -1,0 +1,81 @@
+﻿@model EraFeira.Models.Fdp_forma_pagamento
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Fdp_forma_pagamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ass_Assinatura.Ass_descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ass_Assinatura.Ass_descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stp_Status_Pedido.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stp_Status_Pedido.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fpd_nome_titular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fpd_nome_titular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fdp_numero_cartao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fdp_numero_cartao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fdp_validade_cartao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fdp_validade_cartao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fdp_cvv_cartao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fdp_cvv_cartao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fpd_data_compra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fpd_data_compra)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

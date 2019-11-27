@@ -1,0 +1,70 @@
+﻿@model IEnumerable<EraFeira.Models.Fdp_forma_pagamento>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ass_Assinatura.Ass_descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stp_Status_Pedido.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fpd_nome_titular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fdp_numero_cartao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fdp_validade_cartao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fdp_cvv_cartao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fpd_data_compra)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ass_Assinatura.Ass_descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stp_Status_Pedido.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fpd_nome_titular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fdp_numero_cartao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fdp_validade_cartao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fdp_cvv_cartao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fpd_data_compra)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Fpd_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Fpd_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Fpd_id })
+        </td>
+    </tr>
+}
+
+</table>
