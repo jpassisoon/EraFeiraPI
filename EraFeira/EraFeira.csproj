@@ -146,6 +146,7 @@
     <Compile Include="Controllers\Ces_cestasController.cs" />
     <Compile Include="Controllers\Cxp_cesta_produtosController.cs" />
     <Compile Include="Controllers\End_enderecosController.cs" />
+    <Compile Include="Controllers\Ent_entregasController.cs" />
     <Compile Include="Controllers\Est_estoquesController.cs" />
     <Compile Include="Controllers\Fdp_forma_pagamentosController.cs" />
     <Compile Include="Controllers\For_fornecedoresController.cs" />
@@ -172,6 +173,7 @@
     <Compile Include="Models\Criptografia.cs" />
     <Compile Include="Models\Cxp_cesta_produto.cs" />
     <Compile Include="Models\End_endereco.cs" />
+    <Compile Include="Models\Ent_entrega.cs" />
     <Compile Include="Models\Est_estoque.cs" />
     <Compile Include="Models\Fdp_forma_pagamento.cs" />
     <Compile Include="Models\For_fornecedor.cs" />
@@ -617,16 +619,6 @@
     <Content Include="Views\For_fornecedores\Details.cshtml" />
     <Content Include="Views\For_fornecedores\Edit.cshtml" />
     <Content Include="Views\For_fornecedores\Index.cshtml" />
-    <Content Include="Views\Ces_cestas\Create.cshtml" />
-    <Content Include="Views\Ces_cestas\Delete.cshtml" />
-    <Content Include="Views\Ces_cestas\Details.cshtml" />
-    <Content Include="Views\Ces_cestas\Edit.cshtml" />
-    <Content Include="Views\Ces_cestas\Index.cshtml" />
-    <Content Include="Views\Ass_assinaturas\Create.cshtml" />
-    <Content Include="Views\Ass_assinaturas\Delete.cshtml" />
-    <Content Include="Views\Ass_assinaturas\Details.cshtml" />
-    <Content Include="Views\Ass_assinaturas\Edit.cshtml" />
-    <Content Include="Views\Ass_assinaturas\Index.cshtml" />
     <Content Include="Views\Usu_usuarios\Carrinho2.cshtml" />
     <Content Include="Views\Usu_usuarios\Carrinho3.cshtml" />
     <Content Include="Views\Usu_usuarios\Carrinho4.cshtml" />
@@ -655,6 +647,21 @@
     <Content Include="Views\Fdp_forma_pagamentos\Details.cshtml" />
     <Content Include="Views\Fdp_forma_pagamentos\Edit.cshtml" />
     <Content Include="Views\Fdp_forma_pagamentos\Index.cshtml" />
+    <Content Include="Views\Ces_cestas\Create.cshtml" />
+    <Content Include="Views\Ces_cestas\Delete.cshtml" />
+    <Content Include="Views\Ces_cestas\Details.cshtml" />
+    <Content Include="Views\Ces_cestas\Edit.cshtml" />
+    <Content Include="Views\Ces_cestas\Index.cshtml" />
+    <Content Include="Views\Ass_assinaturas\Create.cshtml" />
+    <Content Include="Views\Ass_assinaturas\Delete.cshtml" />
+    <Content Include="Views\Ass_assinaturas\Details.cshtml" />
+    <Content Include="Views\Ass_assinaturas\Edit.cshtml" />
+    <Content Include="Views\Ass_assinaturas\Index.cshtml" />
+    <Content Include="Views\Ent_entregas\Create.cshtml" />
+    <Content Include="Views\Ent_entregas\Delete.cshtml" />
+    <Content Include="Views\Ent_entregas\Details.cshtml" />
+    <Content Include="Views\Ent_entregas\Edit.cshtml" />
+    <Content Include="Views\Ent_entregas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Details";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
 <h2>Details</h2>
@@ -20,19 +20,19 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Ass_qtd_cesta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ass_qtd_cesta)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Ass_tempo)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Ass_tempo)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Ass_descricao)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Ass_descricao)
         </dd>
 
         <dt>
@@ -49,6 +49,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.Ass_tipo_cesta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ass_valor_total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ass_valor_total)
         </dd>
 
     </dl>

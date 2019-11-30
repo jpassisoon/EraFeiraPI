@@ -19,25 +19,30 @@ namespace EraFeira.Controllers
         [AcceptVerbs(HttpVerbs.Post)]
         public JsonResult CadastrarProdutos(List<getItens> dados, ConfigCesta config)
         {
-           
+
             Ass_assinatura ass = new Ass_assinatura();
-            ass.Usu_id = 1;
-            ass.Ass_descricao = config.Descricao;
+            ass.Ass_tempo = config.Tempo;
+            //ass.Ass_tipo_cesta = 
+            //config.Cesta = 0;
+            ass.Ass_status = false;
+
+            //ass.Usu_id = 1;
+            //ass.Ass_descricao = config.Descricao;
 
             string nomecesta = "";
             int cont = 0;
-            foreach(getItens gi in dados)
+            foreach (getItens gi in dados)
             {
-              if(Convert.ToInt32(gi.Qtd) > 0)
+                if (Convert.ToInt32(gi.Qtd) > 0)
                 {
-                    if(nomecesta != gi.Identificacao)
+                    if (nomecesta != gi.Identificacao)
                     {
                         nomecesta = gi.Identificacao;
                         Ces_cesta cesta = new Ces_cesta();
                         cesta.Ces_nome = gi.Identificacao;
                         cesta.Ces_criacao = DateTime.Now;
                         cesta.Usu_id = 1;
-                        cesta.Ces_valor_total = 100;
+                        cesta.Ces_valor = 100;
                         cesta.Ass_id = 1;
                         db.Ces_Cesta.Add(cesta);
                         db.SaveChanges();
@@ -54,10 +59,10 @@ namespace EraFeira.Controllers
                     db.SaveChanges();
                 }
             }
-           
+
             return Json("ok");
         }
-        
+
         // GET: Usu_usuarios
         //[Authorize(Roles = "Adm")]
         public ActionResult Index()

@@ -1,0 +1,51 @@
+﻿@model EraFeira.Models.Ent_entrega
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ent_entrega</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ces_Cesta.Ces_nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ces_Cesta.Ces_nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ent_data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ent_data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ent_anotacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ent_anotacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ent_entregue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ent_entregue)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Ent_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

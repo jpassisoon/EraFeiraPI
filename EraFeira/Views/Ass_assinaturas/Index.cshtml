@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
 <h2>Index</h2>
@@ -16,16 +16,19 @@
             @Html.DisplayNameFor(model => model.Usu_Usuario.Usu_nome)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Ass_tempo)
+            @Html.DisplayNameFor(model => model.Ass_qtd_cesta)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Ass_descricao)
+            @Html.DisplayNameFor(model => model.Ass_tempo)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Ass_status)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Ass_tipo_cesta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ass_valor_total)
         </th>
         <th></th>
     </tr>
@@ -36,16 +39,19 @@
             @Html.DisplayFor(modelItem => item.Usu_Usuario.Usu_nome)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Ass_tempo)
+            @Html.DisplayFor(modelItem => item.Ass_qtd_cesta)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Ass_descricao)
+            @Html.DisplayFor(modelItem => item.Ass_tempo)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Ass_status)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Ass_tipo_cesta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ass_valor_total)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Ass_id }) |

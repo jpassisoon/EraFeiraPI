@@ -1,0 +1,52 @@
+﻿@model IEnumerable<EraFeira.Models.Ent_entrega>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ces_Cesta.Ces_nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ent_data)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ent_anotacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ent_entregue)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ces_Cesta.Ces_nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ent_data)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ent_anotacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ent_entregue)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Ent_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Ent_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Ent_id })
+        </td>
+    </tr>
+}
+
+</table>

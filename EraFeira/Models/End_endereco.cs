@@ -41,8 +41,11 @@ namespace EraFeira.Models
         [Display(Name = "Instruções Especiais")]
         public string End_instrucao { get; set; }
 
-        
+
         //public int Usu_id { get; set; }
         //public virtual Usu_usuario Usu_Usuario { get; set; }
+
+        //public int Ent_id { get; set; }
+        //public virtual Ent_entrega Ent_Entrega { set; get; }
     }
 }

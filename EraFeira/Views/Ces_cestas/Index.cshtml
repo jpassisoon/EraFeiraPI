@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
 <h2>Index</h2>
@@ -13,7 +13,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Ass_Assinatura.Ass_descricao)
+            @Html.DisplayNameFor(model => model.Ass_Assinatura.Ass_id)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Usu_Usuario.Usu_nome)
@@ -25,7 +25,7 @@
             @Html.DisplayNameFor(model => model.Ces_criacao)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Ces_valor_total)
+            @Html.DisplayNameFor(model => model.Ces_valor)
         </th>
         <th></th>
     </tr>
@@ -33,7 +33,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Ass_Assinatura.Ass_descricao)
+            @Html.DisplayFor(modelItem => item.Ass_Assinatura.Ass_id)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Usu_Usuario.Usu_nome)
@@ -45,7 +45,7 @@
             @Html.DisplayFor(modelItem => item.Ces_criacao)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Ces_valor_total)
+            @Html.DisplayFor(modelItem => item.Ces_valor)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Ces_id }) |

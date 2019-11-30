@@ -21,8 +21,8 @@ namespace EraFeira.Models
         public DateTime Ces_criacao { get; set; }
 
         //[Required]
-        [Display(Name = "Valor total")]
-        public double Ces_valor_total { get; set; }
+        [Display(Name = "Total")]
+        public double Ces_valor { get; set; }
 
         public int Usu_id { get; set; }
         public virtual Usu_usuario Usu_Usuario { get; set; }

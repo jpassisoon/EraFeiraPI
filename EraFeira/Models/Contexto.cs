@@ -23,5 +23,6 @@ namespace EraFeira.Models
         public DbSet<Cxp_cesta_produto> Cxp_Cesta_Produto { get; set; }
         public DbSet<Stp_status_pedido> Stp_Status_Pedido { set; get; }
         public DbSet<Fdp_forma_pagamento> Fdp_Forma_Pagamento { set; get; }
+        public DbSet<Ent_entrega> Ent_Entrega { set; get; }
     }
 }

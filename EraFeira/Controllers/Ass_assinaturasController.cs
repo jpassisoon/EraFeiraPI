@@ -48,7 +48,7 @@ namespace EraFeira.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Ass_id,Ass_tempo,Ass_descricao,Ass_status,Ass_tipo_cesta,Usu_id")] Ass_assinatura ass_assinatura)
+        public ActionResult Create([Bind(Include = "Ass_id,Ass_qtd_cesta,Ass_tempo,Ass_status,Ass_tipo_cesta,Ass_valor_total,Usu_id")] Ass_assinatura ass_assinatura)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace EraFeira.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Ass_id,Ass_tempo,Ass_descricao,Ass_status,Ass_tipo_cesta,Usu_id")] Ass_assinatura ass_assinatura)
+        public ActionResult Edit([Bind(Include = "Ass_id,Ass_qtd_cesta,Ass_tempo,Ass_status,Ass_tipo_cesta,Ass_valor_total,Usu_id")] Ass_assinatura ass_assinatura)
         {
             if (ModelState.IsValid)
             {

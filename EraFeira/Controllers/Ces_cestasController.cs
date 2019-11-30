@@ -21,9 +21,6 @@ namespace EraFeira.Controllers
             return View(ces_Cesta.ToList());
         }
 
-       
-
-
         // GET: Ces_cestas/Details/5
         public ActionResult Details(int? id)
         {
@@ -42,7 +39,7 @@ namespace EraFeira.Controllers
         // GET: Ces_cestas/Create
         public ActionResult Create()
         {
-            ViewBag.Ass_id = new SelectList(db.Ass_Assinatura, "Ass_id", "Ass_descricao");
+            ViewBag.Ass_id = new SelectList(db.Ass_Assinatura, "Ass_id", "Ass_id");
             ViewBag.Usu_id = new SelectList(db.Usu_Usuario, "Usu_id", "Usu_nome");
             return View();
         }
@@ -52,7 +49,7 @@ namespace EraFeira.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Ces_id,Ces_nome,Ces_criacao,Ces_valor_total,Usu_id,Ass_id")] Ces_cesta ces_cesta)
+        public ActionResult Create([Bind(Include = "Ces_id,Ces_nome,Ces_criacao,Ces_valor,Usu_id,Ass_id")] Ces_cesta ces_cesta)
         {
             if (ModelState.IsValid)
             {
@@ -61,7 +58,7 @@ namespace EraFeira.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Ass_id = new SelectList(db.Ass_Assinatura, "Ass_id", "Ass_descricao", ces_cesta.Ass_id);
+            ViewBag.Ass_id = new SelectList(db.Ass_Assinatura, "Ass_id", "Ass_id", ces_cesta.Ass_id);
             ViewBag.Usu_id = new SelectList(db.Usu_Usuario, "Usu_id", "Usu_nome", ces_cesta.Usu_id);
             return View(ces_cesta);
         }
@@ -78,7 +75,7 @@ namespace EraFeira.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.Ass_id = new SelectList(db.Ass_Assinatura, "Ass_id", "Ass_descricao", ces_cesta.Ass_id);
+            ViewBag.Ass_id = new SelectList(db.Ass_Assinatura, "Ass_id", "Ass_id", ces_cesta.Ass_id);
             ViewBag.Usu_id = new SelectList(db.Usu_Usuario, "Usu_id", "Usu_nome", ces_cesta.Usu_id);
             return View(ces_cesta);
         }
@@ -88,7 +85,7 @@ namespace EraFeira.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Ces_id,Ces_nome,Ces_criacao,Ces_valor_total,Usu_id,Ass_id")] Ces_cesta ces_cesta)
+        public ActionResult Edit([Bind(Include = "Ces_id,Ces_nome,Ces_criacao,Ces_valor,Usu_id,Ass_id")] Ces_cesta ces_cesta)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +93,7 @@ namespace EraFeira.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.Ass_id = new SelectList(db.Ass_Assinatura, "Ass_id", "Ass_descricao", ces_cesta.Ass_id);
+            ViewBag.Ass_id = new SelectList(db.Ass_Assinatura, "Ass_id", "Ass_id", ces_cesta.Ass_id);
             ViewBag.Usu_id = new SelectList(db.Usu_Usuario, "Usu_id", "Usu_nome", ces_cesta.Usu_id);
             return View(ces_cesta);
         }

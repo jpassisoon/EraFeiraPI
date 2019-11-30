@@ -11,19 +11,20 @@ namespace EraFeira.Models
         [Key]
         public int Ass_id { get; set; }
 
+        public int Ass_qtd_cesta { set; get; }
+
         public int Ass_tempo { get; set; }
 
-        public string Ass_descricao { get; set; }
-
-        [EnumDataType(typeof(Status))]
+        //public string Ass_descricao { get; set; }
+                
         [Display(Name = "Status")]
-        public Status Ass_status { get; set; }
-        public enum Status { vigente, encerrado }
-
-        [EnumDataType(typeof(TipoCesta))]
+        public bool Ass_status { get; set; }
+       
         [Display(Name = "")]
-        public TipoCesta Ass_tipo_cesta { get; set; }
-        public enum TipoCesta { igual, diferente }
+        public bool Ass_tipo_cesta { get; set; }
+
+        //total de todas as cestas
+        public double Ass_valor_total { set; get; }
 
         public int Usu_id { get; set; }
         public virtual Usu_usuario Usu_Usuario { get; set; }
