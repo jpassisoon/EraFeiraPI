@@ -90,9 +90,47 @@
         }
     }
 
+
+
+
+
     $("#btnfinalizar").click(function () {
         var dados = [];
         var produto = {};
+        var configs = {}
+
+
+        if (getCookie("configCestas") != null) {
+            var cookie = getCookie("configCestas");
+            if (cookie != "") {
+                var oi = JSON.parse(cookie);
+                    
+                configs = {
+                    QtdCesta: oi[0],
+                    Tempo: oi[1],
+                    TipoCesta: oi[2],
+
+                }   
+                
+            }
+        }
+
+        var jsonText = JSON.stringify(configs);
+
+          $.ajax({
+            type: 'POST',
+            url: 'CadastrarAssinatura',
+            data: jsonText,
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            success: function (r) {
+                if (r.d == "não") {
+                    alert("Houve um erro ao cadastrar!");
+                } else {
+                    alert("Produtos cadastrados com sucesso!");
+                }
+            }
+        });
 
         if (getCookie("CarrinhoCookie1") != null) {
             var cookie = getCookie("CarrinhoCookie1");

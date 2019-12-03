@@ -240,11 +240,13 @@
 
     $(".ent-next").click(function () {
 
-        var config = {
-            numEntregas: qtdEntregas,
-            tempEntregas: tempEntregas,
-            cestasIguais: isCestasIguais
-        }
+        var config = [];
+
+        config[0] = qtdEntregas;
+        config[1] = tempEntregas;
+        config[2] = isCestasIguais;
+           
+        
 
         document.cookie = "configCestas = " + JSON.stringify(config);
     });

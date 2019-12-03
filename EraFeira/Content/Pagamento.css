@@ -1,0 +1,52 @@
+﻿body {
+}
+
+.resi{
+
+    margin: 0;
+}
+
+.pag-section{
+
+
+    max-width: 900px;
+    border: 1px solid black;
+    height: 500px;
+    margin: 0 auto;
+    
+
+
+
+}
+
+.pag-summary {
+    max-width: 700px;
+    border: 2px solid black;
+    margin: 0 auto;
+    text-align: center;
+    color: #585858;
+}
+.pag-summary-h1{
+
+    font-size: 30px;
+    font-weight: 600;
+
+}
+.pag-summary-h2{
+    font-size: 20px;
+    margin-top: 80px;
+}
+.pag-orange-summary {
+    height: 200px;
+    width: 2px;
+    background-color: #FF9124;
+    margin: 0 auto;
+}
+
+.pag-standard-text{
+
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    margin-top: 60px;
+}

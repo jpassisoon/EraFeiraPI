@@ -17,20 +17,33 @@ namespace EraFeira.Controllers
 
         //[Authorize(Roles = "Comum")]
         [AcceptVerbs(HttpVerbs.Post)]
-        public JsonResult CadastrarProdutos(List<getItens> dados, ConfigCesta config)
+
+
+        public JsonResult CadastrarAssinatura(ConfigCesta configCesta)
         {
 
             Ass_assinatura ass = new Ass_assinatura();
-            ass.Ass_tempo = config.Tempo;
-            //ass.Ass_tipo_cesta = 
-            //config.Cesta = 0;
-            ass.Ass_status = false;
 
-            //ass.Usu_id = 1;
-            //ass.Ass_descricao = config.Descricao;
+            ass.Ass_qtd_cesta = configCesta.QtdCesta;
+            ass.Ass_tempo = configCesta.Tempo;
+            ass.Ass_status = true;
+            ass.Ass_tipo_cesta = configCesta.Status;
+            ass.Usu_id = 1;
+            db.Ass_Assinatura.Add(ass);
+            db.SaveChanges();
 
+
+            return Json("ok");
+
+        }
+        public JsonResult CadastrarProdutos(List<getItens> dados, ConfigCesta config)
+        {
+
+
+       
             string nomecesta = "";
             int cont = 0;
+            double cont2 = 0;
             foreach (getItens gi in dados)
             {
                 if (Convert.ToInt32(gi.Qtd) > 0)
@@ -42,7 +55,7 @@ namespace EraFeira.Controllers
                         cesta.Ces_nome = gi.Identificacao;
                         cesta.Ces_criacao = DateTime.Now;
                         cesta.Usu_id = 1;
-                        cesta.Ces_valor = 100;
+                        cesta.Ces_valor = Convert.ToDouble(gi.Total);
                         cesta.Ass_id = 1;
                         db.Ces_Cesta.Add(cesta);
                         db.SaveChanges();
@@ -53,12 +66,15 @@ namespace EraFeira.Controllers
                     Cxp_cesta_produto a = new Cxp_cesta_produto();
                     a.Cxp_quantidade = Convert.ToInt32(gi.Qtd);
                     a.Cxp_valor = Convert.ToDouble(gi.Valor);
+                    cont2 = Convert.ToDouble(gi.Valor);
                     a.Pro_id = Convert.ToInt32(gi.Id);
                     a.Ces_id = cont;
                     db.Cxp_Cesta_Produto.Add(a);
                     db.SaveChanges();
                 }
             }
+            
+
 
             return Json("ok");
         }
@@ -118,6 +134,10 @@ namespace EraFeira.Controllers
        
 
         public ActionResult EsqueceuSenha()
+        {
+            return View();
+        }
+        public ActionResult Pagamento()
         {
             return View();
         }

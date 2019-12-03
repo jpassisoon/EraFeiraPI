@@ -293,6 +293,7 @@
     <Content Include="Content\Fornecedor.css" />
     <Content Include="Content\Home.css" />
     <Content Include="Content\Login.css" />
+    <Content Include="Content\Pagamento.css" />
     <Content Include="Content\ResumoCompletoPedido.css" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
@@ -662,6 +663,7 @@
     <Content Include="Views\Ent_entregas\Details.cshtml" />
     <Content Include="Views\Ent_entregas\Edit.cshtml" />
     <Content Include="Views\Ent_entregas\Index.cshtml" />
+    <Content Include="Views\Usu_usuarios\Pagamento.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
