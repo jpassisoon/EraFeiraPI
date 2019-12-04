@@ -5,23 +5,27 @@
 
     margin: 0;
 }
-
+.resi-2{
+    margin: 0;
+    margin-top: 30px;
+}
+.resi-3 {
+    margin: 0;
+    margin-top: 15px;
+}
 .pag-section{
 
 
     max-width: 900px;
-    border: 1px solid black;
+   
     height: 500px;
     margin: 0 auto;
-    
-
-
-
+   
 }
 
 .pag-summary {
-    max-width: 700px;
-    border: 2px solid black;
+    max-width: 550px;
+   
     margin: 0 auto;
     text-align: center;
     color: #585858;
@@ -33,20 +37,120 @@
 
 }
 .pag-summary-h2{
-    font-size: 20px;
-    margin-top: 80px;
+    font-size: 22px;
+    margin-top: 40px;
 }
 .pag-orange-summary {
-    height: 200px;
+    height: 80px;
     width: 2px;
     background-color: #FF9124;
     margin: 0 auto;
+    margin-top: 10px;
 }
 
 .pag-standard-text{
 
-    font-size: 20px;
+    font-size: 16px;
     color: black;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 10px;
+}
+.pag-main{
+
+    max-width: 550px;
+    height: 300px;
+    
+    margin: 0 auto;
+}
+.pag-main-h3{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 15px;
+}
+.pag-card {
+    width: 30%;
+    margin: 0;
+    margin-left: 50px;
+    
+
+}
+
+.pag-main-h4{
+
+    font-size: 12px;
+    text-align: center;
+    margin-top: 3px;
+    font-weight: 600;
+}
+.pag-orange-card {
+    width: 95%;
+    height: 2px;
+    background-color: #110000;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.pag-card-2 {
+    width: 30%;
+    margin: 0;
+    margin-left: 50px;
+}
+
+.pag-main-h5 {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 3px;
+    font-weight: 600;
+}
+
+.pag-orange-card-2 {
+    width: 95%;
+    height: 2px;
+    background-color: #110000;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+.pag-orange-card-2, .pag-main-h5, .pag-card-2{
+
+    opacity: 0.4;
+}
+.inputs {
+    border-radius: 1px;
+    border: 1px solid #9A9A9A;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    opacity: 0.7;
+    height: 45px;
+}
+.pag-span-1 {
+    color: #2B2B2B;
+    font-size: 22px;
+}
+.pag-span-2 {
+    font-weight: 600;
+    color: #646464;
+}
+.pag-span-3 {
+    font-size: 10px;
+    color: #A0A0A0;
+
+}
+.pag-general-input{
+    width:90%;
+    height: 50px;
+}
+.pag-input-end {
+    width:200px;
+    border-radius: 1px;
+    height: 40px;
+    color: white;
+    background-color: #FC9C5F;
+    border: none;
+    margin-top: 20px;
+    float: right;
+    font-size: 13px;
+    font-weight: 600;
 }
