@@ -6,11 +6,11 @@
 <link href="~/Content/ResumoCompletoPedido.css" rel="stylesheet" />
 <h1 class="rcp-h1">Resumo Completo do Pedido</h1>
 <section>
-    <div id="valor" class="rcp-valor">Valor <span class="rcp-preco">R$ 64,90</span></div>
+    <div id="valor" class="rcp-valor"><span class="rcp-preco"></span></div>
     <br />
-    <div class="rcp-entrega" value="Tempo"></div>
+    <div id="tempo" class="rcp-entrega" value="Tempo"></div>
     <br />
-    <div class="rcp-data-entrega">A primeira entrega do mês será <span class="rcp-data-entrega1">03/11/2019</span></div>
+    <div id="data" class="rcp-data-entrega"><span class="rcp-data-entrega1"></span></div>
     <br />
 </section>
 <br />
@@ -36,14 +36,19 @@
 <script>
 
     $(document).ready(function () {
+        Ler2("ConfigCesta1");
+        Ler2("ConfigCesta2");
+        Ler2("ConfigCesta3");
+    });
+    
+    $(document).ready(function () {
         Ler("CarrinhoCookie1");
         Ler("CarrinhoCookie2");
         Ler("CarrinhoCookie3");
         Ler("CarrinhoCookie4");
-        Ler("Config1");
-        Ler("Config2");
     });
 
+   
     function getCookie(cname) {
         var name = cname + "=";
         var ca = document.cookie.split(';');
@@ -59,6 +64,20 @@
         return "";
     }
 
+    //function getCookie(nome) {
+    //    var vnome = nome + "=";
+    //    var b = document.cookie1.split(';');
+    //    for (var y = 0; y < b.length; b++) {
+    //        var v = b[y];
+    //        while (v.charAt(0) == ' ') {
+    //            v = v.substring(1);
+    //        }
+    //        if (v.indexOf(vnome) == 0) {
+    //            return v.substring(vnome.length, v.length);
+    //        }
+    //    }
+    //    return "";
+    //}
 
     function Ler(nomeCookie) {
         if (getCookie(nomeCookie) != null) {
@@ -66,7 +85,7 @@
             var oi = JSON.parse(cookie);
             var dados = [];
             var produto = {};
-
+          
             for (var i = 1; i <= oi.length; i++) {
                 var separa = [];
                 var a = oi[i];
@@ -94,7 +113,33 @@
     }
 
 
+    function Ler2(nameCookie) {
+        if (getCookie(nameCookie) != null) {
+            var cookie1 = getCookie(nameCookie);
+            var x = JSON.parse(cookie1);
 
+            for (var y = 0; y <= x.length; y++) {
+                var ax = [];
+                var w = ax[y];
+
+                if (w != null || typeof w !== "undefined") {
+                    ax = w.split("-");
+                    switch (nameCookie) {
+                        case "ConfigCesta1":
+                            $("#valor").append("Valor " + ax[0]);
+                            break;
+                        case "ConfigCesta2":
+                            $("#tempo").append(ax[1] + " entregas");
+                            break;
+                        case "ConfigCesta3":
+                            $("#data").append("A primeira entrega será " + ax[2]);
+                            break;
+                    }
+                }
+
+            }
+        }
+    }
 
 
     $("#btnfinalizar").click(function () {
@@ -104,9 +149,9 @@
        
 
         if (getCookie("configCestas") != null) {
-            var cookie = getCookie("configCestas");
-            if (cookie != "") {
-                var ax = JSON.parse(cookie);
+            var cookie1 = getCookie("configCestas");
+            if (cookie1 != "") {
+                var ax = JSON.parse(cookie1);
                     
                 configs = {
                     QtdCesta: ax[0],
