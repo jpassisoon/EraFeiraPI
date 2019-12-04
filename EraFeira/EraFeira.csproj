@@ -304,11 +304,14 @@
     <Content Include="Imagens\alface.png" />
     <Content Include="Imagens\alho.png" />
     <Content Include="Imagens\banana.png" />
+    <Content Include="Imagens\barcode.svg" />
     <Content Include="Imagens\cecilia-rodriguez-suarez-ZWL0e5X7SB0-unsplash.jpg" />
     <Content Include="Imagens\CenouraOutlined.png" />
     <Content Include="Imagens\cesta.png" />
     <Content Include="Imagens\circulo-laranja.png" />
     <Content Include="Imagens\cozinhando3.jpg" />
+    <Content Include="Imagens\credit-card-2.svg" />
+    <Content Include="Imagens\credit-card.svg" />
     <Content Include="Imagens\direita.png" />
     <Content Include="Imagens\Erafeira-cesta-quantidade.png" />
     <Content Include="Imagens\Erafeira-cesta.png" />

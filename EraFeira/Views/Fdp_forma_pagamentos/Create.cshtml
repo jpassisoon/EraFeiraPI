@@ -2,83 +2,110 @@
 
 @{
     ViewBag.Title = "Create";
-    Layout = "~/Views/Shared/_Layout2.cshtml";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
 }
 
-<h2>Create</h2>
+<link rel="stylesheet" href="~/Content/Pagamento.css">
 
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Fdp_forma_pagamento</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Fpd_nome_titular, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Fpd_nome_titular, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Fpd_nome_titular, "", new { @class = "text-danger" })
+<div class="pag-section">
+
+
+    <div class="pag-summary">
+
+        <h1 class="pag-summary-h1"> Resumo </h1>
+
+
+        <div class="row resi">
+
+            <div class="col-lg-5 ">
+
+                <h2 class="pag-summary-h2"> total Cesta(s) </h2>
+            </div>
+            <div class="col-lg-2 ">
+
+                <div class="pag-orange-summary"></div>
+            </div>
+            <div class="col-lg-5 ">
+
+                <p class="pag-standard-text"> <span class="pag-span-1">64,90</span><br /> <span class="pag-span-2">3 cestas Mensais</span> <br /> <span class="pag-span-3">*Frete incluso no valor total</span></p>
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Fdp_numero_cartao, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Fdp_numero_cartao, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Fdp_numero_cartao, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Fdp_validade_cartao, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Fdp_validade_cartao, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Fdp_validade_cartao, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Fdp_cvv_cartao, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Fdp_cvv_cartao, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Fdp_cvv_cartao, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Fpd_data_compra, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Fpd_data_compra, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Fpd_data_compra, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Ass_id, "Ass_id", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("Ass_id", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.Ass_id, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Stp_id, "Stp_id", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("Stp_id", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.Stp_id, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
     </div>
-}
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+    <div class="pag-main">
+
+        <h3 class="pag-main-h3"> Escolha a melhor forma de pagamento</h3>
+
+        <div class="row resi-2">
+
+            <div class="col-lg-4">
+
+                <img class="pag-card" src="~/Imagens/credit-card.svg" />
+                <h4 class="pag-main-h4"> Cartão de Crédito </h4>
+                <div class="pag-orange-card"></div>
+
+            </div>
+            <div class="col-lg-4 ">
+                <img class="pag-card-2" src="~/Imagens/credit-card-2.svg" />
+                <h5 class="pag-main-h5"> Cartão de Debito </h5>
+                <div class="pag-orange-card-2"></div>
+
+            </div>
+            <div class="col-lg-4 ">
+                <img class="pag-card-2" src="~/Imagens/barcode.svg" />
+                <h5 class="pag-main-h5"> Boleto Bancário </h5>
+                <div class="pag-orange-card-2"></div>
+            </div>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+    <div class="row  resi-3">
+
+
+        <div class="col-lg-12 ">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            @Html.EditorFor(model => model.Fpd_nome_titular, new { htmlAttributes = new { @class = "form-control inputs", @placeholder = "Nome do titular do cartao" } })
+            @Html.ValidationMessageFor(model => model.Fpd_nome_titular, "", new { @class = "text-danger" })
+
+
+        </div>
+        <div class="col-lg-12 ">
+            @Html.EditorFor(model => model.Fdp_numero_cartao, new { htmlAttributes = new { @class = "form-control inputs", @placeholder = "Numero do cartao" } })
+            @Html.ValidationMessageFor(model => model.Fdp_numero_cartao, "", new { @class = "text-danger" })
+
+        </div>
+        <div class="col-lg-5">
+            @Html.EditorFor(model => model.Fdp_validade_cartao, new { htmlAttributes = new { @class = "form-control inputs", @placeholder = "Validade do Cartao" } })
+            @Html.ValidationMessageFor(model => model.Fdp_validade_cartao, "", new { @class = "text-danger" })
+
+        </div>
+        <div class="col-lg-7">
+            @Html.EditorFor(model => model.Fdp_cvv_cartao, new { htmlAttributes = new { @class = "form-control inputs", @placeholder = "CVV do cartao" } })
+            @Html.ValidationMessageFor(model => model.Fdp_cvv_cartao, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div class="col-lg-12">
+            <input type="submit" value="Confirmar e Assinar cesta" class="pag-input-end" />
+
+        </div>
+        
+
+    </div>
+
+      
+        }
+
 </div>
+
+
+
+    
+               
+
+    @*@Html.ActionLink("Back to List", "Index")*@
+
