@@ -168,7 +168,7 @@
 
             $(".car-quantidade").each(function () {
                 if (this.value != null) {
-                    dados[i] = $(this).attr("idProd") + "-" + $(this).attr("valorV") + "-" + this.value;
+                    dados[i] =$(this).attr("idProd")+"-"+$(this).attr("valorV")+"-"+this.value+"-"+$(".carrinho").text()
                     i++
                 };
             })
@@ -223,7 +223,7 @@
                             id: separa[0],
                             valor: separa[1],
                             qtd: separa[2],
-                            Total: $(".carrinho").text(),
+                           Total: separa[3],
                             nomeCestausu: $(".car-input").val(),
                             identificacao: "Cesta 2"
                         }
