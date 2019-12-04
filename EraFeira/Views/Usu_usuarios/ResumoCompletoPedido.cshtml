@@ -5,14 +5,15 @@
 }
 <link href="~/Content/ResumoCompletoPedido.css" rel="stylesheet" />
 <h1 class="rcp-h1">Resumo Completo do Pedido</h1>
-
-<label class="rcp-valor">Valor <span class="rcp-preco">R$ 64,90</span></label>
+<section>
+    <div id="valor" class="rcp-valor">Valor <span class="rcp-preco">R$ 64,90</span></div>
+    <br />
+    <div class="rcp-entrega" value="Tempo"></div>
+    <br />
+    <div class="rcp-data-entrega">A primeira entrega do mês será <span class="rcp-data-entrega1">03/11/2019</span></div>
+    <br />
+</section>
 <br />
-<label class="rcp-entrega">3 entregas mensais</label>
-<br />
-<label class="rcp-data-entrega">A primeira entrega do mês será <span class="rcp-data-entrega1">03/11/2019</span></label>
-<br />
-
 <div class="form-horizontal">
     <section>
         <div class="rcp-canto-direito"><img src="~/Imagens/circulo-laranja.png" />Quantidade</div>
@@ -39,6 +40,8 @@
         Ler("CarrinhoCookie2");
         Ler("CarrinhoCookie3");
         Ler("CarrinhoCookie4");
+        Ler("Config1");
+        Ler("Config2");
     });
 
     function getCookie(cname) {
@@ -98,17 +101,17 @@
         var dados = [];
         var produto = {};
         var configs = {}
-
+       
 
         if (getCookie("configCestas") != null) {
             var cookie = getCookie("configCestas");
             if (cookie != "") {
-                var oi = JSON.parse(cookie);
+                var ax = JSON.parse(cookie);
                     
                 configs = {
-                    QtdCesta: oi[0],
-                    Tempo: oi[1],
-                    TipoCesta: oi[2],
+                    QtdCesta: ax[0],
+                    Tempo: ax[1],
+                    TipoCesta: ax[2],
 
                 }   
                 
