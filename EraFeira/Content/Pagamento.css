@@ -20,7 +20,11 @@
    
     height: 500px;
     margin: 0 auto;
-    margin-top: 25px;
+
+    /*margin-top: 25px;*/
+
+    margin-top: 40px;
+
    
 }
 
@@ -69,13 +73,23 @@
     margin-top: 15px;
 }
 .pag-card {
-    width: 30%;
+    width: 75%;
     margin: 0;
-    margin-left: 50px;
-    
+    margin-left: 23px;
+    margin-top: 30px;
+    cursor: pointer;
 
 }
-
+.colorized {
+    color: #FF9124;
+    font-size: 20px;
+    font-weight: 500;
+}
+.colorized-2{
+    font-weight: 500;
+    color: #6cff8a;
+}
+   
 .pag-main-h4{
 
     font-size: 12px;
@@ -86,16 +100,16 @@
 .pag-orange-card {
     width: 95%;
     height: 2px;
-    background-color: #110000;
+    background-color: #FF9124;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 29px;
     border-radius: 5px;
 }
 
 .pag-card-2 {
-    width: 30%;
+    width: 31.5%;
     margin: 0;
-    margin-left: 50px;
+    margin-left: 80px;
 }
 
 .pag-main-h5 {
@@ -110,12 +124,12 @@
     height: 2px;
     background-color: #110000;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 14px;
     border-radius: 5px;
 }
 .pag-orange-card-2, .pag-main-h5, .pag-card-2{
 
-    opacity: 0.4;
+    opacity: 0.2;
 }
 .inputs {
     border-radius: 1px;
@@ -144,14 +158,22 @@
     height: 50px;
 }
 .pag-input-end {
-    width:200px;
+    width:250px;
     border-radius: 1px;
     height: 40px;
     color: white;
-    background-color: #FC9C5F;
+    background-color: #FF9124;
     border: none;
-    margin-top: 20px;
-    float: right;
+    margin-top: 40px;
+    margin-left: 130px;
     font-size: 13px;
+    font-weight: 600;
+    display: none;
+}
+
+.pag-main-h6{
+
+    text-align: center;
+    padding-top: 45px;
     font-weight: 600;
 }
