@@ -39,39 +39,55 @@
 
         <div class="row resi-2">
 
-            <div class="col-lg-4">
+            <div class="col-lg-6">
 
-                <img class="pag-card" src="~/Imagens/credit-card.svg" />
-                <h4 class="pag-main-h4"> Cartão de Crédito </h4>
+                <a href="https://pagseguro.uol.com.br/para-seu-negocio/online/tela-de-pagamento" target="_blank"><img id="pag" class="pag-card" src="~/Imagens/pagseguro-logo.png" /></a>
+               
                 <div class="pag-orange-card"></div>
-                
-            </div>
-            <div class="col-lg-4 ">
-                <img class="pag-card-2" src="~/Imagens/credit-card-2.svg" />
-                <h5 class="pag-main-h5"> Cartão de Debito </h5>
-                <div class="pag-orange-card-2"></div>
 
             </div>
-            <div class="col-lg-4 ">
+            <div class="col-lg-6 ">
                 <img class="pag-card-2" src="~/Imagens/barcode.svg" />
                 <h5 class="pag-main-h5"> Boleto Bancário </h5>
                 <div class="pag-orange-card-2"></div>
             </div>
-        </div>
-        <div class="row border">
 
-            <div class="col-lg-12 border ">
-
-               
+            <div class="col-lg-12">
+                <h6 id="status-pag"class="pag-main-h6"> Aguardando Confirmacao de pagamento </h6>
+                
             </div>
-            <div class="col-lg-12 border">
+            <div class="col-lg-12">
 
-               
+                <input id="pag-input-end-1" class="pag-input-end" type="submit" value="Confirmar e Assinar Cesta" />
+
             </div>
-
         </div>
-       
+
+
+
     </div>
     
 
 </div>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script>
+
+    $("#pag").click(function () {
+
+        $("#status-pag").text("Selecionado PagSeguro").addClass("colorized").fadeOut(15000, function () {
+
+            if ($("#status-pag").is(':hidden')) {
+
+                $("#status-pag").text("Pagamento finalizado").addClass("colorized-2").fadeIn(1000);
+                $("#pag-input-end-1").fadeIn(1000).show();
+}
+
+        })
+
+        
+
+    })
+
+
+</script>
