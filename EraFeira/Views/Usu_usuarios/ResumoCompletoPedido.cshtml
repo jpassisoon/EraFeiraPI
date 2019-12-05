@@ -8,7 +8,7 @@
 <section>
     <div id="valor" class="rcp-valor"><span class="rcp-preco"></span></div>
     <br />
-    <div id="tempo" class="rcp-entrega" value="Tempo"></div>
+    <div id="entrega" class="rcp-entrega" value="Tempo"></div>
     <br />
     <div id="data" class="rcp-data-entrega"><span class="rcp-data-entrega1"></span></div>
     <br />
@@ -36,11 +36,10 @@
 <script>
 
     $(document).ready(function () {
-        Ler2("ConfigCesta1");
-        Ler2("ConfigCesta2");
-        Ler2("ConfigCesta3");
+        Ler2("configCestas");
+
     });
-    
+
     $(document).ready(function () {
         Ler("CarrinhoCookie1");
         Ler("CarrinhoCookie2");
@@ -48,7 +47,7 @@
         Ler("CarrinhoCookie4");
     });
 
-   
+
     function getCookie(cname) {
         var name = cname + "=";
         var ca = document.cookie.split(';');
@@ -85,7 +84,7 @@
             var oi = JSON.parse(cookie);
             var dados = [];
             var produto = {};
-          
+
             for (var i = 1; i <= oi.length; i++) {
                 var separa = [];
                 var a = oi[i];
@@ -118,54 +117,39 @@
             var cookie1 = getCookie(nameCookie);
             var x = JSON.parse(cookie1);
 
-            for (var y = 0; y <= x.length; y++) {
-                var ax = [];
-                var w = ax[y];
+            // $("#valor").append("<li> Valor Total" + ax[0] + "</li>")
+            $("#entrega").append("<li>" + x[0] + " entregas </li>");
 
-                if (w != null || typeof w !== "undefined") {
-                    ax = w.split("-");
-                    switch (nameCookie) {
-                        case "ConfigCesta1":
-                            $("#valor").append("Valor " + ax[0]);
-                            break;
-                        case "ConfigCesta2":
-                            $("#tempo").append(ax[1] + " entregas");
-                            break;
-                        case "ConfigCesta3":
-                            $("#data").append("A primeira entrega será " + ax[2]);
-                            break;
-                    }
-                }
 
-            }
         }
     }
+
 
 
     $("#btnfinalizar").click(function () {
         var dados = [];
         var produto = {};
         var configs = {}
-       
+
 
         if (getCookie("configCestas") != null) {
             var cookie1 = getCookie("configCestas");
             if (cookie1 != "") {
                 var ax = JSON.parse(cookie1);
-                    
+
                 configs = {
                     QtdCesta: ax[0],
                     Tempo: ax[1],
                     TipoCesta: ax[2],
 
-                }   
-                
+                }
+
             }
         }
 
         var jsonText = JSON.stringify(configs);
 
-          $.ajax({
+        $.ajax({
             type: 'POST',
             url: 'CadastrarAssinatura',
             data: jsonText,
@@ -243,7 +227,7 @@
                             id: separa[0],
                             valor: separa[1],
                             qtd: separa[2],
-                             Total: separa[3],
+                            Total: separa[3],
                             nomeCestausu: $(".car-input").val(),
                             identificacao: "Cesta 3"
                         }
