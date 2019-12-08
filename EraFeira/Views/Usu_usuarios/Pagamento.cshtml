@@ -27,7 +27,7 @@
             </div>
             <div class="col-lg-5 ">
 
-               <p class="pag-standard-text"> <span class="pag-span-1">64,90</span><br /> <span class="pag-span-2">3 cestas Mensais</span class="pag-span-2"> <br /> <span class="pag-span-3">*Frete incluso no valor total</span></p>
+                <p class="pag-standard-text"> <span class="pag-span-1"></span><br /> <span class="pag-span-2"></span> <span class="pag-span-4">Cestas Mensais</span> <br /> <span class="pag-span-3">*Frete incluso no valor total</span></p>
             </div>
         </div>
 
@@ -58,7 +58,8 @@
             </div>
             <div class="col-lg-12">
 
-                <input id="pag-input-end-1" class="pag-input-end" type="submit" value="Confirmar e Assinar Cesta" />
+           
+                @Html.ActionLink("Finalizar pagamento", "Agradecimento", "Usu_usuarios", new { area = "" }, new { @class = "pag-input-end", @id = "pag-input-end-1" })
 
             </div>
         </div>
@@ -73,9 +74,102 @@
 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
 <script>
 
+    $(document).ready(function () {
+
+        Ler2("configCestas")
+    })
+    $(document).ready(function () {
+        var cont = 0;
+        var cont1 = 0;
+        var cont2 = 0;
+        var cont3 = 0;
+        var total = 0;
+        if (getCookie("CarrinhoCookie1") != "") {
+
+            var cookie = getCookie("CarrinhoCookie1");
+            var teste = JSON.parse(cookie);
+
+            var vetor = [];
+            vetor = teste[3];
+
+            var a = vetor.split("-")
+            cont += parseFloat(a[3])
+        }
+        total += parseFloat(cont)
+
+        if (getCookie("CarrinhoCookie2") != "") {
+
+            var cookie = getCookie("CarrinhoCookie2");
+            var teste = JSON.parse(cookie);
+
+            var vetor = [];
+            vetor = teste[3];
+
+            var a = vetor.split("-")
+            cont1 += parseFloat(a[3])
+        }
+
+        total += parseFloat(cont1)
+
+        if (getCookie("CarrinhoCookie3") != "") {
+
+            var cookie = getCookie("CarrinhoCookie3");
+            var teste = JSON.parse(cookie);
+
+            var vetor = [];
+            vetor = teste[3];
+
+            var a = vetor.split("-")
+            cont2 += parseFloat(a[3])
+        }
+        total += parseFloat(cont2)
+        if (getCookie("CarrinhoCookie4") != "") {
+
+            var cookie = getCookie("CarrinhoCookie4");
+            var teste = JSON.parse(cookie);
+
+            var vetor = [];
+            vetor = teste[3];
+
+            var a = vetor.split("-")
+            cont3 += parseFloat(a[3])
+        }
+        total += parseFloat(cont3)
+        $(".pag-span-1").text(total.toFixed(2))
+
+
+    })
+
+    function Ler2(nameCookie) {
+        if (getCookie(nameCookie) != null) {
+            var cookie1 = getCookie(nameCookie);
+            var x = JSON.parse(cookie1);
+
+            // $("#valor").append("<li> Valor Total" + ax[0] + "</li>")
+            $(".pag-span-2").text(x[0])
+
+
+        }
+    }
+
+     function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
     $("#pag").click(function () {
 
-        $("#status-pag").text("Selecionado PagSeguro").addClass("colorized").fadeOut(15000, function () {
+        $("#status-pag").text("Selecionado PagSeguro").addClass("colorized").fadeOut(7000, function () {
 
             if ($("#status-pag").is(':hidden')) {
 

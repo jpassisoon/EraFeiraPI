@@ -179,7 +179,7 @@ namespace EraFeira.Controllers
         //[Authorize(Roles = "Comum")]
         public ActionResult ResumoCompletoPedido()
         {
-            return View();
+            return View(db.Pro_Produto.ToList());
         }
 
         //[Authorize(Roles = "Comum")]
@@ -193,7 +193,10 @@ namespace EraFeira.Controllers
         {
             return View();
         }
-        
+        public ActionResult Agradecimento()
+        {
+            return View();
+        }
         //[Authorize(Roles = "Comum")]
         public ActionResult AreaUsuario()
         {
