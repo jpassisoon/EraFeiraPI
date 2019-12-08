@@ -17,7 +17,8 @@ namespace EraFeira.Controllers
         // GET: Est_estoques
         public ActionResult Index()
         {
-            return View(db.Est_Estoque.ToList());
+            var est_Estoque = db.Est_Estoque.Include(e => e.Pro_Produto);
+            return View(est_Estoque.ToList());
         }
 
         // GET: Est_estoques/Details/5
@@ -38,15 +39,20 @@ namespace EraFeira.Controllers
         // GET: Est_estoques/Create
         public ActionResult Create()
         {
+            ViewBag.Pro_id = new SelectList(db.Pro_Produto, "Pro_id", "Pro_descricao");
             return View();
         }
 
-        // POST: Est_estoques/Create
-        // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
-        // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
+        // entrada 
+        public ActionResult Entrada()
+        {
+            ViewBag.Pro_id = new SelectList(db.Pro_Produto, "Pro_id", "Pro_descricao");
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Est_id,Est_quantidade,Est_entrada,Est_saida,Est_motivo_saida,Est_valor_entrada,Est_data_vencimento")] Est_estoque est_estoque)
+        public ActionResult Entrada([Bind(Include = "Est_id,Est_quantidade_entrada,Est_entrada,Est_valor_entrada,Est_data_vencimento,Pro_id")] Est_estoque est_estoque)
         {
             if (ModelState.IsValid)
             {
@@ -55,8 +61,50 @@ namespace EraFeira.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.Pro_id = new SelectList(db.Pro_Produto, "Pro_id", "Pro_descricao", est_estoque.Pro_id);
             return View(est_estoque);
         }
+
+        // Saída
+
+        public ActionResult Saida()
+        {
+            ViewBag.Pro_id = new SelectList(db.Pro_Produto, "Pro_id", "Pro_descricao");
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Saida([Bind(Include = "Est_id,Est_quantidade_saida,Est_saida,Est_motivo_saida,Pro_id")] Est_estoque est_estoque)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Est_Estoque.Add(est_estoque);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.Pro_id = new SelectList(db.Pro_Produto, "Pro_id", "Pro_descricao", est_estoque.Pro_id);
+            return View(est_estoque);
+        }
+
+        // POST: Est_estoques/Create
+        // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
+        // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Create([Bind(Include = "Est_id,Est_quantidade_entrada,Est_quantidade_saida,Est_entrada,Est_saida,Est_motivo_saida,Est_valor_entrada,Est_data_vencimento,Pro_id")] Est_estoque est_estoque)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Est_Estoque.Add(est_estoque);
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+
+        //    ViewBag.Pro_id = new SelectList(db.Pro_Produto, "Pro_id", "Pro_descricao", est_estoque.Pro_id);
+        //    return View(est_estoque);
+        //}
 
         // GET: Est_estoques/Edit/5
         public ActionResult Edit(int? id)
@@ -70,6 +118,7 @@ namespace EraFeira.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.Pro_id = new SelectList(db.Pro_Produto, "Pro_id", "Pro_descricao", est_estoque.Pro_id);
             return View(est_estoque);
         }
 
@@ -78,7 +127,7 @@ namespace EraFeira.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Est_id,Est_quantidade,Est_entrada,Est_saida,Est_motivo_saida,Est_valor_entrada,Est_data_vencimento")] Est_estoque est_estoque)
+        public ActionResult Edit([Bind(Include = "Est_id,Est_quantidade_entrada,Est_quantidade_saida,Est_entrada,Est_saida,Est_motivo_saida,Est_valor_entrada,Est_data_vencimento,Pro_id")] Est_estoque est_estoque)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +135,7 @@ namespace EraFeira.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.Pro_id = new SelectList(db.Pro_Produto, "Pro_id", "Pro_descricao", est_estoque.Pro_id);
             return View(est_estoque);
         }
 

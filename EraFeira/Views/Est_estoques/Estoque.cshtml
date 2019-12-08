@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Estoque";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Estoque</h2>
+
+@*id, descrição do produto e a quantidade no estoque*@ 
+
+<div>
+    <table>
+        <tr>
+            <th>Produto</th>
+            <th>Estoque</th>
+        </tr>
+    </table>
+
+    @foreach (var produto in Model)
+    {
+        <table>
+            <tr>@produto.Pro_descricao</tr>
+            <tr></tr>
+        </table>
+    }
+</div>
+
+<script>
+        
+    //function Concatenar() {
+    //    var valor = parseInt(0);
+
+    //}
+
+
+
+</script>

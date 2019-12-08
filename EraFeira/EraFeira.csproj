@@ -627,11 +627,6 @@
     <Content Include="Views\Usu_usuarios\Carrinho2.cshtml" />
     <Content Include="Views\Usu_usuarios\Carrinho3.cshtml" />
     <Content Include="Views\Usu_usuarios\Carrinho4.cshtml" />
-    <Content Include="Views\Est_estoques\Create.cshtml" />
-    <Content Include="Views\Est_estoques\Delete.cshtml" />
-    <Content Include="Views\Est_estoques\Details.cshtml" />
-    <Content Include="Views\Est_estoques\Edit.cshtml" />
-    <Content Include="Views\Est_estoques\Index.cshtml" />
     <Content Include="Views\Pxf_produto_fornecedores\Create.cshtml" />
     <Content Include="Views\Pxf_produto_fornecedores\Delete.cshtml" />
     <Content Include="Views\Pxf_produto_fornecedores\Details.cshtml" />
@@ -668,6 +663,14 @@
     <Content Include="Views\Ent_entregas\Edit.cshtml" />
     <Content Include="Views\Ent_entregas\Index.cshtml" />
     <Content Include="Views\Usu_usuarios\Pagamento.cshtml" />
+    <Content Include="Views\Est_estoques\Create.cshtml" />
+    <Content Include="Views\Est_estoques\Delete.cshtml" />
+    <Content Include="Views\Est_estoques\Details.cshtml" />
+    <Content Include="Views\Est_estoques\Edit.cshtml" />
+    <Content Include="Views\Est_estoques\Index.cshtml" />
+    <Content Include="Views\Est_estoques\Entrada.cshtml" />
+    <Content Include="Views\Est_estoques\Saida.cshtml" />
+    <Content Include="Views\Est_estoques\Estoque.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

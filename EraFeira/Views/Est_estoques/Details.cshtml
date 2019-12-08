@@ -5,18 +5,34 @@
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<h2>Detalhes</h2>
+<h2>Details</h2>
 
 <div>
-    @*<h4>Est_estoque</h4>*@
-    <br />
+    <h4>Est_estoque</h4>
+    <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Est_quantidade)
+            @Html.DisplayNameFor(model => model.Pro_Produto.Pro_descricao)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Est_quantidade)
+            @Html.DisplayFor(model => model.Pro_Produto.Pro_descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_quantidade_entrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_quantidade_entrada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_quantidade_saida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_quantidade_saida)
         </dd>
 
         <dt>
@@ -62,6 +78,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.Est_id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Est_id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
