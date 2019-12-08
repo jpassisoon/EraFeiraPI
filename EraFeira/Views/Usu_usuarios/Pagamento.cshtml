@@ -58,7 +58,8 @@
             </div>
             <div class="col-lg-12">
 
-                <input id="pag-input-end-1" class="pag-input-end" type="submit" value="Confirmar e Assinar Cesta" />
+           
+                @Html.ActionLink("Finalizar pagamento", "Agradecimento", "Usu_usuarios", new { area = "" }, new { @class = "pag-input-end", @id = "pag-input-end-1" })
 
             </div>
         </div>
@@ -168,7 +169,7 @@
 
     $("#pag").click(function () {
 
-        $("#status-pag").text("Selecionado PagSeguro").addClass("colorized").fadeOut(15000, function () {
+        $("#status-pag").text("Selecionado PagSeguro").addClass("colorized").fadeOut(7000, function () {
 
             if ($("#status-pag").is(':hidden')) {
 

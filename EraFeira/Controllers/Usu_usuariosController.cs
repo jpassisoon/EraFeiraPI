@@ -184,7 +184,10 @@ namespace EraFeira.Controllers
         {
             return View();
         }
-        
+        public ActionResult Agradecimento()
+        {
+            return View();
+        }
         //[Authorize(Roles = "Comum")]
         public ActionResult AreaUsuario()
         {
