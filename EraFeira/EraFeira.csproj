@@ -591,7 +591,6 @@
     <Content Include="Views\End_enderecos\Details.cshtml" />
     <Content Include="Views\End_enderecos\Edit.cshtml" />
     <Content Include="Views\End_enderecos\Index.cshtml" />
-    <Content Include="Views\Usu_usuarios\ResumoCompletoPedido.cshtml" />
     <Content Include="Views\Shared\_Layout2.cshtml" />
     <Content Include="Views\Adm_Administradores\Create.cshtml" />
     <Content Include="Views\Adm_Administradores\Delete.cshtml" />
@@ -668,6 +667,7 @@
     <Content Include="Views\Ent_entregas\Edit.cshtml" />
     <Content Include="Views\Ent_entregas\Index.cshtml" />
     <Content Include="Views\Usu_usuarios\Pagamento.cshtml" />
+    <Content Include="Views\Usu_usuarios\ResumoCompletoPedido.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

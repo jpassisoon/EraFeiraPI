@@ -170,7 +170,7 @@ namespace EraFeira.Controllers
         //[Authorize(Roles = "Comum")]
         public ActionResult ResumoCompletoPedido()
         {
-            return View();
+            return View(db.Pro_Produto.ToList());
         }
 
         //[Authorize(Roles = "Comum")]

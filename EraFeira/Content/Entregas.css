@@ -81,23 +81,26 @@
 }
 
 .ent-button {
-    color: #262626;
-    font-weight: 500;
-    font-size: 20px;
-    display: inline-block;
-    padding-top: 10px;
-    transition: all .30s ease-in-out;
-    
-
+    padding: 15px;
+    padding-top: 8px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 8px;
+    border: 2px solid #F96714;
+    color: #F96714;
+    text-decoration: none;
+    position: relative;
+    top: 30px;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .30s ease-in-out;
 }
 
     .ent-button:hover {
-        color: #F96714;
-        font-weight: 500;
-        font-size: 20px;
-        display: inline-block;
-        padding-top: 15px;
         text-decoration: none;
+        opacity: 0.8;
+        color: #F96714;
     }
 
 

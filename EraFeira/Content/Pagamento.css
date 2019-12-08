@@ -23,7 +23,7 @@
 
     /*margin-top: 25px;*/
 
-    margin-top: 40px;
+    margin-top: 20px;
 
    
 }
@@ -39,6 +39,7 @@
 
     font-size: 30px;
     font-weight: 600;
+    padding-bottom: 20px;
 
 }
 .pag-summary-h2{
@@ -143,6 +144,7 @@
 .pag-span-1 {
     color: #2B2B2B;
     font-size: 22px;
+    font-weight: 700;
 }
 .pag-span-2 {
     font-weight: 600;
@@ -152,6 +154,10 @@
     font-size: 10px;
     color: #A0A0A0;
 
+}
+.pag-span-4 {
+    font-weight: 600;
+    color: #646464;
 }
 .pag-general-input{
     width:90%;

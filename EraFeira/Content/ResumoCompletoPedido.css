@@ -1,85 +1,124 @@
-﻿/*titulo*/
+﻿body {
+}
+
+
+.size{
+    margin: 0;
+}
+.rcp-main {
+    text-align: center;
+    max-width: 800px;
+    height: 500px;
+    
+    margin: 0 auto;
+}
+
+.rcp-summary {
+    max-width: 700px;
+   
+   
+    margin: 0 auto;
+}
+
 .rcp-h1 {
-    font-family: 'Poppins';
-    font-weight: 700;
-    font-size: 25px;
     color: #585858;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 10px;
-}
-/*começo - introdução*/
-.rcp-valor{
-    font-family: 'Poppins';
-    font-size: 27px;
-    font-weight: 700;
-    color: #F96714;
-    margin-left: 245px;
-}
-
-.rcp-preco{
-    font-family: 'Poppins';
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
-    color: #2B2B2B;
-    margin-left: 20px;
-}
-
-.rcp-entrega{
-    font-family: 'Poppins';
-    font-size: 24px;
-    font-weight: 500;
-    color: #2b2b2b;
-    margin-left: 245px;
-    margin-top: 10px;
-}
-
-.rcp-data-entrega{
-    font-family: 'Poppins';
-    font-size: 24px;
-    font-weight: 500;
-    color: #2b2b2b;
-    margin-left: 245px;
-    margin-top: 10px;
-}
-
-.rcp-data-entrega1{
-    font-family: 'Poppins';
-    font-size: 25px;
-    font-weight: 600;
-    color: #2b2b2b;
-    text-decoration: underline;
-}
-
-/*itens da lista*/
-.rcp-quadrado{
-    width: 850px;
-    height: 550px;
-    background-color: #fcfcfc;
-    border: 1px solid #cecece;
-    border-radius: 25px;
-    margin-left: 250px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-/*canto direito*/
-/*icone bdo circulo laranja*/
-.rcp-canto-direito {
     margin-top: 20px;
-    margin-left: 650px;
-    font-family: 'Poppins';
-    font-size: 16px;
-    font-weight: 700;
-    color: #a8a8a8;
+    padding-bottom: 20px;
 }
-
-/*titulo*/
 .rcp-h2 {
-    font-family: 'Poppins';
-    font-size: 27px;
-    font-weight: 700;
     color: #6A6767;
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    
+}
+.rcp-descri {
+    color: #292929;
+    font-size: 17px;
+    font-weight: 600;
+}
+.rcp-text-val {
+    color: #FF9124;
+    font-size: 20px;
+    text-align: left;
+    font-weight:700;
+}
+#rcp-total-basket {
+    color: #2B2B2B;
+    font-weight: 600;
+}
+.rcp-text {
+    color: black;
+    font-size: 20px;
+    text-align: left;
+}
+.rcp-text-qt {
+    font-size: 17px;
+    font-weight: 700;
+    color: #3B3B3B;
+    text-align: left;
+}
+.rcp-qt-basket {
+    color:#3B3B3B;
+    font-size: 15px;
+    font-weight: 600;
+}
+.rcp-text-date {
+    text-align: left;
+    color: #292929;
+    font-weight: 600;
+    font-size: 17px;
+}
+#rcp-first-delivery{
+    text-decoration: underline;
+    font-weight: 700;
+}
+.rcp-image-gray {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    background-color: #F5F5F5;
+    margin: 0px auto ;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rcp-text-prod {
+    color: black;
     text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    color: #FF9124;
+    padding: 0;
+    margin: 0;
+    
     margin-top: 10px;
 }
+.rcp-qt {
+    color: #3B3B3B;
+    font-size: 17px;
+    font-weight: 700;
+}
+.rcp-input-end {
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #FF9124;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    top: 60px;
+    border-radius: 1px;
+    font-size: 13px;
+    transition: .30s ease-in-out;
+}
+    .rcp-input-end:hover {
+        text-decoration: none;
+        background-color: #212121;
+        opacity: 0.8;
+        color: white;
+    }
