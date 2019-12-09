@@ -1,51 +1,44 @@
-﻿.end-h1{
-    font-family: 'Poppins';
+﻿
+
+.end-center{
+
+    max-width: 500px;
+    height: 700px;
+    border: 2px solid red;
+    margin: 0 auto;
+    background-color: #fefefe;
+    border: 1px solid #eaeaea;
+}
+.end-h1 {
+    color: #FF9124;
     font-weight: 600;
-    position: relative;
-    padding-top: 40px;
-    font-size: 30px;
-    color: #292929;
-    margin-left: 360px;
-    margin-top: 50px;
-    margin-bottom: 10px;
+    font-size: 21px;
+    text-align: center;
+    padding-top: 11px;
 }
-
-.end-span{
-    color: #292929;
-    border-bottom: 5px solid #F96714;
-}
-
-.end-label{
-    text-decoration:none;
-}
-
-.end-inpu {
-    width: 320px;
-    height: 50px;
-    border: #EAEAEA;
-    background-color: #fafafa;
-    border: 1px solid #d6d6d6;
+.end-input{
+    border: 1px solid #c8c8c8;
     border-radius: 1px;
-    margin-left: 360px;
+    width: 60%;
+    margin: 0 auto;
+    height: 35px;
+    
 }
-
-.end-test {
-    margin-bottom: 16px;
+.end-label{
+    margin-left: 85px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    font-weight: 600;
 }
-
-.end-botao{
-    border: 2px solid #F96714;
-    width: 150px;
+.end-botao {
+    width: 200px;
     height: 40px;
-    color: #F96714;
-    background-color: #FFFFFF;
-    font-family: 'Poppins';
-    font-size: 18px;
-    font-weight: 500;
-    margin-left: 360px;
-    margin-top: 15px;
-}
-
-.espaco{
-    margin-bottom: 210px;
+    color: white;
+    background-color: #FF9124;
+    border-radius: 1px;
+    border: none;
+    font-weight: 600;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
 }

@@ -27,7 +27,8 @@ namespace EraFeira.Controllers
             ass.Ass_qtd_cesta = configCesta.QtdCesta;
             ass.Ass_tempo = configCesta.Tempo;
             ass.Ass_status = true;
-            ass.Ass_tipo_cesta = configCesta.Status;
+            ass.Ass_tipo_cesta = configCesta.TipoCesta;
+            ass.Ass_valor_total = configCesta.Total;
             ass.Usu_id = 1;
             db.Ass_Assinatura.Add(ass);
             db.SaveChanges();
@@ -36,11 +37,13 @@ namespace EraFeira.Controllers
             return Json("ok");
 
         }
+
+        
         public JsonResult CadastrarProdutos(List<getItens> dados, ConfigCesta config)
         {
 
+            
 
-       
             string nomecesta = "";
             int cont = 0;
             double cont2 = 0;
@@ -55,8 +58,10 @@ namespace EraFeira.Controllers
                         Ces_cesta cesta = new Ces_cesta();
                         cesta.Ces_nome = gi.Identificacao;
                         cesta.Ces_criacao = DateTime.Now;
+                        cont2 += gi.Entregas;
+                        cesta.Ces_data_entrega = DateTime.Today.AddDays(cont2);
                         cesta.Usu_id = 1;
-                        cesta.Ces_valor = Convert.ToDouble(gi.Total);
+                        cesta.Ces_valor = gi.Total;
                         cesta.Ass_id = 1;
                         db.Ces_Cesta.Add(cesta);
                         db.SaveChanges();
@@ -66,8 +71,8 @@ namespace EraFeira.Controllers
 
                     Cxp_cesta_produto a = new Cxp_cesta_produto();
                     a.Cxp_quantidade = Convert.ToInt32(gi.Qtd);
-                    a.Cxp_valor = Convert.ToDouble(gi.Valor);
-                    cont2 = Convert.ToDouble(gi.Valor);
+                    a.Cxp_valor = gi.Valor;
+               
                     a.Pro_id = Convert.ToInt32(gi.Id);
                     a.Ces_id = cont;
                     db.Cxp_Cesta_Produto.Add(a);

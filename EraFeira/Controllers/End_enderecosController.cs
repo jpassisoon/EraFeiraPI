@@ -52,7 +52,7 @@ namespace EraFeira.Controllers
             {
                 db.End_Endereco.Add(end_endereco);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Entregas", "Usu_usuarios");
             }
 
             return View(end_endereco);

@@ -16,7 +16,9 @@ namespace EraFeira.Models
 
         //Se é cesta igual ou diferente - tabela assinatura
         public bool TipoCesta { set; get; }
-        
+
+        public double Total { set; get; }
+
         // Se está vigente ou encerrado, começa vigente - tabela assinatura
         public bool Status { set;  get; }
 
