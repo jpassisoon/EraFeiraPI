@@ -4,14 +4,67 @@
     ViewBag.Title = "Saida";
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
+<style>
+
+    .est-titulo {
+        font-family: 'Josefin Sans';
+        font-size: 30px;
+        font-weight: 700;
+        color: #F96714;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        
+    }
+
+    .est-form {
+        margin-left: 160px;
+    }
+
+    .est-ok {
+        width: 220px;
+        height: 35px;
+        font-family: 'Josefin Sans';
+        font-weight: 700;
+        font-size: 17px;
+        background-color: #F96714;
+        color: #FFFFFF;
+        border-radius: 0px;
+        margin-top: 45px;
+        margin-bottom: 35px;
+       
+        transition: all .30s ease-in-out;
+    }
+
+        .est-ok:hover {
+            border-bottom: 3px solid #262626;
+            color: #FFFFFF;           
+        }
+
+    .link-est {
+        color: #262626;
+        font-family: 'Josefin Sans';
+        font-weight: 700;
+        font-size: 25px;
+        margin-left: 170px;
+    }
+
+            .link-est:hover {
+                color: #262626;
+                font-family: 'Josefin Sans';
+                font-weight: 700;
+                font-size: 25px;                
+            }
+
+</style>
+
 <link href="~/Content/CadastroProduto.css" rel="stylesheet" />
-<h2>Saida</h2>
+<h2 class="est-titulo text-center">Saída</h2>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
+    <div class="form-horizontal est-form">
         
         @Html.ValidationSummary(true, "", new { @class = "msg-val" })
         
@@ -47,12 +100,13 @@
             </div>
         </div>
 
-        <div class="form-group">            
-                <input type="submit" value="Cadastro" class="btn pro_cadastro" />
-        </div>
     </div>
+
+     <div class="form-group text-center">            
+        <input type="submit" value="Salvar" class="btn est-ok" />
+     </div>
 }
 
-    <div>
-        @Html.ActionLink("Voltar", "Create", "Est_estoques") @*voltar para tela do dropdown*@
+    <div class="form-group">
+        @Html.ActionLink("Voltar", "Estoque", "Est_estoques", new { }, new { @class = "link-est"}) @*voltar para tela do dropdown*@
     </div>

@@ -1,37 +1,90 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Estoque";
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<h2>Estoque</h2>
+<style>
 
-@*id, descrição do produto e a quantidade no estoque*@ 
-
-<div>
-    <table>
-        <tr>
-            <th>Produto</th>
-            <th>Estoque</th>
-        </tr>
-    </table>
-
-    @foreach (var produto in Model)
-    {
-        <table>
-            <tr>@produto.Pro_descricao</tr>
-            <tr></tr>
-        </table>
+    .est-h2 {
+        font-family: 'Josefin Sans';
+        font-size: 50px;
+        font-weight: 700;
+        color: #F96714;
+        margin-top: 170px;
+        margin-bottom: 50px;
     }
-</div>
 
-<script>
-        
-    //function Concatenar() {
-    //    var valor = parseInt(0);
+    .inp-est {
+        width: 200px;
+        height: 50px;
+        font-family: 'Josefin Sans';
+        font-weight: 700;
+        font-size: 20px;
+        background-color: #262626;
+        color: #FFFFFF;
+        border: #262626;
+        box-shadow: none;
+    }
 
-    //}
+        .inp-est:hover {
+            background-color: #1D1C1C;
+            border-color: #1D1C1C;
+            color: #FFFFFF;
+            box-shadow: none;
+        }
+
+    .est-submenu {
+        width: 200px;
+        background-color: #262626;
+    }
+
+    .est-link {
+        font-family: 'Josefin Sans';
+        font-size: 18px;
+        font-weight: 400;
+        background-color: #262626;
+        border-color: #2E2E2E;
+        color: #FFFFFF;
+    }
+
+        .est-link:hover {
+            background-color: #1D1C1C;
+            border-color: #1D1C1C;
+            color: #FFFFFF;
+            box-shadow: none;
+        }
+</style>
+
+<h2 class="text-center est-h2">Movimentação</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="dropdown text-center">
+        <button class="btn btn-secondary dropdown-toggle inp-est" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Escolha
+        </button>
+        <div class="dropdown-menu text-center est-submenu" aria-labelledby="dropdownMenuButton">
+            @Html.ActionLink("Entrada", "Entrada", "Est_estoques", new { area = "" }, new { @class = "dropdown-item est-link" })
+            @Html.ActionLink("Saída", "Saida", "Est_estoques", new { area = "" }, new { @class = "dropdown-item est-link" })
+            @Html.ActionLink("Estoque", "Create", "Est_estoques", new { area = "" }, new { @class = "dropdown-item est-link" })
+        </div>
+    </div>
+
+
+}
 
 
 
-</script>
+
+
+
+
+
+
+
+
+
