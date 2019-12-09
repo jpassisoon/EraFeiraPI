@@ -21,6 +21,10 @@ namespace EraFeira.Models
         public DateTime Ces_criacao { get; set; }
 
         //[Required]
+        [Display(Name = "Data Entrega")]
+        public DateTime Ces_data_entrega { get; set; }
+
+        //[Required]
         [Display(Name = "Total")]
         public double Ces_valor { get; set; }
 

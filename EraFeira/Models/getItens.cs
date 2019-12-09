@@ -8,17 +8,19 @@ namespace EraFeira.Models
     public class getItens
     {
         string id;
-        string valor;
+        double valor;
         string qtd;
-        string total;
+        double total;
         string nomeCestausu;
         string identificacao;
+        int entregas;
 
         public string Id { get => id; set => id = value; }
-        public string Valor { get => valor; set => valor = value; }
+        public double Valor { get => valor; set => valor = value; }
         public string Qtd { get => qtd; set => qtd = value; }
-        public string Total { get => total; set => total = value; }
+        public double Total { get => total; set => total = value; }
         public string NomeCestausu { get => nomeCestausu; set => nomeCestausu = value; }
         public string Identificacao { get => identificacao; set => identificacao = value; }
+        public int Entregas { get => entregas; set => entregas = value; }
     }
 }

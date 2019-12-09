@@ -17,7 +17,7 @@
 
             <div class="col-lg-12">
 
-                <p class="rcp-text-val"> Valor:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="rcp-total-basket"></span></p>
+                <p class="rcp-text-val"> Valor:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R$<span id="rcp-total-basket"></span></p>
             </div>
             <div class="col-lg-12">
 
@@ -1038,6 +1038,14 @@
         var configs = {}
 
 
+
+
+
+
+        
+        
+
+
         if (getCookie("configCestas") != null) {
             var cookie1 = getCookie("configCestas");
             if (cookie1 != "") {
@@ -1047,7 +1055,7 @@
                     QtdCesta: ax[0],
                     Tempo: ax[1],
                     TipoCesta: ax[2],
-
+                    Total: parseFloat($("#rcp-total-basket").text())
                 }
 
             }
@@ -1072,8 +1080,11 @@
 
         if (getCookie("CarrinhoCookie1") != null) {
             var cookie = getCookie("CarrinhoCookie1");
+            var cookie2 = getCookie("configCestas");
             if (cookie != "") {
                 var oi = JSON.parse(cookie);
+                var oi2 = JSON.parse(cookie2);
+               
 
                 for (var i = 1; i <= oi.length; i++) {
                     var separa = [];
@@ -1083,11 +1094,12 @@
                         //isso
                         produto = {
                             id: separa[0],
-                            valor: separa[1],
+                            valor: parseFloat(separa[1]),
                             qtd: separa[2],
-                            Total: separa[3],
+                            Total: parseFloat(separa[3]),
                             nomeCestausu: $(".car-input").val(),
-                            identificacao: "Cesta 1"
+                            identificacao: "Cesta 1",
+                            entregas: parseInt( oi2[1])
                         }
                         dados.push(produto);
                     }
@@ -1097,8 +1109,11 @@
 
         if (getCookie("CarrinhoCookie2") != null) {
             var cookie = getCookie("CarrinhoCookie2");
+            var cookie2 = getCookie("configCestas");
             if (cookie != "") {
                 var oi = JSON.parse(cookie);
+                var oi2 = JSON.parse(cookie2);
+              
 
                 for (var i = 1; i <= oi.length; i++) {
                     var separa = [];
@@ -1107,11 +1122,12 @@
                         separa = a.split("-");
                         produto = {
                             id: separa[0],
-                            valor: separa[1],
+                            valor: parseFloat(separa[1]),
                             qtd: separa[2],
-                            Total: separa[3],
+                            Total: parseFloat(separa[3]),
                             nomeCestausu: $(".car-input").val(),
-                            identificacao: "Cesta 2"
+                            identificacao: "Cesta 2",
+                             entregas: parseInt( oi2[1])
                         }
                         dados.push(produto);
                     }
@@ -1121,8 +1137,12 @@
 
         if (getCookie("CarrinhoCookie3") != null) {
             var cookie = getCookie("CarrinhoCookie3");
+            var cookie2 = getCookie("configCestas");
             if (cookie != "") {
                 var oi = JSON.parse(cookie);
+                var oi2 = JSON.parse(cookie2);
+              
+
 
                 for (var i = 1; i <= oi.length; i++) {
                     var separa = [];
@@ -1131,11 +1151,12 @@
                         separa = a.split("-");
                         produto = {
                             id: separa[0],
-                            valor: separa[1],
+                            valor: parseFloat(separa[1]),
                             qtd: separa[2],
-                            Total: separa[3],
+                            Total: parseFloat(separa[3]),
                             nomeCestausu: $(".car-input").val(),
-                            identificacao: "Cesta 3"
+                            identificacao: "Cesta 3",
+                            entregas: parseInt( oi2[1])
                         }
                         dados.push(produto);
                     }
@@ -1145,8 +1166,12 @@
 
         if (getCookie("CarrinhoCookie4") != null) {
             var cookie = getCookie("CarrinhoCookie4");
+             var cookie2 = getCookie("configCestas");
             if (cookie != "") {
                 var oi = JSON.parse(cookie);
+
+                var oi2 = JSON.parse(cookie2);
+               
 
                 for (var i = 1; i <= oi.length; i++) {
                     var separa = [];
@@ -1155,11 +1180,12 @@
                         separa = a.split("-");
                         produto = {
                             id: separa[0],
-                            valor: separa[1],
+                            valor: parseFloat(separa[1]),
                             qtd: separa[2],
-                            Total: separa[3],
+                            Total: parseFloat(separa[3]),
                             nomeCestausu: $(".car-input").val(),
-                            identificacao: "Cesta 4"
+                            identificacao: "Cesta 4",
+                            entregas: parseInt( oi2[1])
                         }
                         dados.push(produto);
                     }
