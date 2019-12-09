@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Create";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
 }
 
 <link href="~/Content/Endereco.css" rel="stylesheet" />
@@ -10,50 +10,53 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
+   <div class="end-center">
+
+       <h1 class="end-h1"> Cadastre seu endereço! </h1>
+  
         @*<h1 class="end-h1">Quase lá, poderia nos informar o seu <span class="end-span">CEP?</span></h1>*@
         @*<br />*@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
         <div>
             @Html.LabelFor(model => model.End_cep, htmlAttributes: new { @class = "control-label col-md-2 end-label" })
-            @Html.EditorFor(model => model.End_cep, new { htmlAttributes = new { @class = "form-control end-inpu end-test" } })
+            @Html.EditorFor(model => model.End_cep, new { htmlAttributes = new { @class = "form-control end-input" } })
             @Html.ValidationMessageFor(model => model.End_cep, "", new { @class = "text-danger" })
         </div>
 
             <div>
-                @Html.LabelFor(model => model.End_logradouro, htmlAttributes: new { @class = "control-label col-md-2" })
-                @Html.EditorFor(model => model.End_logradouro, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.LabelFor(model => model.End_logradouro, htmlAttributes: new { @class = "control-label col-md-2 end-label" })
+                @Html.EditorFor(model => model.End_logradouro, new { htmlAttributes = new { @class = "form-control end-input" } })
                 @Html.ValidationMessageFor(model => model.End_logradouro, "", new { @class = "text-danger" })
             </div>
 
             <div>
-                @Html.LabelFor(model => model.End_numero, htmlAttributes: new { @class = "control-label col-md-2" })
-                @Html.EditorFor(model => model.End_numero, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.LabelFor(model => model.End_numero, htmlAttributes: new { @class = "control-label col-md-2 end-label" })
+                @Html.EditorFor(model => model.End_numero, new { htmlAttributes = new { @class = "form-control end-input" } })
                 @Html.ValidationMessageFor(model => model.End_numero, "", new { @class = "text-danger" })
             </div>
 
             <div>
-                @Html.LabelFor(model => model.End_bairro, htmlAttributes: new { @class = "control-label col-md-2" })
-                @Html.EditorFor(model => model.End_bairro, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.LabelFor(model => model.End_bairro, htmlAttributes: new { @class = "control-label col-md-2 end-label" })
+                @Html.EditorFor(model => model.End_bairro, new { htmlAttributes = new { @class = "form-control end-input" } })
                 @Html.ValidationMessageFor(model => model.End_bairro, "", new { @class = "text-danger" })
             </div>
 
             <div>
-                @Html.LabelFor(model => model.End_complemento, htmlAttributes: new { @class = "control-label col-md-2" })
-                @Html.EditorFor(model => model.End_complemento, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.LabelFor(model => model.End_complemento, htmlAttributes: new { @class = "control-label col-md-2 end-label" })
+                @Html.EditorFor(model => model.End_complemento, new { htmlAttributes = new { @class = "form-control end-input" } })
                 @Html.ValidationMessageFor(model => model.End_complemento, "", new { @class = "text-danger" })
             </div>
 
             <div>
-                @Html.LabelFor(model => model.End_cidade, htmlAttributes: new { @class = "control-label col-md-2" })
-                @Html.EditorFor(model => model.End_cidade, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.LabelFor(model => model.End_cidade, htmlAttributes: new { @class = "control-label col-md-2 end-label" })
+                @Html.EditorFor(model => model.End_cidade, new { htmlAttributes = new { @class = "form-control end-input" } })
                 @Html.ValidationMessageFor(model => model.End_cidade, "", new { @class = "text-danger" })
             </div>
 
             <div>
-                @Html.LabelFor(model => model.End_estado, htmlAttributes: new { @class = "control-label col-md-2" })
-                @Html.EditorFor(model => model.End_estado, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.LabelFor(model => model.End_estado, htmlAttributes: new { @class = "control-label col-md-2 end-label" })
+                @Html.EditorFor(model => model.End_estado, new { htmlAttributes = new { @class = "form-control end-input" } })
                 @Html.ValidationMessageFor(model => model.End_estado, "", new { @class = "text-danger" })
             </div>
 
@@ -61,10 +64,11 @@
         <div>
             <input type="submit" value="Continuar" class="end-botao" />
         </div>
-    </div>
-    <div></div>
+   </div>
+    
+  
 
-    <div class="espaco"></div>
+    
 }
 
 
