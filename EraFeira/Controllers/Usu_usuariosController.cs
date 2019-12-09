@@ -47,6 +47,7 @@ namespace EraFeira.Controllers
             string nomecesta = "";
             int cont = 0;
             double cont2 = 0;
+
             foreach (getItens gi in dados)
             {
                 if (Convert.ToInt32(gi.Qtd) > 0)
@@ -75,6 +76,14 @@ namespace EraFeira.Controllers
                     a.Pro_id = Convert.ToInt32(gi.Id);
                     a.Ces_id = cont;
                     db.Cxp_Cesta_Produto.Add(a);
+                    db.SaveChanges();
+
+                    Est_estoque e = new Est_estoque();
+                    e.Est_quantidade_saida = Convert.ToInt32(gi.Qtd);
+                    e.Est_saida = DateTime.Now;
+                    e.Est_motivo_saida = "comprado";
+                    e.Pro_id = a.Pro_id;
+                    db.Est_Estoque.Add(e);
                     db.SaveChanges();
                 }
             }

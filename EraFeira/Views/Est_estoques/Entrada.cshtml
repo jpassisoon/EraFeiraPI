@@ -1,0 +1,65 @@
+﻿@model EraFeira.Models.Est_estoque
+
+@{
+    ViewBag.Title = "Entrada";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<link href="~/Content/CadastroProduto.css" rel="stylesheet" />
+<h2>Entrada</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+       
+        @Html.ValidationSummary(true, "", new { @class = "msg-val" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Est_quantidade_entrada, htmlAttributes: new { @class = "control-label col-md-3 pro_label" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.Est_quantidade_entrada, new { htmlAttributes = new { @class = "form-control pro_input" } })
+                @Html.ValidationMessageFor(model => model.Est_quantidade_entrada, "", new { @class = "msg-val" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Est_entrada, htmlAttributes: new { @class = "control-label col-md-3 pro_label" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.Est_entrada, new { htmlAttributes = new { @class = "form-control pro_input" } })
+                @Html.ValidationMessageFor(model => model.Est_entrada, "", new { @class = "msg-val" })
+            </div>
+        </div>
+                
+        <div class="form-group">
+            @Html.LabelFor(model => model.Est_valor_entrada, htmlAttributes: new { @class = "control-label col-md-3 pro_label" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.Est_valor_entrada, new { htmlAttributes = new { @class = "form-control pro_input" } })
+                @Html.ValidationMessageFor(model => model.Est_valor_entrada, "", new { @class = "msg-val" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Est_data_vencimento, htmlAttributes: new { @class = "control-label col-md-3 pro-label" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.Est_data_vencimento, new { htmlAttributes = new { @class = "form-control pro_input" } })
+                @Html.ValidationMessageFor(model => model.Est_data_vencimento, "", new { @class = "msg-val" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Pro_id, "Pro_id", htmlAttributes: new { @class = "control-label col-md-3 pro_label" })
+            <div class="col-md-9">
+                @Html.DropDownList("Pro_id", null, htmlAttributes: new { @class = "form-control pro_input" })
+                @Html.ValidationMessageFor(model => model.Pro_id, "", new { @class = "msg-val" })
+            </div>
+        </div>
+
+        <div class="form-group">            
+                <input type="submit" value="Cadastrar" class="btn pro_cadastro" />
+        </div>
+    </div>
+}
+
+    <div>
+        @Html.ActionLink("Voltar", "Create", "Est_estoques") @*voltar para tela do dropdown*@
+    </div>

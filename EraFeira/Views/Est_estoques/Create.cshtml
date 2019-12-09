@@ -1,70 +1,30 @@
 ﻿@model EraFeira.Models.Est_estoque
 
 @{
-    ViewBag.Title = "Create";
-    Layout = "~/Views/Shared/_Layout2.cshtml";
+/**/
+
+ViewBag.Title = "Create";
+Layout = "~/Views/Shared/_Layout2.cshtml";
 }
-<link href="~/Content/CadastroProduto.css" rel="stylesheet" />
-@*<h2>Cadastro</h2>*@
+
+<h2>Movimentação</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
-<div class="form-horizontal">
-    <h4 class="cp-titulo">Estoque</h4>
-    @Html.ValidationSummary(true, "", new { @class = "msg-val" })
-    <div class="form-group">
-        @Html.LabelFor(model => model.Est_quantidade, htmlAttributes: new { @class = "control-label col-md-3 pro_label" })
-        <div class="col-md-9">
-            @Html.EditorFor(model => model.Est_quantidade, new { htmlAttributes = new { @class = "form-control pro_input" } })
-            @Html.ValidationMessageFor(model => model.Est_quantidade, "", new { @class = "msg-val" })
+
+    <div class="dropdown text-center">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Escolha
+        </button>
+        <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
+            @Html.ActionLink("Entrada", "Entrada", "Est_estoques", new { area = "" }, new { @class = "dropdown-item adm-link" })
+            @Html.ActionLink("Saída", "Saida", "Est_estoques", new { area = "" }, new { @class = "dropdown-item adm-link" })
+            @Html.ActionLink("Estoque", "Estoque", "Est_estoques", new { area = "" }, new { @class = "dropdown-item adm-link" })
         </div>
     </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Est_entrada, htmlAttributes: new { @class = "control-label col-md-3 pro_label" })
-        <div class="col-md-9">
-            @Html.EditorFor(model => model.Est_entrada, new { htmlAttributes = new { @class = "form-control pro_input" } })
-            @Html.ValidationMessageFor(model => model.Est_entrada, "", new { @class = "msg-val" })
-        </div>
-    </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Est_saida, htmlAttributes: new { @class = "control-label col-md-3 pro_label" })
-        <div class="col-md-9">
-            @Html.EditorFor(model => model.Est_saida, new { htmlAttributes = new { @class = "form-control pro_input" } })
-            @Html.ValidationMessageFor(model => model.Est_saida, "", new { @class = "msg-val" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.Est_motivo_saida, htmlAttributes: new { @class = "control-label col-md-3 pro_label" })
-        <div class="col-md-9">
-            @Html.EditorFor(model => model.Est_motivo_saida, new { htmlAttributes = new { @class = "form-control pro-input" } })
-            @Html.ValidationMessageFor(model => model.Est_motivo_saida, "", new { @class = "msg-val" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.Est_valor_entrada, htmlAttributes: new { @class = "control-label col-md-3 pro_label" })
-        <div class="col-md-9">
-            @Html.EditorFor(model => model.Est_valor_entrada, new { htmlAttributes = new { @class = "form-control pro_input" } })
-            @Html.ValidationMessageFor(model => model.Est_valor_entrada, "", new { @class = "msg-val" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.Est_data_vencimento, htmlAttributes: new { @class = "control-label col-md-3 pro_label" })
-        <div class="col-md-9">
-            @Html.EditorFor(model => model.Est_data_vencimento, new { htmlAttributes = new { @class = "form-control pro_input" } })
-            @Html.ValidationMessageFor(model => model.Est_data_vencimento, "", new { @class = "msg-val" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        <input type="submit" value="Cadastrar" class="btn pro_cadastro" />
-    </div>
-</div>
 }
 
