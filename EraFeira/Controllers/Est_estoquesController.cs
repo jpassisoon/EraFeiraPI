@@ -39,8 +39,8 @@ namespace EraFeira.Controllers
         // GET: Est_estoques/Create
         public ActionResult Create()
         {
-            ViewBag.Pro_id = new SelectList(db.Pro_Produto, "Pro_id", "Pro_descricao");
-            return View();
+            var est_Estoque = db.Est_Estoque.Include(e => e.Pro_Produto);
+            return View(est_Estoque.ToList());
         }
 
         // entrada 
@@ -90,7 +90,8 @@ namespace EraFeira.Controllers
 
         public ActionResult Estoque()
         {
-            return View();
+            //ViewBag.Pro_id = new SelectList(db.Pro_Produto, "Pro_id", "Pro_descricao");
+            return View(db.Est_Estoque.ToList());
         }
 
         // POST: Est_estoques/Create

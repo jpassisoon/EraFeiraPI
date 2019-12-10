@@ -6,74 +6,392 @@
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<h2>Estoque</h2>
+<style>
+    .visi{
+        visibility: hidden;
+    }
 
-@*id, descrição do produto e a quantidade no estoque*@
+    .est{
+       color: #262626;
+       font-family: 'Poppins';
+       font-size: 18px;
+       font-weight: 700;
+    }
 
-<div>
-    <table>
-        <tr>
-            <th>Produto</th>
-            <th>Estoque</th>
-        </tr>
-    </table>
+    .est-titulo {
+        font-family: 'Josefin Sans';
+        font-size: 30px;
+        font-weight: 700;
+        color: #F96714;
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
+
+</style>
+<br />
+<h2 class="est-titulo text-center">Estoque</h2>
+<br />
+<div>         
+            <div class="text-center est">Quantidade em estoque dos produtos </div>
+       
+
+    
+      <br /><br />
+    <div class="text-center est">
+        ID 1: &nbsp; <label class="qtd-estoque1"></label><br />
+        ID 2: &nbsp; <label class="qtd-estoque2"></label><br />
+        ID 3: &nbsp; <label class="qtd-estoque3"></label><br />
+        ID 4: &nbsp; <label class="qtd-estoque4"></label><br />
+        ID 5: &nbsp; <label class="qtd-estoque5"></label><br />
+        ID 6: &nbsp; <label class="qtd-estoque6"></label><br />
+        ID 7: &nbsp; <label class="qtd-estoque7"></label><br />
+        ID 8: &nbsp; <label class="qtd-estoque8"></label><br />
+        ID 9: &nbsp;<label class="qtd-estoque9"></label><br />
+        ID 10: &nbsp;<label class="qtd-estoque10"></label><br />
+
+    </div>
 
     @foreach (var prod in Model)
     {
-        <table>
-            <tr class="id-est" id="id_@prod.Pro_id" prodID="@prod.Pro_id">@prod.Pro_Produto.Pro_descricao</tr>
-            <tr id="qtd_@prod.Est_quantidade_saida"></tr>
-            <tr id="est_@prod.Est_quantidade_entrada"></tr>
-        </table>
-    }
-</div>
-
-<script>
-
-    function Concatenar() {
-        var total = 0;
-        //var x = $("qtd-ent");
-        const y = document.querySelectorAll('.des-ent');
-        const x = document.querySelectorAll('.qtd-ent');
-        var n = y.localeCompare(x);
-
-        //if (var i = 0; i <= x.length; i++) {
-
-        //    var qtd = x[i];
-        //}else {
-        //    return '';
-        //}
-
-        $.each(tabela, function (item) {
-            var n = $(item).text();
-
-            for (var i = 0; i < y.length; i++) {
-                if (tabela.localeCompare(y){
-                    var qtd = y[i];
-
-                }
-
-            }
-        });
-
-    }
-
-    function Debitar() {
-        var valor = 0;
-        const y = document.querySelectorAll('.id-est');
-        const x = document.querySelectorAll('.qtd-est');
-
-        var idH = "#id_" + $(this).attr("prodID");
-
-        if ('.qtd-est' > 0) {
-
+        if (prod.Pro_id == 1)
+        {
+            //var pro = prod.Pro_Produto.Pro_descricao[1];
+            @*<span class="id-est" id="id@prod.Pro_id" prodID="@prod.Pro_id">@prod.Pro_Produto.Pro_descricao</span>*@
+            <span class="est-entradas1 visi" id="">@prod.Est_quantidade_entrada</span>
+            <span class="est-saidas1 visi" id="">@prod.Est_quantidade_saida</span>
+            @*<span class="qtd-estoque1" value=""></span>*@
         }
 
+        if (prod.Pro_id == 2)
+        {
+            @*<span class="id-est" id="id@prod.Pro_id" prodID="@prod.Pro_id">@prod.Pro_Produto.Pro_descricao</span>*@
+            <span class="est-entradas2 visi" id="">@prod.Est_quantidade_entrada</span>
+            <span class="est-saidas2 visi" id="">@prod.Est_quantidade_saida</span>
+            
+        }
 
+        if (prod.Pro_id == 3)
+        {
+            @*<span class="id-est" id="id@prod.Pro_id" prodID="@prod.Pro_id">@prod.Pro_Produto.Pro_descricao</span>*@
+            <span class="est-entradas3 visi" id="">@prod.Est_quantidade_entrada</span>
+            <span class="est-saidas3 visi" id="">@prod.Est_quantidade_saida</span>
+            
+        }
+
+        if (prod.Pro_id == 4)
+        {
+            @*<span class="id-est" id="id@prod.Pro_id" prodID="@prod.Pro_id">@prod.Pro_Produto.Pro_descricao</span>*@
+            <span class="est-entradas4 visi" id="">@prod.Est_quantidade_entrada</span>
+            <span class="est-saidas4 visi" id="">@prod.Est_quantidade_saida</span>
+            
+        }
+
+        if (prod.Pro_id == 5)
+        {
+            @*<span class="id-est" id="id@prod.Pro_id" prodID="@prod.Pro_id">@prod.Pro_Produto.Pro_descricao</span>*@
+            <span class="est-entradas5 visi" id="">@prod.Est_quantidade_entrada</span>
+            <span class="est-saidas5 visi" id="">@prod.Est_quantidade_saida</span>
+            
+        }
+
+        if (prod.Pro_id == 6)
+        {
+            @*<span class="id-est" id="id@prod.Pro_id" prodID="@prod.Pro_id">@prod.Pro_Produto.Pro_descricao</span>*@
+            <span class="est-entradas6 visi" id="">@prod.Est_quantidade_entrada</span>
+            <span class="est-saidas6 visi" id="">@prod.Est_quantidade_saida</span>
+           
+        }
+
+        if (prod.Pro_id == 7)
+        {
+            @*<span class="id-est" id="id@prod.Pro_id" prodID="@prod.Pro_id">@prod.Pro_Produto.Pro_descricao</span>*@
+            <span class="est-entradas7 visi" id="">@prod.Est_quantidade_entrada</span>
+            <span class="est-saidas7 visi" id="">@prod.Est_quantidade_saida</span>
+            
+        }
+
+        if (prod.Pro_id == 8)
+        {            
+            <span class="est-entradas8 visi" id="">@prod.Est_quantidade_entrada</span>
+            <span class="est-saidas8 visi" id="">@prod.Est_quantidade_saida</span>
+            
+        }
+
+        if (prod.Pro_id == 9)
+        {           
+            <span class="est-entradas9 visi" id="">@prod.Est_quantidade_entrada</span>
+            <span class="est-saidas9 visi" id="">@prod.Est_quantidade_saida</span>
+            
+        }
+
+        if (prod.Pro_id == 10)
+        {            
+            <span class="est-entradas10 visi" id="">@prod.Est_quantidade_entrada</span>
+            <span class="est-saidas10 visi" id="">@prod.Est_quantidade_saida</span>
+            
+        }
     }
 
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script>
+    var total1 = 0;
+    var total2 = 0;
+    var total3 = 0;
+    var total4 = 0;
+    var total5 = 0;
+    var total6 = 0;
+    var total7 = 0;
+    var total8 = 0;
+    var total9 = 0;
+    var total10 = 0;
+    // Soma saidas e exibe total
+    //primeiro produto
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-entradas1").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total1 += t;
+
+    })
+    // soma entradas e exibe total
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-saidas1").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total1 -= t;
+        $(".qtd-estoque1").text(total1);
+        // exibe estoque do produto id 1
+        //alert(" Total Estoque = " + total1)
+        //$("#prod-1").text(total)
+    })
+
+    //segundo produto
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-entradas2").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total2 += t;
+
+    })
+    // soma entradas e exibe total
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-saidas2").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total2 -= t;
+        $(".qtd-estoque2").text(total2);
+        // exibe estoque do produto id 2
+        //alert(" Total Estoque = " + total2)
+    })
+
+    //terceiro produto
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-entradas3").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total3 += t;
+
+    })
+    // soma entradas e exibe total
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-saidas3").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total3 -= t;
+        $(".qtd-estoque3").text(total3);
+        // exibe estoque do produto id 2
+       // alert(" Total Estoque = " + total3)
+    })
+
+    //quarto produto
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-entradas4").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total4 += t;
+
+    })
+    // soma entradas e exibe total
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-saidas4").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total4 -= t;
+        $(".qtd-estoque4").text(total4);
+        // exibe estoque do produto id 2
+        //alert(" Total Estoque = " + total4)
+    })
+
+    //quinto produto
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-entradas5").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total5 += t;
+
+    })
+    // soma entradas e exibe total
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-saidas5").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total5 -= t;
+        $(".qtd-estoque5").text(total5);
+        // exibe estoque do produto id 2
+        //alert(" Total Estoque = " + total5)
+    })
+    //sexto produto
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-entradas6").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total6 += t;
+
+    })
+    // soma entradas e exibe total
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-saidas6").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total6 -= t;
+        $(".qtd-estoque6").text(total6);
+        // exibe estoque do produto id 2
+       // alert(" Total Estoque = " + total6)
+    })
+
+    //setimo produto
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-entradas7").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total7 += t;
+       
+    })
+    // soma entradas e exibe total
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-saidas7").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total7 -= t;
+        $(".qtd-estoque7").text(total7);
+        // exibe estoque do produto id 2
+       // alert(" Total Estoque = " + total7)
+    })
+    //oitavo produto
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-entradas8").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total8 += t;
+
+    })
+    // soma entradas e exibe total
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-saidas8").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total8 -= t;
+        $(".qtd-estoque8").text(total8);
+        // exibe estoque do produto id 2
+        //alert(" Total Estoque = " + total8)
+    })
+    //nono produto
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-entradas9").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total9 += t;
+
+    })
+    // soma entradas e exibe total
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-saidas9").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total9 -= t;
+        $(".qtd-estoque9").text(total9);
+        // exibe estoque do produto id 2
+        //alert(" Total Estoque = " + total9)
+    })
+    //decimo produto
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-entradas10").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total10 += t;
+
+    })
+    // soma entradas e exibe total
+    $(document).ready(function () {
+        var t = 0;
+        $(".est-saidas10").each(function () {
+
+            t += parseInt($(this).text())
+
+        })
+        total10 -= t;
+        $(".qtd-estoque10").text(total10);
+        // exibe estoque do produto id 2
+        //alert(" Total Estoque = " + total10)
+    })
 
 </script>
-
-
-
